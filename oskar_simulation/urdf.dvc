@@ -1,0 +1,6 @@
+outs:
+- md5: 6e4930fd98812036970fdf96492a6552.dir
+  size: 402065989
+  nfiles: 839
+  hash: md5
+  path: urdf

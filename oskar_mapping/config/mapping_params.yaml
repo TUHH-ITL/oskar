@@ -1,0 +1,70 @@
+stereo_sync_node:
+  ros__parameters:
+    use_sim_time: false
+    left_image_topic: /camera/left/image_raw
+    right_image_topic: /camera/right/image_raw
+    left_info_topic: /camera/left/camera_info
+    right_info_topic: /camera/right/camera_info
+    left_camera_frame: camera_left_optical
+    right_camera_frame: camera_right_optical
+    sync_slop: 0.02
+    queue_size: 10
+
+disparity_node:
+  ros__parameters:
+    use_sim_time: false
+    ffm_dir: /home/workstation/oskar/Fast-FoundationStereo
+    model_dir: /home/workstation/oskar/Fast-FoundationStereo/weights/23-36-37/model_best_bp2_serialize.pth
+    scale: 0.5
+    valid_iters: 8
+    max_disp: 192
+
+segmentation_node:
+  ros__parameters:
+    use_sim_time: false
+    model_path: /home/workstation/oskar/2025-transformers-for-apple-flower-segmentation-bhangale/experiments/training_outputs/maskrcnn/test_batch/best_hp_run/finetune/model_final.pth
+    confidence_threshold: 0.5
+    device: cuda
+
+depth_fusion_node:
+  ros__parameters:
+    use_sim_time: false
+    left_info_topic: /camera/left/camera_info
+    erosion_radius_px: 5
+    depth_std_threshold: 0.15
+    min_valid_pixels: 10
+
+backprojection_node:
+  ros__parameters:
+    use_sim_time: false
+    camera_frame: camera_left_optical
+    map_frame: map
+
+multiview_fusion_node:
+  ros__parameters:
+    use_sim_time: false
+    eps: 0.08
+    min_samples: 3
+    window_m: 4.0
+    max_age_s: 30.0
+
+bio_sanity_node:
+  ros__parameters:
+    use_sim_time: false
+    expected_flowers_per_corymb: 5
+    intra_flower_spacing_m: 0.03
+    merge_distance_m: 0.02
+    corymb_radius_m: 0.06
+
+tree_assignment_node:
+  ros__parameters:
+    use_sim_time: false
+    tree_map_file: config/tree_map.yaml
+    max_radius_m: 0.8
+
+thinning_decision_node:
+  ros__parameters:
+    use_sim_time: false
+    target_flowers_per_tree: 20
+    agronomic_min: 15
+    agronomic_max: 25

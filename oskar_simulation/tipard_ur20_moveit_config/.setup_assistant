@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: tipard_ur20_combined
+    relative_path: tipard_ur20_combined.urdf
+  srdf:
+    relative_path: config/tipard_ur20_combined.srdf
+  package_settings:
+    author_name: Manav Thakkar
+    author_email: manav.thakkar@tuhh.de
+    generated_timestamp: 1777542001
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

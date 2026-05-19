@@ -1,0 +1,9 @@
+# Real robot orchard tree positions
+# Position in space: x, y coordinates in meters relative to map origin
+# These should be measured/surveyed from the real orchard
+trees:
+  1: {x: 0.0, y: 0.0}
+  2: {x: 1.0, y: 0.0}
+  3: {x: 2.0, y: 0.0}
+  4: {x: 3.0, y: 0.0}
+  5: {x: 4.0, y: 0.0}

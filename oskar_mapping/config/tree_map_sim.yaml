@@ -1,0 +1,8 @@
+# Isaac Sim test scene tree positions
+# Position in space: x, y coordinates in meters relative to map origin
+trees:
+  1: {x: 0.0, y: 0.0}
+  2: {x: 1.0, y: 0.0}
+  3: {x: 2.0, y: 0.0}
+  4: {x: 3.0, y: 0.0}
+  5: {x: 4.0, y: 0.0}

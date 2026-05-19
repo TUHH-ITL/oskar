@@ -1,0 +1,5 @@
+uint32 instance_id
+geometry_msgs/Point position
+float32 confidence
+bool low_confidence
+float32 depth_std_ratio

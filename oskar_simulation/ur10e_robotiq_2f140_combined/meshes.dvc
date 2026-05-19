@@ -1,0 +1,6 @@
+outs:
+- md5: 94f5367f647a9179118065272d281062.dir
+  size: 12023527
+  nfiles: 26
+  hash: md5
+  path: meshes

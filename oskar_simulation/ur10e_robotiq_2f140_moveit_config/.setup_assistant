@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: ur10e_robotiq_2f140_combined
+    relative_path: urdf/ur10e_robotiq_2f140_combined.urdf
+  srdf:
+    relative_path: config/ur10e_robotiq_2f140.srdf
+  package_settings:
+    author_name: Manav Thakkar
+    author_email: manav.thakkar@tuhh.de
+    generated_timestamp: 1776171792
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

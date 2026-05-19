@@ -1,0 +1,8 @@
+[core]
+    analytics = false
+    remote = itl-nas
+    autostage = true
+['remote "itl-nas"']
+    url = ssh://nas.flowcean.me:/oskar/dvc_data
+    user = oskar
+
