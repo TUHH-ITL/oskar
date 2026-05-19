@@ -6,20 +6,7 @@ Tested in this workspace with ROS 2 Humble.
 
 ## Isaac Sim Scene
 
-Most commands in this README expect topics from the Isaac Sim scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is included in the DVC.
-
-The MoveIt ros2_control xacro currently uses an Isaac Sim topic bridge through:
-
-```xml
-<plugin>topic_based_ros2_control/TopicBasedSystem</plugin>
-```
-
-with these topics:
-
-```text
-/isaac_joint_commands
-/isaac_joint_states
-```
+Most commands in this README expect topics from the Isaac Sim (version 5.1) scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is included in the DVC. 
 
 ## Create a Workspace
 
@@ -196,9 +183,9 @@ To control the arm in Cartesian `x`, `y`, and `z` directions using the joystick,
 ros2 launch tipard_control arm_servo_joystick.launch.py
 ```
 
-## Joystick Controls
+## Joystick Controls 
 
-Base teleop publishes to `/cmd_vel` and `/steering_mode`.
+Base teleop publishes to `/cmd_vel` and `/steering_mode`. The buttons correspond to Logitech joystick, adjust if you have a different joystick.
 
 - Hold `RB` as the base dead-man switch.
 - Hold `LB` for precision base motion.
@@ -216,7 +203,7 @@ Arm Servo publishes twist commands to `/servo_node/delta_twist_cmds`.
 
 The arm only moves while `LB` is held down.
 
-## ZED Camera And Mapping
+## ZED Camera And Depth Estimation
 
 These commands require the optional ZED and mapping packages listed above.
 
@@ -245,7 +232,3 @@ The mapping launch publishes:
 /stereo/disparity
 /stereo/points
 ```
-
-## Standalone Fake Hardware
-
-For standalone fake hardware demos, switch the hardware plugin in `tipard_ur20_moveit_config/config/tipard_ur20_combined.ros2_control.xacro` to `mock_components/GenericSystem` and rebuild.
