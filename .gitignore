@@ -1,0 +1,6 @@
+oskar_simulation/isaac_sim/**
+oskar_simulation/urdf/**
+**/__pycache__/
+**/meshes/
+oskar_perception/IMPLEMENTATION_SUMMARY.md
+oskar_perception/CLAUDE.md

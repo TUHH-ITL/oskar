@@ -6,7 +6,7 @@ Tested in this workspace with ROS 2 Humble.
 
 ## Isaac Sim Scene
 
-Most commands in this README expect topics from the Isaac Sim scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is included in this repository.
+Most commands in this README expect topics from the Isaac Sim scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is included in the DVC.
 
 The MoveIt ros2_control xacro currently uses an Isaac Sim topic bridge through:
 
@@ -30,15 +30,7 @@ cd ~/tipard_ws/src
 
 ## Packages Included
 
-Copy/clone these source packages into the `src/` directory of a ROS 2 workspace:
-
-```text
-oskar_mapping
-oskar_msgs
-tipard_control
-tipard_ur20_combined
-tipard_ur20_moveit_config
-```
+Clone this repo in your `src` folder in the ros2 workspace.
 
 `oskar_msgs` is required by `oskar_mapping` for the custom mapping messages. If you only want the Tipard base, UR20 MoveIt, and joystick launch files, `oskar_mapping` and `oskar_msgs` are optional.
 
