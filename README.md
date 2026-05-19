@@ -6,7 +6,24 @@ Tested in this workspace with ROS 2 Humble.
 
 ## Isaac Sim Scene
 
-Most commands in this README expect topics from the Isaac Sim (version 5.1) scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is included in the DVC. 
+Most commands in this README expect topics from the Isaac Sim (version 5.1) scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is tracked by DVC inside `oskar_simulation`.
+
+### Getting the USD File
+
+Install DVC with SSH support if not already installed:
+
+```bash
+pip install 'dvc[ssh]'
+```
+
+Then pull the Isaac Sim assets from the `oskar_simulation` directory:
+
+```bash
+cd oskar_simulation
+dvc pull isaac_sim.dvc
+```
+
+This requires SSH access to `nas.flowcean.me` with the `oskar` user. The file `robot_and_orchard.usd` will be placed inside `oskar_simulation/isaac_sim/`.
 
 ## Create a Workspace
 
