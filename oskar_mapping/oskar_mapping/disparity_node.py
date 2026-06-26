@@ -114,8 +114,10 @@ class DisparityNode(Node):
         self.warmup_model()
 
         # ROS communication
-        # Subscriber: BEST_EFFORT is fine — stereo_sync_node publishes RELIABLE
-        sub_qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
+        # Subscriber: RELIABLE — the StereoPair is large (~9 MB); BEST_EFFORT silently
+        # drops the fragmented message on localhost, starving this node. RELIABLE
+        # requests retransmission so every frame arrives (matches the RELIABLE publisher).
+        sub_qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE)
         self.sub = self.create_subscription(StereoPair, '/stereo/sync_pair',
                                             self.stereo_callback, sub_qos)
         # Publishers: RELIABLE so RViz and downstream nodes can subscribe without QoS warnings

@@ -4,3 +4,5 @@ oskar_simulation/urdf/**
 **/meshes/
 oskar_perception/IMPLEMENTATION_SUMMARY.md
 oskar_perception/CLAUDE.md
+oskar_mapping/bagfile_data
+docs

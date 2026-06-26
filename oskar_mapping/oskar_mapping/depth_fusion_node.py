@@ -39,8 +39,10 @@ class DepthFusionNode(Node):
         self.get_logger().info(f"Min valid pixels: {self.min_valid_pixels}")
         
         # ROS communication
-        qos_profile = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
-        
+        # RELIABLE: depth (~6 MB) and masks (tens of MB) are large; BEST_EFFORT drops
+        # the fragmented messages on localhost, so the time-sync never pairs them.
+        qos_profile = QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE)
+
         # Subscribe to depth and masks
         depth_sub = Subscriber(self, Image, '/stereo/depth', qos_profile=qos_profile)
         masks_sub = Subscriber(self, FlowerMasks, '/flowers/masks', qos_profile=qos_profile)

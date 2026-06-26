@@ -44,10 +44,15 @@ class SegmentationNode(Node):
         self.predictor = self.load_model(model_path, device)
         
         # ROS communication
-        qos_profile = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
+        # RELIABLE: the StereoPair in / FlowerMasks out are large; BEST_EFFORT drops
+        # the fragmented messages on localhost. RELIABLE guarantees delivery.
+        qos_profile = QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE)
         self.sub = self.create_subscription(StereoPair, '/stereo/sync_pair',
                                           self.image_callback, qos_profile)
-        self.pub = self.create_publisher(FlowerMasks, '/flowers/masks', qos_profile)
+        # masks are very large (a full-res mask per flower, ~tens of MB total); use
+        # depth=1 so we don't hoard several of them in memory.
+        masks_qos = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE)
+        self.pub = self.create_publisher(FlowerMasks, '/flowers/masks', masks_qos)
         
         self.bridge = CvBridge()
         self.get_logger().info("SegmentationNode initialized")
