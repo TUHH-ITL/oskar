@@ -33,6 +33,17 @@ from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
 from sensor_msgs.msg import CameraInfo, Image
 
 
+def _repo_root():
+    """Return the repository root containing `oskar_mapping/` and `docs/`."""
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def _default_calib_path(name):
+    """Return a bundled stereo calibration path if it exists."""
+    path = os.path.join(_repo_root(), "oskar_mapping", "bagfile_data", name)
+    return path if os.path.exists(path) else ""
+
+
 def _frame_id_and_stamp(path):
     """Parse '003396_1713171581-898.jpg' -> (frameid='003396', sec, nanosec)."""
     base = os.path.basename(path)
@@ -59,9 +70,15 @@ class BagImageFeederNode(Node):
         self.declare_parameter("loop", False)
         self.declare_parameter("start_index", 0)
         self.declare_parameter("max_frames", 0)       # 0 = all
-        # Real stereo calibration (full-res *_stereo.yaml). Empty => synthetic fallback.
-        self.declare_parameter("left_calib_file", "")
-        self.declare_parameter("right_calib_file", "")
+        # Real stereo calibration (full-res *_stereo.yaml). Empty => bundled default.
+        self.declare_parameter(
+            "left_calib_file",
+            _default_calib_path("SAMSON3_SAMSON4_stereo.yaml"),
+        )
+        self.declare_parameter(
+            "right_calib_file",
+            _default_calib_path("SAMSON4_SAMSON3_stereo.yaml"),
+        )
 
         top_dir = self.get_parameter("top_dir").value
         bottom_dir = self.get_parameter("bottom_dir").value
@@ -121,8 +138,11 @@ class BagImageFeederNode(Node):
         self._info_cache_left = None
         self._info_cache_right = None
         self.get_logger().info(
-            f"Calibration: left={'real' if self.calib_left else 'synthetic'} "
-            f"right={'real' if self.calib_right else 'synthetic'}"
+            "Calibration: "
+            f"left={'real' if self.calib_left else 'synthetic'} "
+            f"({left_calib_file or 'none'}), "
+            f"right={'real' if self.calib_right else 'synthetic'} "
+            f"({right_calib_file or 'none'})"
         )
 
         self.timer = self.create_timer(1.0 / max(rate_hz, 0.01), self._tick)

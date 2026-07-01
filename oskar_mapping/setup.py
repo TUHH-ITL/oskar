@@ -34,6 +34,7 @@ setup(
         'console_scripts': [
             'stereo_sync_node = oskar_mapping.stereo_sync_node:main',
             'disparity_node = oskar_mapping.disparity_node:main',
+            'disparity_roi_node = oskar_mapping.disparity_roi_node:main',
             'segmentation_node = oskar_mapping.segmentation_node:main',
             'depth_fusion_node = oskar_mapping.depth_fusion_node:main',
             'backprojection_node = oskar_mapping.backprojection_node:main',
