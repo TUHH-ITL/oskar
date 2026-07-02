@@ -267,6 +267,7 @@ def run_offline_pipeline(max_frames=None):
                         p_map[2],
                         det["confidence"],
                         det["instance_id"],
+                        float(idx),  # Frame index
                     ],
                 )
             t_backproj += time.time() - t0
@@ -280,6 +281,11 @@ def run_offline_pipeline(max_frames=None):
         else np.array([], dtype=np.float32)
     )
     print(f"Total accumulated world observations: {len(world_obs)}")
+
+    # Save world observations (with frame_idx column) to config.BACKPROJ_OUT_DIR
+    utils.clear_dir(config.BACKPROJ_OUT_DIR)
+    np.save(os.path.join(config.BACKPROJ_OUT_DIR, "world_obs.npy"), world_obs)
+    print(f"Saved {len(world_obs)} world observations to {os.path.join(config.BACKPROJ_OUT_DIR, 'world_obs.npy')}")
 
     # 8. Run Step 5: Multiview Observation Fusion (DBSCAN)
     print("\n--- STEP 5: Multiview Fusion (DBSCAN Clustering) ---")

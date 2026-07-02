@@ -75,6 +75,55 @@ def process_tree_assignment(landmarks_bio, tree_map_filepath=None, max_radius=No
 
     return per_tree_flowers
 
+def count_overlapping_landmarks(landmarks_bio, tree_map_filepath=None, max_radius=None):
+    """Counts how many landmarks fall within max_radius of more than one tree."""
+    if tree_map_filepath is None:
+        tree_map_filepath = config.TREE_MAP_FILE
+    if max_radius is None:
+        max_radius = config.TREE_ASSIGNMENT_MAX_RADIUS_M
+
+    trees = load_tree_map(tree_map_filepath)
+    if not trees:
+        return 0
+
+    overlap_count = 0
+    for lm in landmarks_bio:
+        lm_x, lm_y = lm[0], lm[1]
+        nearby_trees = []
+        for tree_id, (tree_x, tree_y) in trees.items():
+            dist = np.sqrt((lm_x - tree_x) ** 2 + (lm_y - tree_y) ** 2)
+            if dist < max_radius:
+                nearby_trees.append(tree_id)
+        if len(nearby_trees) > 1:
+            overlap_count += 1
+
+    return overlap_count
+
+def count_orphan_landmarks(landmarks_bio, tree_map_filepath=None, max_radius=None):
+    """Counts how many landmarks do not fall within max_radius of any tree."""
+    if tree_map_filepath is None:
+        tree_map_filepath = config.TREE_MAP_FILE
+    if max_radius is None:
+        max_radius = config.TREE_ASSIGNMENT_MAX_RADIUS_M
+
+    trees = load_tree_map(tree_map_filepath)
+    if not trees:
+        return len(landmarks_bio)
+
+    orphan_count = 0
+    for lm in landmarks_bio:
+        lm_x, lm_y = lm[0], lm[1]
+        assigned = False
+        for tree_id, (tree_x, tree_y) in trees.items():
+            dist = np.sqrt((lm_x - tree_x) ** 2 + (lm_y - tree_y) ** 2)
+            if dist < max_radius:
+                assigned = True
+                break
+        if not assigned:
+            orphan_count += 1
+
+    return orphan_count
+
 if __name__ == "__main__":
     landmarks_bio_path = os.path.join(config.BIO_SANITY_OUT_DIR, "landmarks_bio.npy")
     if not os.path.exists(landmarks_bio_path):
@@ -95,3 +144,11 @@ if __name__ == "__main__":
     with open(save_path, "w") as f:
         json.dump(per_tree_flowers, f, indent=4)
     print(f"Assigned landmarks to trees. Saved counts to {save_path}")
+
+    # Run overlap diagnostic
+    num_overlaps = count_overlapping_landmarks(landmarks_bio, config.TREE_MAP_FILE, config.TREE_ASSIGNMENT_MAX_RADIUS_M)
+    print(f"Overlap Diagnostic: {num_overlaps} landmarks fall within {config.TREE_ASSIGNMENT_MAX_RADIUS_M}m of more than one tree.")
+
+    # Run orphan diagnostic
+    num_orphans = count_orphan_landmarks(landmarks_bio, config.TREE_MAP_FILE, config.TREE_ASSIGNMENT_MAX_RADIUS_M)
+    print(f"Orphan Diagnostic: {num_orphans} landmarks fall within 0m of all trees (orphaned).")

@@ -131,7 +131,7 @@ def save_thinning_plot(plan, output_path):
     plt.savefig(output_path, dpi=150)
     plt.close()
 
-def save_2d_cluster_map(trees, per_tree_flowers, output_path):
+def save_2d_cluster_map(trees, per_tree_flowers, output_path, x_window_m=None):
     """Saves a detailed 2D farm map zoomed tightly in Y to distinguish flowers."""
     import matplotlib
     matplotlib.use('Agg')
@@ -215,83 +215,152 @@ def save_2d_cluster_map(trees, per_tree_flowers, output_path):
 
     max_radius = getattr(config, "TREE_ASSIGNMENT_MAX_RADIUS_M", 0.8)
 
-    # Setup figure for a single clean map plot
-    fig, ax = plt.subplots(figsize=(15, 7))
-
     # Track Y coordinates of trees, landmarks, and trajectory for dynamic Y scaling
     all_y = list(ty_vals)
     if trajectory_y is not None and len(trajectory_y) > 0:
         all_y.extend(list(trajectory_y))
 
-    # Plot Robot Path
-    if trajectory_x is not None and trajectory_y is not None and len(trajectory_x) > 0:
-        ax.plot(trajectory_x, trajectory_y, color='#7F8C8D', linestyle='--', linewidth=1.5, alpha=0.6, label='Robot Path', zorder=1)
-        ax.scatter(trajectory_x[0], trajectory_y[0], color='#27AE60', s=100, marker='o', edgecolors='black', label='Start Point', zorder=6)
-        ax.scatter(trajectory_x[-1], trajectory_y[-1], color='#E67E22', s=100, marker='X', edgecolors='black', label='End Point', zorder=6)
+    # Pre-gather all flower landmarks to calculate accurate Y bounds
+    for tree_id in active_tree_ids:
+        tree_data = per_tree_flowers.get(str(tree_id)) or per_tree_flowers.get(int(tree_id)) or {}
+        landmarks = tree_data.get("landmarks", [])
+        if landmarks:
+            lms = np.array(landmarks)
+            lx_rot, ly_rot = rotate_pt(lms[:, 0], lms[:, 1])
+            all_y.extend(list(ly_rot))
+
+    min_y = min(all_y)
+    max_y = max(all_y)
+    padding_y = 0.2
+
+    # Scale tree marker size and label spacing dynamically
+    num_active = len(active_tree_ids)
+    if num_active > 150:
+        marker_size = 35
+        label_interval = 20
+    elif num_active > 50:
+        marker_size = 70
+        label_interval = 10
+    elif num_active > 20:
+        marker_size = 110
+        label_interval = 5
+    else:
+        marker_size = 180
+        label_interval = 1
 
     # Colors for flower landmarks
     cmap = plt.colormaps.get_cmap('tab10')
     colors = {tid: cmap(i % 10) for i, tid in enumerate(active_tree_ids)}
 
-    for tree_id in active_tree_ids:
-        tx, ty = trees_rot[tree_id]
-        color = colors[tree_id]
-        tree_data = per_tree_flowers.get(str(tree_id)) or per_tree_flowers.get(int(tree_id)) or {}
+    # Helper function to render the map on a given Axes
+    def draw_on_ax(ax, x_lim=None):
+        # Plot Robot Path
+        if trajectory_x is not None and trajectory_y is not None and len(trajectory_x) > 0:
+            ax.plot(trajectory_x, trajectory_y, color='#7F8C8D', linestyle='--', linewidth=1.5, alpha=0.6, label='Robot Path', zorder=1)
+            ax.scatter(trajectory_x[0], trajectory_y[0], color='#27AE60', s=100, marker='o', edgecolors='black', label='Start Point', zorder=6)
+            ax.scatter(trajectory_x[-1], trajectory_y[-1], color='#E67E22', s=100, marker='X', edgecolors='black', label='End Point', zorder=6)
+
+        # Plot trees and landmarks
+        for tree_id in active_tree_ids:
+            tx, ty = trees_rot[tree_id]
+            if x_lim is not None:
+                if tx < x_lim[0] - 2.0 or tx > x_lim[1] + 2.0:
+                    continue
+
+            color = colors[tree_id]
+            tree_data = per_tree_flowers.get(str(tree_id)) or per_tree_flowers.get(int(tree_id)) or {}
+            
+            # Draw the 0.8m canopy assignment boundary as a light shaded ellipse
+            ellipse = Ellipse((tx, ty), width=max_radius*2, height=max_radius*2, facecolor=color, alpha=0.08, edgecolor=color, linestyle=':', linewidth=1.0, zorder=2)
+            ax.add_patch(ellipse)
+
+            # Plot Tree Location
+            ax.scatter(tx, ty, color='#27AE60', s=marker_size, marker='^', edgecolors='black', linewidth=1.0, zorder=5,
+                       label='Tree' if tree_id == active_tree_ids[0] else "")
+            
+            # Label tree
+            if x_lim is not None or (tree_id % label_interval == 0):
+                ax.text(tx, ty + 0.18, f"T{tree_id}", fontsize=9, ha='center', color='#2C3E50', fontweight='bold', zorder=6)
+
+            # Plot assigned clusters (rotated)
+            landmarks = tree_data.get("landmarks", [])
+            if landmarks:
+                lms = np.array(landmarks)
+                lx_rot, ly_rot = rotate_pt(lms[:, 0], lms[:, 1])
+                ax.scatter(lx_rot, ly_rot, s=25, alpha=0.7, color=color, edgecolors='black', linewidths=0.3, zorder=4,
+                           label='Flower Cluster' if tree_id == active_tree_ids[0] else "")
+                for lxi, lyi in zip(lx_rot, ly_rot):
+                    ax.plot([tx, lxi], [ty, lyi], color=color, alpha=0.15, linewidth=0.8, zorder=3)
+
+        ax.set_xlabel("Distance along Orchard Row [meters]", fontsize=12, fontweight='semibold', color='#34495E')
+        ax_map_y_label = "Lateral Offset from Row [meters]\n(Stretched vertically to distinguish details)"
+        ax.set_ylabel(ax_map_y_label, fontsize=12, fontweight='semibold', color='#34495E')
+        ax.grid(True, linestyle=':', alpha=0.5)
         
-        # Draw the 0.8m canopy assignment boundary as a light shaded ellipse
-        ellipse = Ellipse((tx, ty), width=max_radius*2, height=max_radius*2, facecolor=color, alpha=0.08, edgecolor=color, linestyle=':', linewidth=1.0, zorder=2)
-        ax.add_patch(ellipse)
+        if x_lim is not None:
+            ax.set_xlim(x_lim[0], x_lim[1])
+        else:
+            ax.set_xlim(min(tx_vals) - 8.0, max(tx_vals) + 8.0)
+            
+        ax.set_ylim(min_y - padding_y, max_y + padding_y)
+        ax.set_aspect('auto')
+        
+        # Clean legend
+        handles, labels = ax.get_legend_handles_labels()
+        unique_labels = {}
+        for handle, label in zip(handles, labels):
+            if label not in unique_labels:
+                unique_labels[label] = handle
+        ax.legend(unique_labels.values(), unique_labels.keys(), loc='upper left', framealpha=0.9)
 
-        # Plot Tree Location: prominent triangle with tree label
-        ax.scatter(tx, ty, color='#27AE60', s=180, marker='^', edgecolors='black', linewidth=1.2, zorder=5,
-                   label='Tree' if tree_id == active_tree_ids[0] else "")
-        ax.text(tx, ty + 0.18, f"T{tree_id}", fontsize=10, ha='center', color='#2C3E50', fontweight='bold', zorder=6)
-
-        # Plot assigned clusters (rotated)
-        landmarks = tree_data.get("landmarks", [])
-        if landmarks:
-            lms = np.array(landmarks)
-            lx_rot, ly_rot = rotate_pt(lms[:, 0], lms[:, 1])
-            # Plot flower points slightly larger and with high contrast
-            ax.scatter(lx_rot, ly_rot, s=25, alpha=0.7, color=color, edgecolors='black', linewidths=0.3, zorder=4,
-                       label='Flower Cluster' if tree_id == active_tree_ids[0] else "")
-            # Draw lines connecting flowers to the tree center
-            for lxi, lyi in zip(lx_rot, ly_rot):
-                ax.plot([tx, lxi], [ty, lyi], color=color, alpha=0.15, linewidth=0.8, zorder=3)
-            all_y.extend(list(ly_rot))
-
+    # Plot 1: Save full-row map with dynamic width
+    row_span_m = max(tx_vals) - min(tx_vals)
+    fig_width = max(15.0, row_span_m * 0.35)
+    fig, ax = plt.subplots(figsize=(fig_width, 7))
+    draw_on_ax(ax)
     ax.set_title("Global Orchard Row Mapping & Flower Clusters Distribution", fontsize=15, fontweight='bold', color='#2C3E50', pad=15)
-    ax.set_xlabel("Distance along Orchard Row [meters]", fontsize=12, fontweight='semibold', color='#34495E')
-    ax_map_y_label = "Lateral Offset from Row [meters]\n(Stretched vertically to distinguish details)"
-    ax.set_ylabel(ax_map_y_label, fontsize=12, fontweight='semibold', color='#34495E')
-    ax.grid(True, linestyle=':', alpha=0.5)
-    
-    # Set X limits with 8 meters padding
-    ax.set_xlim(min(tx_vals) - 8.0, max(tx_vals) + 8.0)
-    
-    # Set Y limits dynamically zoomed in on the canopy range
-    min_y = min(all_y)
-    max_y = max(all_y)
-    padding_y = 0.2
-    ax.set_ylim(min_y - padding_y, max_y + padding_y)
-    
-    # CRITICAL: Do NOT set aspect equal! Stretches the Y-axis vertically to clearly separate flower details.
-    ax.set_aspect('auto')
-    
-    # Clean legend
-    handles, labels = ax.get_legend_handles_labels()
-    unique_labels = {}
-    for handle, label in zip(handles, labels):
-        if label not in unique_labels:
-            unique_labels[label] = handle
-    ax.legend(unique_labels.values(), unique_labels.keys(), loc='upper left', framealpha=0.9)
-
     plt.tight_layout()
     plt.savefig(output_path, dpi=200)
     plt.close()
 
-    # 2. Table Summary Plot (Saved as a separate image)
-    fig_table, ax_table = plt.subplots(figsize=(6, 8))
+    # Plot 2: Save paginated maps if x_window_m is provided
+    if x_window_m is not None and x_window_m > 0:
+        start_x = min(tx_vals) - 4.0
+        end_x = max(tx_vals) + 4.0
+        x_current = start_x
+        part_idx = 1
+        
+        base, ext = os.path.splitext(output_path)
+        while x_current < end_x:
+            w_start = x_current
+            w_end = x_current + x_window_m
+            
+            # Verify if there are actually any trees or trajectory points in this range
+            has_data = False
+            for tid in active_tree_ids:
+                if w_start <= trees_rot[tid][0] <= w_end:
+                    has_data = True
+                    break
+            if not has_data and trajectory_x is not None:
+                if np.any((trajectory_x >= w_start) & (trajectory_x <= w_end)):
+                    has_data = True
+                    
+            if has_data:
+                fig_slice, ax_slice = plt.subplots(figsize=(15, 7))
+                draw_on_ax(ax_slice, x_lim=(w_start, w_end))
+                ax_slice.set_title(f"Orchard Row Mapping - Part {part_idx} ({w_start:.0f}m to {w_end:.0f}m)", fontsize=15, fontweight='bold', color='#2C3E50', pad=15)
+                part_path = f"{base}_part{part_idx}{ext}"
+                plt.tight_layout()
+                plt.savefig(part_path, dpi=200)
+                plt.close()
+                part_idx += 1
+            
+            x_current += x_window_m
+
+    # 2. Table Summary Plot (Saved as a separate image, sizing is dynamic based on number of trees)
+    num_rows = len(active_tree_ids) + 2
+    fig_height = max(6.0, num_rows * 0.26)
+    fig_table, ax_table = plt.subplots(figsize=(6, fig_height))
     ax_table.axis('off')
     
     cell_text = []
@@ -314,7 +383,7 @@ def save_2d_cluster_map(trees, per_tree_flowers, output_path):
     table = ax_table.table(cellText=cell_text, colLabels=col_labels, loc='center', cellLoc='center')
     table.auto_set_font_size(False)
     table.set_fontsize(10)
-    table.scale(1.2, 1.8)
+    table.scale(1.0, 1.3)
     
     # Bold the headers and total row, and color them nicely
     for (row, col), cell in table.get_celld().items():

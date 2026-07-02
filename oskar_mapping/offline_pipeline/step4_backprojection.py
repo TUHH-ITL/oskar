@@ -95,7 +95,8 @@ def process_backprojection(detections_3d_results, trajectory_file=None):
                 p_map[1],          # North
                 p_map[2],          # Up
                 det["confidence"],
-                det["instance_id"]
+                det["instance_id"],
+                float(frame.get("frame_idx", idx))  # Frame index (0-based)
             ])
 
     return np.array(world_observations, dtype=np.float32)

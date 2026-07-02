@@ -62,7 +62,7 @@ def segment_frame(left_cv, predictor, confidence_threshold=None):
         })
     return frame_flowers
 
-def process_segmentation(left_image_paths, predictor=None, rectification_maps=None):
+def process_segmentation(left_image_paths, predictor=None, rectification_maps=None, all_left_files=None):
     """Processes Left images, running Mask R-CNN to detect flowers.
     
     Returns a list of frames, where each frame contains a list of flower dicts.
@@ -85,11 +85,18 @@ def process_segmentation(left_image_paths, predictor=None, rectification_maps=No
     map_lx, map_ly = rectification_maps
 
     for idx, img_path in enumerate(left_image_paths):
-        print(f"[{idx+1}/{total_imgs}] Segmenting {os.path.basename(img_path)}...")
+        abs_idx = idx
+        if all_left_files is not None:
+            try:
+                abs_idx = all_left_files.index(img_path)
+            except ValueError:
+                pass
+                
+        print(f"[{idx+1}/{total_imgs}] Segmenting {os.path.basename(img_path)} (Absolute Frame Index: {abs_idx})...")
         left_cv = cv2.imread(img_path)
         if left_cv is None:
             print(f"Warning: could not read {img_path}")
-            results.append({"frame_idx": idx, "flowers": []})
+            results.append({"frame_idx": abs_idx, "flowers": []})
             continue
 
         # Rectify image
@@ -99,7 +106,7 @@ def process_segmentation(left_image_paths, predictor=None, rectification_maps=No
         timestamp = utils.parse_frame_timestamp(img_path)
 
         results.append({
-            "frame_idx": idx,
+            "frame_idx": abs_idx,
             "image_path": img_path,
             "timestamp": timestamp,
             "flowers": frame_flowers
@@ -148,10 +155,10 @@ def save_intermediate_segmentation(results, output_dir):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Step 1: Apple flower instance segmentation using Mask R-CNN.")
-    parser.add_argument("--max-frames", type=int, default=10, help="Maximum number of frames to process (-1 for all, default: 10)")
+    parser.add_argument("--max-frames", type=int, default=None, help="Maximum number of frames to process (overrides start/end)")
+    parser.add_argument("--start-frame", type=int, default=0, help="Start frame index (0-based, default: 0)")
+    parser.add_argument("--end-frame", type=int, default=None, help="End frame index (inclusive, default: None)")
     args = parser.parse_args()
-
-    max_frames = args.max_frames if args.max_frames >= 0 else None
 
     # Resolve images
     if not os.path.exists(config.LEFT_IMAGES_DIR):
@@ -164,12 +171,17 @@ if __name__ == "__main__":
         if f.lower().endswith(('.jpg', '.jpeg', '.png'))
     ])
 
-    if max_frames is not None:
-        left_files_test = left_files[:max_frames]
+    if args.max_frames is not None and args.max_frames >= 0:
+        left_files_test = left_files[:args.max_frames]
     else:
-        left_files_test = left_files
+        start_idx = args.start_frame
+        end_idx = args.end_frame
+        if end_idx is not None:
+            left_files_test = left_files[start_idx:end_idx+1]
+        else:
+            left_files_test = left_files[start_idx:]
 
-    print(f"Found {len(left_files)} images. Processing {len(left_files_test)} frames...")
+    print(f"Found {len(left_files)} images. Slicing range [{args.start_frame} to {args.end_frame if args.end_frame is not None else len(left_files)-1}]. Processing {len(left_files_test)} frames...")
 
-    results = process_segmentation(left_files_test)
+    results = process_segmentation(left_files_test, all_left_files=left_files)
     save_intermediate_segmentation(results, config.SEGMENTATION_OUT_DIR)
