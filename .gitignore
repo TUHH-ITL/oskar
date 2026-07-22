@@ -9,3 +9,6 @@ oskar_mapping/bagfile_data/**
 docs/**
 oskar_mapping/offline_pipeline/data/**
 oskar_mapping/offline_pipeline/data_archive/**
+oskar_mapping/offline_pipeline/offline_pipeline_trial2/fresh_cache
+oskar_mapping/offline_pipeline/offline_pipeline_trial2/data/**
+
