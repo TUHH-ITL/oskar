@@ -4,9 +4,9 @@ Create a combined Tipard + UR20 Robotiq URDF.
 
 Usage:
   python3 create_combined_urdf.py \
-    --base /home/workstation/ros2_ws/src/oskar_simulation/urdf/tipard_new/tipard_robot.urdf \
-    --arm /home/workstation/ros2_ws/src/oskar_simulation/ur20_robotiq_2f85_combined/urdf/ur20_robotiq_2f85_combined.urdf \
-    --output /home/workstation/ros2_ws/src/oskar_simulation/urdf/tipard_ur20_combined/tipard_ur20_combined.urdf \
+    --base /home/workstation/ros2_ws/src/oskar/oskar_simulation/urdf/tipard_new/tipard_robot.urdf \
+    --arm /home/workstation/ros2_ws/src/oskar/oskar_simulation/ur20_robotiq_2f85_combined/urdf/ur20_robotiq_2f85_combined.urdf \
+    --output /home/workstation/ros2_ws/src/oskar/oskar_simulation/urdf/tipard_ur20_combined/tipard_ur20_combined.urdf \
     --xyz 0.25 0.0 0.75 \
     --rpy 0 0 0
 """

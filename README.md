@@ -2,11 +2,11 @@
 
 This workspace contains the ROS 2 packages needed to visualize and control the Tipard mobile base with a UR20 arm and Robotiq 2F-85 gripper through MoveIt 2.
 
-Tested in this workspace with ROS 2 Humble.
+Tested in this workspace with ROS 2 Jazzy on Ubuntu 24.04.
 
 ## Isaac Sim Scene
 
-Most commands in this README expect topics from the Isaac Sim (version 5.1) scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is tracked by DVC inside `oskar_simulation`.
+Most commands in this README expect topics from the Isaac Sim (version 6.0.1) scene. For simulation in Isaac Sim, open `robot_and_orchard.usd`. This scene has all ROS 2 OmniGraphs configured. The USD file is tracked by DVC inside `oskar_simulation`.
 
 ### Getting the USD File
 
@@ -24,6 +24,22 @@ dvc pull isaac_sim.dvc
 ```
 
 This requires SSH access to `nas.flowcean.me` with the `oskar` user. The file `robot_and_orchard.usd` will be placed inside `oskar_simulation/isaac_sim/`.
+
+The pull is self-contained. Every scene under `isaac_sim/` opens from a fresh clone with no
+other checkout on the machine, because all of its dependencies are vendored alongside it:
+
+| Directory | Contents |
+| --- | --- |
+| `isaac_sim/orchard/` | Orchard geometry (`two_by_two_orchard.usdc`), its 13 tree/bark/petal textures and the two dome-light HDRIs |
+| `isaac_sim/materials_nvidia/` | The 14 NVIDIA Base and vMaterials 2 `.mdl` materials the environment scenes use, plus their 167 textures |
+| `isaac_sim/materials/textures/` | The shared UR20 diffuse texture |
+
+Every asset path inside the scenes is relative, so the workspace can be cloned to any
+location. The only remote references left are NVIDIA's own Isaac 6.0 asset URLs for the
+grid floor and the ZED X camera body, which stream from S3 on demand.
+
+The NVIDIA materials are redistributed here for convenience; they are freely available from
+NVIDIA as part of the Isaac Sim asset packs and vMaterials 2.
 
 ## Create a Workspace
 
@@ -62,43 +78,56 @@ These external packages are optional for the current Tipard/UR20 MoveIt bringup.
 
 ## ROS Dependencies
 
-Install ROS 2 Humble and MoveIt 2 first. Then install the runtime dependencies:
+Install ROS 2 Jazzy and MoveIt 2 first. Then install the runtime dependencies:
 
 ```bash
 sudo apt update
 sudo apt install \
-  ros-humble-ament-cmake \
-  ros-humble-controller-manager \
-  ros-humble-geometry-msgs \
-  ros-humble-joint-state-broadcaster \
-  ros-humble-joint-state-publisher \
-  ros-humble-joint-state-publisher-gui \
-  ros-humble-joint-trajectory-controller \
-  ros-humble-joy \
-  ros-humble-launch \
-  ros-humble-launch-ros \
-  ros-humble-message-filters \
-  ros-humble-moveit \
-  ros-humble-moveit-msgs \
-  ros-humble-moveit-servo \
-  ros-humble-position-controllers \
-  ros-humble-rclpy \
-  ros-humble-robot-state-publisher \
-  ros-humble-ros2-control \
-  ros-humble-ros2-controllers \
-  ros-humble-rosidl-default-generators \
-  ros-humble-rosidl-default-runtime \
-  ros-humble-rviz2 \
-  ros-humble-sensor-msgs \
-  ros-humble-std-msgs \
-  ros-humble-std-srvs \
-  ros-humble-stereo-msgs \
-  ros-humble-tf2-ros \
-  ros-humble-tf2-geometry-msgs \
-  ros-humble-topic-based-ros2-control \
-  ros-humble-warehouse-ros-mongo \
-  ros-humble-xacro
+  ros-jazzy-ament-cmake \
+  ros-jazzy-controller-manager \
+  ros-jazzy-geometry-msgs \
+  ros-jazzy-joint-state-broadcaster \
+  ros-jazzy-joint-state-publisher \
+  ros-jazzy-joint-state-publisher-gui \
+  ros-jazzy-joint-trajectory-controller \
+  ros-jazzy-joy \
+  ros-jazzy-launch \
+  ros-jazzy-launch-ros \
+  ros-jazzy-message-filters \
+  ros-jazzy-moveit \
+  ros-jazzy-moveit-msgs \
+  ros-jazzy-moveit-servo \
+  ros-jazzy-position-controllers \
+  ros-jazzy-rclpy \
+  ros-jazzy-robot-state-publisher \
+  ros-jazzy-ros2-control \
+  ros-jazzy-ros2-controllers \
+  ros-jazzy-rosidl-default-generators \
+  ros-jazzy-rosidl-default-runtime \
+  ros-jazzy-rviz2 \
+  ros-jazzy-sensor-msgs \
+  ros-jazzy-std-msgs \
+  ros-jazzy-std-srvs \
+  ros-jazzy-stereo-msgs \
+  ros-jazzy-tf2-ros \
+  ros-jazzy-tf2-geometry-msgs \
+  ros-jazzy-warehouse-ros-sqlite \
+  ros-jazzy-xacro
 ```
+
+Two dependencies changed with the Jazzy move:
+
+- `topic-based-ros2-control` has no Jazzy Debian package. The MoveIt config uses its
+  `topic_based_ros2_control/TopicBasedSystem` hardware plugin to talk to Isaac Sim, so it
+  must be built from source in the workspace:
+
+  ```bash
+  cd ~/tipard_ws/src
+  git clone https://github.com/PickNikRobotics/topic_based_ros2_control.git
+  ```
+
+- `warehouse-ros-mongo` was never released for Jazzy. `warehouse-ros-sqlite` replaces it and
+  is what `warehouse_db.launch.py` now uses.
 
 Install `rosdep` if it is not already installed:
 
@@ -117,7 +146,7 @@ Then ask `rosdep` to install dependencies declared in the package manifests:
 
 ```bash
 cd ~/tipard_ws
-rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
+rosdep install --from-paths src --ignore-src -r -y --rosdistro jazzy
 ```
 
 Note: `tipard_control/package.xml` does not currently declare all Python and launch dependencies used by its nodes. The apt list above includes those missing runtime dependencies explicitly.
@@ -130,7 +159,7 @@ From the workspace root:
 
 ```bash
 cd ~/tipard_ws
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
 ```
@@ -221,6 +250,58 @@ Arm Servo publishes twist commands to `/servo_node/delta_twist_cmds`.
 The arm only moves while `LB` is held down.
 
 ## ZED Camera And Depth Estimation
+
+### Isaac Sim ZED Extension
+
+The scenes drive their stereo camera through the Stereolabs OmniGraph node
+`sl.sensor.camera.ZED_Camera`, which comes from an extension that is **not** bundled with
+Isaac Sim. Its version must match the Kit version exactly — Isaac Sim 6.0.1 runs Kit
+110.1.2, which `zed-isaac-sim` **v5.2.0** targets. Older tags (v4.x, Kit 107.3) fail to
+compile against it.
+
+```bash
+git clone https://github.com/stereolabs/zed-isaac-sim.git ~/zed-isaac-sim
+cd ~/zed-isaac-sim
+git checkout v5.2.0
+./build.sh -u
+```
+
+Use `-u` so the extension version lock is regenerated; a stale lock pins a nonexistent
+`omni.graph.action-1.130.0`. If you are rebuilding after switching Kit versions, delete
+`_build _compiler _repo` first, or stale headers get linked in.
+
+Then make the extension discoverable and load it at startup:
+
+```bash
+ln -s ~/zed-isaac-sim/exts/sl.sensor.camera ~/isaacsim_6_0_1/extsUser/
+isaac-sim.sh --enable sl.sensor.camera
+```
+
+Both steps are needed. `extsUser/` only puts the extension on the search path — without
+`--enable` (or ticking AUTOLOAD in *Window -> Extensions*) the scene still fails with
+`Could not find node type interface for 'sl.sensor.camera.ZED_Camera'`.
+
+To receive the simulated stream with the ZED SDK you also need **SDK 5.4.1 or newer**
+(<https://www.stereolabs.com/developers/release>); earlier versions cannot decode what
+v5.2.0 sends. On Ubuntu 24.04 with the CUDA 12.8 toolkit:
+
+```bash
+sudo ./ZED_SDK_Ubuntu24_cuda12.8_tensorrt10.9_v5.4.1.zstd.run -- silent skip_cuda skip_drivers
+```
+
+The installer bundles its own `pyzed` wheel, which declares `numpy>=2.0` and will **silently
+upgrade NumPy in `~/.local/lib`**. NumPy 2 breaks `cv_bridge`, OpenCV and Numba here, so pin
+it back afterwards:
+
+```bash
+python3 -m pip install --user --break-system-packages numpy==1.26.4
+```
+
+`pyzed` 5.4 works against NumPy 1.26.4 despite the declared constraint — pip's
+incompatibility warning is a false alarm. `~/oskar_venv` carries its own NumPy 1.26.4 and is
+unaffected either way.
+
+### Launching
 
 These commands require the optional ZED and mapping packages listed above.
 
