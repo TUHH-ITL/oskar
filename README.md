@@ -25,21 +25,7 @@ dvc pull isaac_sim.dvc
 
 This requires SSH access to `nas.flowcean.me` with the `oskar` user. The file `robot_and_orchard.usd` will be placed inside `oskar_simulation/isaac_sim/`.
 
-The pull is self-contained. Every scene under `isaac_sim/` opens from a fresh clone with no
-other checkout on the machine, because all of its dependencies are vendored alongside it:
-
-| Directory | Contents |
-| --- | --- |
-| `isaac_sim/orchard/` | Orchard geometry (`two_by_two_orchard.usdc`), its 13 tree/bark/petal textures and the two dome-light HDRIs |
-| `isaac_sim/materials_nvidia/` | The 14 NVIDIA Base and vMaterials 2 `.mdl` materials the environment scenes use, plus their 167 textures |
-| `isaac_sim/materials/textures/` | The shared UR20 diffuse texture |
-
-Every asset path inside the scenes is relative, so the workspace can be cloned to any
-location. The only remote references left are NVIDIA's own Isaac 6.0 asset URLs for the
-grid floor and the ZED X camera body, which stream from S3 on demand.
-
-The NVIDIA materials are redistributed here for convenience; they are freely available from
-NVIDIA as part of the Isaac Sim asset packs and vMaterials 2.
+Every scene under `isaac_sim/` opens from a fresh clone with no other checkout on the machine — geometry, textures, HDRIs and materials are all vendored alongside the scenes, and every asset path is relative, so the workspace can be cloned to any location. The only remote references are NVIDIA's own Isaac 6.0 asset URLs for the grid floor and the ZED X camera body, which stream from S3 on demand.
 
 ## Create a Workspace
 
@@ -56,11 +42,9 @@ Clone this repo in your `src` folder in the ros2 workspace.
 
 No additional local source packages are required for the Tipard base, UR20 MoveIt, and joystick launch files. The runtime robot meshes are already inside `tipard_ur20_combined/meshes`, and the MoveIt package only depends on the local `tipard_ur20_combined` package.
 
-The files `tipard_ur20_combined/create_combined_urdf.py` and `tipard_ur20_combined/fix_mesh_paths.py` are helper scripts from the URDF generation workflow. They contain references to the old source workspace and are not needed for normal build, visualization, MoveIt, or joystick operation.
-
 ## Clone External Packages
 
-The ZED camera wrapper, ZED examples, and Fast Foundation Stereo are external repositories. Clone them only if you want the camera/mapping launches from the old workflow:
+The ZED camera wrapper, ZED examples, and Fast Foundation Stereo are external repositories. Clone them only if you want the camera/mapping launches:
 
 ```bash
 cd ~/tipard_ws/src
@@ -69,7 +53,7 @@ git clone https://github.com/stereolabs/zed-ros2-examples
 git clone https://github.com/NVlabs/Fast-FoundationStereo
 ```
 
-These external packages are optional for the current Tipard/UR20 MoveIt bringup. They are required for:
+These external packages are required for:
 
 - `ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedx sim_mode:=true use_sim_time:=true`
 - `ros2 launch zed_display_rviz2 display_zed_cam.launch.py camera_model:=zedx sim_mode:=true use_sim_time:=true`
@@ -100,6 +84,7 @@ sudo apt install \
   ros-jazzy-position-controllers \
   ros-jazzy-rclpy \
   ros-jazzy-robot-state-publisher \
+  ros-jazzy-ros-testing \
   ros-jazzy-ros2-control \
   ros-jazzy-ros2-controllers \
   ros-jazzy-rosidl-default-generators \
@@ -115,19 +100,12 @@ sudo apt install \
   ros-jazzy-xacro
 ```
 
-Two dependencies changed with the Jazzy move:
+`topic-based-ros2-control` has no Jazzy Debian package. The MoveIt config uses its `topic_based_ros2_control/TopicBasedSystem` hardware plugin to talk to Isaac Sim, so it must be built from source in the workspace:
 
-- `topic-based-ros2-control` has no Jazzy Debian package. The MoveIt config uses its
-  `topic_based_ros2_control/TopicBasedSystem` hardware plugin to talk to Isaac Sim, so it
-  must be built from source in the workspace:
-
-  ```bash
-  cd ~/tipard_ws/src
-  git clone https://github.com/PickNikRobotics/topic_based_ros2_control.git
-  ```
-
-- `warehouse-ros-mongo` was never released for Jazzy. `warehouse-ros-sqlite` replaces it and
-  is what `warehouse_db.launch.py` now uses.
+```bash
+cd ~/tipard_ws/src
+git clone https://github.com/PickNikRobotics/topic_based_ros2_control.git
+```
 
 Install `rosdep` if it is not already installed:
 
@@ -149,7 +127,7 @@ cd ~/tipard_ws
 rosdep install --from-paths src --ignore-src -r -y --rosdistro jazzy
 ```
 
-Note: `tipard_control/package.xml` does not currently declare all Python and launch dependencies used by its nodes. The apt list above includes those missing runtime dependencies explicitly.
+`rosdep` does not cover everything — `tipard_control/package.xml` omits some of the Python and launch dependencies its nodes use, which is why the apt list above is explicit.
 
 `oskar_mapping` also imports Python packages such as OpenCV, NumPy, PyTorch, scikit-learn, Detectron2, and Fast Foundation Stereo. Install those according to the mapping environment you use.
 
@@ -164,25 +142,17 @@ colcon build
 source install/setup.bash
 ```
 
-You can check whether the workspace was sourced correctly by listing available ROS 2 packages:
+To build only the Tipard/UR20 subset:
 
 ```bash
-ros2 pkg list
+colcon build --packages-select tipard_ur20_combined tipard_ur20_moveit_config tipard_control
 ```
-
-If the Tipard packages appear in the list, the workspace was built and sourced successfully.
 
 To avoid sourcing the workspace manually every time, add it to your shell startup file:
 
 ```bash
 echo "source ~/tipard_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-```
-
-For the Tipard/UR20 subset, the package set was verified with:
-
-```bash
-colcon build --packages-select tipard_ur20_combined tipard_ur20_moveit_config tipard_control
 ```
 
 ## Full Bringup
@@ -239,7 +209,7 @@ Base teleop publishes to `/cmd_vel` and `/steering_mode`. The buttons correspond
 - Press `B` for symmetric four-wheel-steering mode.
 - Press `X` for crab mode.
 
-Arm Servo publishes twist commands to `/servo_node/delta_twist_cmds`.
+Arm Servo publishes twist commands to `/servo_node/delta_twist_cmds`. The arm only moves while `LB` is held down.
 
 - Hold `LB` to control the arm.
 - Hold `RT` together with `LB` for precision arm motion.
@@ -247,17 +217,11 @@ Arm Servo publishes twist commands to `/servo_node/delta_twist_cmds`.
 - Left stick horizontal controls arm Y.
 - Right stick vertical controls arm Z.
 
-The arm only moves while `LB` is held down.
-
 ## ZED Camera And Depth Estimation
 
 ### Isaac Sim ZED Extension
 
-The scenes drive their stereo camera through the Stereolabs OmniGraph node
-`sl.sensor.camera.ZED_Camera`, which comes from an extension that is **not** bundled with
-Isaac Sim. Its version must match the Kit version exactly — Isaac Sim 6.0.1 runs Kit
-110.1.2, which `zed-isaac-sim` **v5.2.0** targets. Older tags (v4.x, Kit 107.3) fail to
-compile against it.
+The scenes drive their stereo camera through the Stereolabs OmniGraph node `sl.sensor.camera.ZED_Camera`, which comes from an extension that is **not** bundled with Isaac Sim. Its version must match the Kit version exactly — Isaac Sim 6.0.1 runs Kit 110.1.2, which `zed-isaac-sim` **v5.2.0** targets. Older tags (v4.x, Kit 107.3) fail to compile against it.
 
 ```bash
 git clone https://github.com/stereolabs/zed-isaac-sim.git ~/zed-isaac-sim
@@ -266,9 +230,7 @@ git checkout v5.2.0
 ./build.sh -u
 ```
 
-Use `-u` so the extension version lock is regenerated; a stale lock pins a nonexistent
-`omni.graph.action-1.130.0`. If you are rebuilding after switching Kit versions, delete
-`_build _compiler _repo` first, or stale headers get linked in.
+Use `-u` so the extension version lock is regenerated; a stale lock pins a nonexistent `omni.graph.action-1.130.0`. If you are rebuilding after switching Kit versions, delete `_build _compiler _repo` first, or stale headers get linked in.
 
 Then make the extension discoverable and load it at startup:
 
@@ -277,29 +239,21 @@ ln -s ~/zed-isaac-sim/exts/sl.sensor.camera ~/isaacsim_6_0_1/extsUser/
 isaac-sim.sh --enable sl.sensor.camera
 ```
 
-Both steps are needed. `extsUser/` only puts the extension on the search path — without
-`--enable` (or ticking AUTOLOAD in *Window -> Extensions*) the scene still fails with
-`Could not find node type interface for 'sl.sensor.camera.ZED_Camera'`.
+Both steps are needed. `extsUser/` only puts the extension on the search path — without `--enable` (or ticking AUTOLOAD in *Window -> Extensions*) the scene still fails with `Could not find node type interface for 'sl.sensor.camera.ZED_Camera'`.
 
-To receive the simulated stream with the ZED SDK you also need **SDK 5.4.1 or newer**
-(<https://www.stereolabs.com/developers/release>); earlier versions cannot decode what
-v5.2.0 sends. On Ubuntu 24.04 with the CUDA 12.8 toolkit:
+To receive the simulated stream with the ZED SDK you also need **SDK 5.4.1 or newer** (<https://www.stereolabs.com/developers/release>); earlier versions cannot decode what v5.2.0 sends. On Ubuntu 24.04 with the CUDA 12.8 toolkit:
 
 ```bash
 sudo ./ZED_SDK_Ubuntu24_cuda12.8_tensorrt10.9_v5.4.1.zstd.run -- silent skip_cuda skip_drivers
 ```
 
-The installer bundles its own `pyzed` wheel, which declares `numpy>=2.0` and will **silently
-upgrade NumPy in `~/.local/lib`**. NumPy 2 breaks `cv_bridge`, OpenCV and Numba here, so pin
-it back afterwards:
+The installer bundles its own `pyzed` wheel, which declares `numpy>=2.0` and will **silently upgrade NumPy in `~/.local/lib`**. NumPy 2 breaks `cv_bridge`, OpenCV and Numba here, so pin it back afterwards:
 
 ```bash
 python3 -m pip install --user --break-system-packages numpy==1.26.4
 ```
 
-`pyzed` 5.4 works against NumPy 1.26.4 despite the declared constraint — pip's
-incompatibility warning is a false alarm. `~/oskar_venv` carries its own NumPy 1.26.4 and is
-unaffected either way.
+`pyzed` 5.4 works against NumPy 1.26.4 despite the declared constraint.
 
 ### Launching
 
