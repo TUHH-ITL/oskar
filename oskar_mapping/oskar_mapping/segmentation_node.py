@@ -26,8 +26,7 @@ class SegmentationNode(Node):
         
         # Declare parameters
         self.declare_parameter('model_path', 
-                             '/home/workstation/oskar/2025-transformers-for-apple-flower-segmentation-bhangale/'
-                             'experiments/training_outputs/maskrcnn/test_batch/best_hp_run/finetune/model_final.pth')
+                             '/home/workstation/oskar/synthetic_apple_flowers/results/exp3_real_real/train/model_final.pth')
         self.declare_parameter('confidence_threshold', 0.5)
         self.declare_parameter('device', 'cuda')
         
