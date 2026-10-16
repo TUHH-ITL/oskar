@@ -1,0 +1,141 @@
+# Real-time pruning stack, Isaac Sim two-by-two orchard.
+# Geometry values come from the scene via oskar_simulation/scripts/export_*.py;
+# they are scene facts, not tuned numbers, and are regenerated, not edited.
+
+flower_perception_node:
+  ros__parameters:
+    use_sim_time: true
+    image_topic: /wrist_cam/left/image_raw
+    depth_topic: /wrist_cam/left/depth
+    camera_info_topic: /wrist_cam/left/camera_info
+    optical_frame: wrist_cam_left
+    map_frame: map
+    # oracle takes masks from the simulator's instance segmentation, so the
+    # geometry and timing can be brought up without the detector in the loop.
+    # Switch to maskdino to measure the detector against that ceiling.
+    detector: maskrcnn
+    instance_topic: /wrist_cam/left/instance_segmentation
+    # MaskDINO, the model the offline pipeline and the field results use, and
+    # the best of the three in the training experiments. Kept in step with
+    # oskar_mapping/offline_pipeline/config.py; if that moves, move this, or the
+    # online and offline stacks quietly diverge.
+    #
+    # Cost on this machine, 1280x720: MaskDINO 331 ms a frame, Mask2Former
+    # 172 ms, Mask R-CNN 53 ms, the renderer's own masks 15 ms. The order is the
+    # reverse of the accuracy order, and it sets the sweep speed: at 3 Hz the
+    # camera may travel only 0.075 m/s to stay inside a 25 mm match radius.
+    maskdino_root: /home/workstation/oskar/synthetic_apple_flowers/external/MaskDINO
+    mask2former_root: /home/workstation/oskar/synthetic_apple_flowers/external/Mask2Former
+    segmentation_config_path: /home/workstation/oskar/2025-transformers-for-apple-flower-segmentation-bhangale/experiments/training_outputs/maskdino/egrun_2106/pretrain/detectron2_config.yaml
+    model_path: /home/workstation/oskar/synthetic_apple_flowers/results/exp_sim_maskrcnn/train/model_final.pth
+    # Matches SEG_CONFIDENCE_THRESHOLD in the offline pipeline's config.py.
+    confidence_threshold: 0.8
+    device: cuda
+    sync_slop: 0.05
+    erosion_radius_px: 2
+    min_mask_pixels: 12
+    # The simulator renders exact depth, so the median is safe here. On the real
+    # rig this sits near p75 because foliage in front drags the median near.
+    depth_percentile: 50.0
+    max_depth_spread_m: 0.10
+    min_depth_m: 0.15
+    max_depth_m: 3.0
+    # Mirrors the map node's match_radius_m so the node can warn when the arm
+    # outruns the tracker.
+    match_radius_m: 0.025
+
+flower_map_node:
+  ros__parameters:
+    use_sim_time: true
+    tree_map_file: config/tree_map_sim.yaml
+    # Rows sit 1.3 m apart in this scene, so half that keeps the catchments apart.
+    tree_assignment_radius_m: 0.65
+    # These two are bounded from both sides and must not be copied from the
+    # drive-by pipeline, whose 0.06 m suits a camera advancing 0.2 m per frame.
+    # Here the camera creeps, and flowers sit a median 30 mm apart (5th
+    # percentile 16 mm) in this scene: a radius near the spacing fuses
+    # neighbouring flowers into one landmark. 0.06 m cost 68% of the recall.
+    match_radius_m: 0.025
+    max_gap_frames: 2
+    min_observations: 3
+    # Merges a re-seen flower into the landmark it already has instead of adding
+    # a second one; without it a sweep up and back counts every flower twice.
+    # This is the sensitive one. It wants roughly 2.5 times the position noise:
+    # below that one flower fragments into several landmarks, above it
+    # neighbours fuse. Re-derive it once the noise is measured on a real run,
+    # sigma = 8 mm here. The two bounds meet near sigma = 15 mm, and beyond
+    # that individual flowers cannot be resolved at all, only corymbs.
+    merge_radius_m: 0.020
+    publish_interval_s: 1.0
+
+scan_controller_node:
+  ros__parameters:
+    use_sim_time: true
+    tree_map_file: config/tree_map_sim.yaml
+    joint_command_topic: /isaac_joint_commands
+    joint_state_topic: /isaac_joint_states
+    base_frame: base_link
+    map_frame: map
+    tool_translation: [-0.16426, -0.00909, 0.05994]
+    tool_rotation_xyzw: [0.5, 0.5, -0.5, 0.5]
+    command_rate_hz: 30.0
+    # Bounded by the frame rate in simulation time, which is what the tracker
+    # runs on; the wall clock only decides how long a scan takes to watch.
+    # The camera publishes 30.00 Hz of simulation time, but perception keeps up
+    # with only about half of that, so the rate that matters is near 13 Hz. At
+    # 0.15 m/s that measured 25 mm of travel per frame at the 95th percentile,
+    # sitting exactly on the 25 mm match radius, and flowers fragmented: 67
+    # landmarks for 51 real ones. Half the speed, half the travel.
+    # MaskDINO costs 331 ms a frame, so perception sees far fewer frames than
+    # the renderer produces and the sweep has to slow to match. The node reports
+    # the travel it actually measures; raise this against that line.
+    scan_speed_mps: 0.02
+    path_step_m: 0.01
+    column_spacing_m: 0.35
+    settle_s: 2.0
+
+mission_node:
+  ros__parameters:
+    use_sim_time: true
+    tree_map_file: config/tree_map_sim.yaml
+    trees_to_prune: [0, 1]
+    map_frame: map
+    base_frame: base_link
+    base_gap_m: 2.0
+    scan_standoff_m: 0.6
+    # The arm puts the camera between 0.30 m and 3.55 m once the chassis has
+    # settled onto its wheels, which drops base_link from the 1.4546 m the USD
+    # holds to a measured 1.045 m. Asking for more only wastes the unreachable
+    # ends of the sweep. No flower in the scene sits below 0.805 m.
+    scan_z_min: 0.8
+    scan_z_max: 3.55
+    scan_columns: 1
+    position_tolerance_m: 0.05
+    max_speed_mps: 0.6
+    approach_gain: 0.8
+    control_rate_hz: 20.0
+
+gt_eval_node:
+  ros__parameters:
+    use_sim_time: true
+    ground_truth_file: config/orchard_gt_sim.json
+    match_radius_m: 0.10
+    report_on_scan_end: true
+    report_interval_s: 15.0
+    # Scoring the band the arm can actually reach; AppleTree_01 grows to 4.31 m,
+    # above the camera's 3.95 m ceiling, and those flowers are not misses.
+    evaluate_z_min: 0.8
+    evaluate_z_max: 3.9
+
+dataset_capture_node:
+  ros__parameters:
+    use_sim_time: true
+    image_topic: /wrist_cam/left/image_raw
+    instance_topic: /wrist_cam/left/instance_segmentation
+    # Slivers of a flower behind a leaf carry no shape to learn and would be
+    # scored as misses at test time.
+    min_mask_pixels: 20
+    min_instances: 1
+    sync_slop: 0.05
+    sync_queue_size: 20
+    flush_every: 25
