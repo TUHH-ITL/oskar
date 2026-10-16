@@ -23,6 +23,7 @@ set(msg_files
   "msg/ThinningPlan.msg"
   "msg/PruningTargets.msg"
   "msg/PruningStatus.msg"
+  "msg/ScanRequest.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
