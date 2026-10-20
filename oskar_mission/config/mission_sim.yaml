@@ -1,0 +1,28 @@
+# Mission against the Isaac Sim two-by-two orchard.
+
+mission_node:
+  ros__parameters:
+    use_sim_time: true
+    tree_map_file: config/tree_map_sim.yaml
+    trees_to_thin: [0, 1]
+    map_frame: map
+    base_frame: base_link
+    base_gap_m: 2.0
+    scan_standoff_m: 0.6
+    # The arm puts the camera between 0.30 m and 3.55 m once the chassis has
+    # settled onto its wheels, which drops base_link from the 1.4546 m the USD
+    # holds to a measured 1.045 m. Asking for more only wastes the unreachable
+    # ends of the sweep. No flower in the scene sits below 0.805 m.
+    scan_z_min: 0.8
+    scan_z_max: 3.55
+    scan_columns: 1
+    position_tolerance_m: 0.05
+    max_speed_mps: 0.6
+    approach_gain: 0.8
+    control_rate_hz: 20.0
+    # Thinning, with oskar_thinning_decision and oskar_removal running.
+    thin_trees: false
+    max_kept_per_tree: 20
+    approach_standoff_m: 0.10
+    max_rounds: 4
+    dry_run: false

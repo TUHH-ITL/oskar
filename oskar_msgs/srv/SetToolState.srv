@@ -1,0 +1,11 @@
+# Direct command interface for the end-effector.
+# Commands describe intent rather than mechanism so different removal tools
+# can implement the same interface.
+
+uint8 command
+uint8 CMD_STOP=0                 # enter a safe, non-removing state
+uint8 CMD_PREPARE=1              # ready the tool for removal
+uint8 CMD_REMOVE=2               # perform one complete removal operation
+---
+bool success
+string message

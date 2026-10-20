@@ -1,0 +1,34 @@
+# Move the tool tip to target_pose, then optionally move linearly along the
+# tool's local +Z axis. target_pose must use a TF-resolvable frame.
+geometry_msgs/PoseStamped target_pose     # tool tip pose
+float32 approach_distance 0.10            # [m]; 0 = move to target_pose only
+uint8 motion 0
+uint8 MOTION_PLAN=0                       # collision-aware free-space plan to target_pose
+uint8 MOTION_LINEAR=1                     # straight line from the current pose, e.g. to retract
+---
+bool success
+uint8 error_code
+uint8 ERROR_NONE=0
+uint8 ERROR_INVALID_GOAL=1
+uint8 ERROR_TF=2
+uint8 ERROR_MOVEIT_UNAVAILABLE=3
+uint8 ERROR_NO_IK=4
+uint8 ERROR_COLLISION=5
+uint8 ERROR_PLAN_FAILED=6
+uint8 ERROR_CARTESIAN_INCOMPLETE=7
+uint8 ERROR_CONTROLLER=8
+uint8 ERROR_EXECUTION_ABORTED=9
+uint8 ERROR_CANCELLED=10
+uint8 ERROR_TIMEOUT=11
+int32 moveit_error_code          # native moveit_msgs/MoveItErrorCodes value, 0 if N/A
+string message
+---
+uint8 phase
+uint8 PHASE_TRANSFORMING=0
+uint8 PHASE_PLANNING=1
+uint8 PHASE_MOVING_TO_STANDOFF=2
+uint8 PHASE_PLANNING_APPROACH=3
+uint8 PHASE_APPROACHING=4
+uint8 PHASE_DONE=5
+float32 progress                 # [0..1] within the current phase
+string status

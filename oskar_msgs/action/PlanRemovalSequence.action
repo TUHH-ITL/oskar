@@ -1,0 +1,16 @@
+# Order the candidates to remove and compute each approach pose. No motion.
+# Cancellable because reachability checks can take a while per candidate.
+
+oskar_msgs/ThinningCandidates candidates  # the remove_ids of a ThinningDecision
+geometry_msgs/PoseStamped start           # current tool tip; empty frame_id = start anywhere
+float32 standoff 0.10                     # [m]
+bool check_reachability true              # ask MoveIt for a collision-free IK solution
+---
+bool success
+oskar_msgs/RemovalSequence sequence
+uint32[] rejected_ids                     # no IK solution at the stand-off or at the object
+string message
+---
+uint32 planned
+uint32 total
+uint32 rejected

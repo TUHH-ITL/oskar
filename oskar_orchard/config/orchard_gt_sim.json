@@ -1,0 +1,10387 @@
+{
+ "scene": "oskar_simulation/isaac_sim/robot_and_orchard.usd",
+ "trees": {
+  "0": {
+   "usd_name": "AppleTree_00",
+   "trunk_xy": [
+    0.2714,
+    3.423
+   ],
+   "ground_z": -0.0339,
+   "trunk_diameter": 0.0952,
+   "n_flowers": 64,
+   "n_corymbs": 24,
+   "n_king": 0,
+   "canopy_z": [
+    1.039,
+    3.035
+   ],
+   "flowers": [
+    {
+     "name": "Flower_C00_S_001",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.67401,
+      3.44427,
+      1.7733
+     ]
+    },
+    {
+     "name": "Flower_C00_S_002",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.6764,
+      3.41793,
+      1.74748
+     ]
+    },
+    {
+     "name": "Flower_C00_S_003",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.66696,
+      3.44914,
+      1.73171
+     ]
+    },
+    {
+     "name": "Flower_C01_S_001",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.41957,
+      3.14016,
+      1.63128
+     ]
+    },
+    {
+     "name": "Flower_C01_S_002",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.39769,
+      3.14556,
+      1.60245
+     ]
+    },
+    {
+     "name": "Flower_C02_S_001",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.18528,
+      3.43429,
+      1.70405
+     ]
+    },
+    {
+     "name": "Flower_C02_S_002",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.19764,
+      3.42949,
+      1.67093
+     ]
+    },
+    {
+     "name": "Flower_C02_S_003",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.19361,
+      3.44585,
+      1.65491
+     ]
+    },
+    {
+     "name": "Flower_C03_S_001",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.34733,
+      3.50964,
+      3.02736
+     ]
+    },
+    {
+     "name": "Flower_C03_S_002",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.33399,
+      3.54573,
+      3.03505
+     ]
+    },
+    {
+     "name": "Flower_C03_S_003",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.30689,
+      3.51916,
+      3.03032
+     ]
+    },
+    {
+     "name": "Flower_C04_S_001",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      0.16576,
+      3.73191,
+      1.2716
+     ]
+    },
+    {
+     "name": "Flower_C04_S_002",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      0.15973,
+      3.72728,
+      1.22224
+     ]
+    },
+    {
+     "name": "Flower_C05_S_001",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      0.39025,
+      3.91043,
+      2.49045
+     ]
+    },
+    {
+     "name": "Flower_C05_S_002",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      0.38764,
+      3.89899,
+      2.45602
+     ]
+    },
+    {
+     "name": "Flower_C06_S_001",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.50722,
+      3.19379,
+      2.15125
+     ]
+    },
+    {
+     "name": "Flower_C06_S_002",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.50029,
+      3.22528,
+      2.10684
+     ]
+    },
+    {
+     "name": "Flower_C06_S_003",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.52185,
+      3.1989,
+      2.09456
+     ]
+    },
+    {
+     "name": "Flower_C07_S_001",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      -0.07911,
+      3.45298,
+      1.10008
+     ]
+    },
+    {
+     "name": "Flower_C07_S_002",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      -0.08086,
+      3.47991,
+      1.08484
+     ]
+    },
+    {
+     "name": "Flower_C07_S_003",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      -0.08448,
+      3.47266,
+      1.06355
+     ]
+    },
+    {
+     "name": "Flower_C07_S_004",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      -0.09224,
+      3.45759,
+      1.05764
+     ]
+    },
+    {
+     "name": "Flower_C08_S_001",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.28286,
+      3.36071,
+      1.70971
+     ]
+    },
+    {
+     "name": "Flower_C08_S_002",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.29207,
+      3.32309,
+      1.68431
+     ]
+    },
+    {
+     "name": "Flower_C08_S_003",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.31337,
+      3.35595,
+      1.66089
+     ]
+    },
+    {
+     "name": "Flower_C09_S_001",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.12281,
+      3.44103,
+      1.80813
+     ]
+    },
+    {
+     "name": "Flower_C09_S_002",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.12762,
+      3.48041,
+      1.78352
+     ]
+    },
+    {
+     "name": "Flower_C09_S_003",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.10522,
+      3.46104,
+      1.76265
+     ]
+    },
+    {
+     "name": "Flower_C10_S_001",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.20859,
+      3.53798,
+      1.79117
+     ]
+    },
+    {
+     "name": "Flower_C10_S_002",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.2228,
+      3.55179,
+      1.75251
+     ]
+    },
+    {
+     "name": "Flower_C11_S_001",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      -0.07402,
+      3.31774,
+      2.44595
+     ]
+    },
+    {
+     "name": "Flower_C11_S_002",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      -0.08184,
+      3.34977,
+      2.42103
+     ]
+    },
+    {
+     "name": "Flower_C11_S_003",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      -0.04982,
+      3.33889,
+      2.39784
+     ]
+    },
+    {
+     "name": "Flower_C12_S_001",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.22234,
+      3.54884,
+      2.78929
+     ]
+    },
+    {
+     "name": "Flower_C12_S_002",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.24094,
+      3.5553,
+      2.76329
+     ]
+    },
+    {
+     "name": "Flower_C12_S_003",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.22865,
+      3.53565,
+      2.75045
+     ]
+    },
+    {
+     "name": "Flower_C13_S_001",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.77935,
+      3.50304,
+      1.3913
+     ]
+    },
+    {
+     "name": "Flower_C13_S_002",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.77892,
+      3.47113,
+      1.38393
+     ]
+    },
+    {
+     "name": "Flower_C13_S_003",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.75255,
+      3.46686,
+      1.3662
+     ]
+    },
+    {
+     "name": "Flower_C14_S_001",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.1418,
+      2.99252,
+      2.4984
+     ]
+    },
+    {
+     "name": "Flower_C14_S_002",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.1145,
+      2.98577,
+      2.47114
+     ]
+    },
+    {
+     "name": "Flower_C14_S_003",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.14503,
+      2.99611,
+      2.43846
+     ]
+    },
+    {
+     "name": "Flower_C15_S_001",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      -0.01048,
+      3.5179,
+      1.58596
+     ]
+    },
+    {
+     "name": "Flower_C15_S_002",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      -0.02473,
+      3.50807,
+      1.52962
+     ]
+    },
+    {
+     "name": "Flower_C16_S_001",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      -0.03428,
+      3.72036,
+      1.45345
+     ]
+    },
+    {
+     "name": "Flower_C16_S_002",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      -0.03446,
+      3.7222,
+      1.42247
+     ]
+    },
+    {
+     "name": "Flower_C17_S_001",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.12195,
+      3.28485,
+      2.14564
+     ]
+    },
+    {
+     "name": "Flower_C17_S_002",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.09348,
+      3.28773,
+      2.11879
+     ]
+    },
+    {
+     "name": "Flower_C17_S_003",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.10163,
+      3.31249,
+      2.09227
+     ]
+    },
+    {
+     "name": "Flower_C18_S_001",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.22588,
+      3.35187,
+      1.28713
+     ]
+    },
+    {
+     "name": "Flower_C18_S_002",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.19926,
+      3.35337,
+      1.26997
+     ]
+    },
+    {
+     "name": "Flower_C18_S_003",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.23369,
+      3.34063,
+      1.24012
+     ]
+    },
+    {
+     "name": "Flower_C19_S_001",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.5123,
+      3.3005,
+      1.13399
+     ]
+    },
+    {
+     "name": "Flower_C19_S_002",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.50975,
+      3.26832,
+      1.09657
+     ]
+    },
+    {
+     "name": "Flower_C20_S_001",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      -0.06822,
+      3.18146,
+      1.17578
+     ]
+    },
+    {
+     "name": "Flower_C20_S_002",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      -0.08175,
+      3.16334,
+      1.16737
+     ]
+    },
+    {
+     "name": "Flower_C20_S_003",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      -0.09346,
+      3.17972,
+      1.13631
+     ]
+    },
+    {
+     "name": "Flower_C21_S_001",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.38515,
+      3.94107,
+      2.49644
+     ]
+    },
+    {
+     "name": "Flower_C21_S_002",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.4146,
+      3.95206,
+      2.46418
+     ]
+    },
+    {
+     "name": "Flower_C21_S_003",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.39344,
+      3.93297,
+      2.43903
+     ]
+    },
+    {
+     "name": "Flower_C22_S_001",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.17386,
+      3.4935,
+      1.05676
+     ]
+    },
+    {
+     "name": "Flower_C22_S_002",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.1596,
+      3.49259,
+      1.03923
+     ]
+    },
+    {
+     "name": "Flower_C23_S_001",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      0.49885,
+      3.57656,
+      1.36522
+     ]
+    },
+    {
+     "name": "Flower_C23_S_002",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      0.49858,
+      3.5868,
+      1.32839
+     ]
+    }
+   ]
+  },
+  "1": {
+   "usd_name": "AppleTree_01",
+   "trunk_xy": [
+    1.5881,
+    3.5516
+   ],
+   "ground_z": -0.0339,
+   "trunk_diameter": 0.1359,
+   "n_flowers": 321,
+   "n_corymbs": 88,
+   "n_king": 24,
+   "canopy_z": [
+    1.364,
+    4.314
+   ],
+   "flowers": [
+    {
+     "name": "Flower_C00_K_001",
+     "corymb": 0,
+     "role": "K",
+     "position": [
+      1.5286,
+      3.46485,
+      3.16135
+     ]
+    },
+    {
+     "name": "Flower_C00_S_004",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.50621,
+      3.44856,
+      3.14884
+     ]
+    },
+    {
+     "name": "Flower_C00_S_005",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.54868,
+      3.44308,
+      3.15994
+     ]
+    },
+    {
+     "name": "Flower_C00_S_006",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.53755,
+      3.46461,
+      3.13431
+     ]
+    },
+    {
+     "name": "Flower_C01_K_001",
+     "corymb": 1,
+     "role": "K",
+     "position": [
+      1.54649,
+      3.46136,
+      3.26966
+     ]
+    },
+    {
+     "name": "Flower_C01_S_003",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.56132,
+      3.48078,
+      3.2561
+     ]
+    },
+    {
+     "name": "Flower_C01_S_004",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.54198,
+      3.49297,
+      3.27955
+     ]
+    },
+    {
+     "name": "Flower_C01_S_005",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.51372,
+      3.46953,
+      3.26913
+     ]
+    },
+    {
+     "name": "Flower_C01_S_006",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.53194,
+      3.45804,
+      3.24767
+     ]
+    },
+    {
+     "name": "Flower_C01_S_007",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.56424,
+      3.46038,
+      3.24117
+     ]
+    },
+    {
+     "name": "Flower_C02_K_001",
+     "corymb": 2,
+     "role": "K",
+     "position": [
+      1.48822,
+      3.49839,
+      3.3278
+     ]
+    },
+    {
+     "name": "Flower_C02_S_004",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.50643,
+      3.47947,
+      3.31404
+     ]
+    },
+    {
+     "name": "Flower_C02_S_005",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.52246,
+      3.48662,
+      3.34667
+     ]
+    },
+    {
+     "name": "Flower_C02_S_006",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.51192,
+      3.51364,
+      3.32423
+     ]
+    },
+    {
+     "name": "Flower_C02_S_007",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.49144,
+      3.52069,
+      3.30411
+     ]
+    },
+    {
+     "name": "Flower_C02_S_008",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.48931,
+      3.48763,
+      3.3012
+     ]
+    },
+    {
+     "name": "Flower_C03_K_001",
+     "corymb": 3,
+     "role": "K",
+     "position": [
+      1.53318,
+      3.42265,
+      2.93915
+     ]
+    },
+    {
+     "name": "Flower_C03_S_004",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      1.55402,
+      3.43317,
+      2.92157
+     ]
+    },
+    {
+     "name": "Flower_C03_S_005",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      1.53225,
+      3.44806,
+      2.9337
+     ]
+    },
+    {
+     "name": "Flower_C03_S_006",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      1.51136,
+      3.4339,
+      2.92358
+     ]
+    },
+    {
+     "name": "Flower_C03_S_007",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      1.53209,
+      3.40747,
+      2.91274
+     ]
+    },
+    {
+     "name": "Flower_C04_K_001",
+     "corymb": 4,
+     "role": "K",
+     "position": [
+      1.40753,
+      3.58026,
+      3.38769
+     ]
+    },
+    {
+     "name": "Flower_C04_S_003",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.43351,
+      3.59524,
+      3.39912
+     ]
+    },
+    {
+     "name": "Flower_C04_S_004",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.40607,
+      3.59258,
+      3.42217
+     ]
+    },
+    {
+     "name": "Flower_C04_S_005",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.38786,
+      3.60441,
+      3.39868
+     ]
+    },
+    {
+     "name": "Flower_C04_S_006",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.40787,
+      3.6085,
+      3.37782
+     ]
+    },
+    {
+     "name": "Flower_C05_K_001",
+     "corymb": 5,
+     "role": "K",
+     "position": [
+      1.64333,
+      3.37487,
+      2.054
+     ]
+    },
+    {
+     "name": "Flower_C05_S_003",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.67309,
+      3.38398,
+      2.06895
+     ]
+    },
+    {
+     "name": "Flower_C05_S_004",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.65599,
+      3.3882,
+      2.08372
+     ]
+    },
+    {
+     "name": "Flower_C05_S_005",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.64678,
+      3.40341,
+      2.07278
+     ]
+    },
+    {
+     "name": "Flower_C05_S_006",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.66854,
+      3.39569,
+      2.03256
+     ]
+    },
+    {
+     "name": "Flower_C06_K_001",
+     "corymb": 6,
+     "role": "K",
+     "position": [
+      1.54894,
+      2.93778,
+      2.64271
+     ]
+    },
+    {
+     "name": "Flower_C06_S_004",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.53749,
+      2.96784,
+      2.64533
+     ]
+    },
+    {
+     "name": "Flower_C06_S_005",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.52756,
+      2.94365,
+      2.66746
+     ]
+    },
+    {
+     "name": "Flower_C06_S_006",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.51962,
+      2.9402,
+      2.62158
+     ]
+    },
+    {
+     "name": "Flower_C07_K_001",
+     "corymb": 7,
+     "role": "K",
+     "position": [
+      1.08448,
+      3.80402,
+      2.75905
+     ]
+    },
+    {
+     "name": "Flower_C07_S_005",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.05851,
+      3.77907,
+      2.76493
+     ]
+    },
+    {
+     "name": "Flower_C07_S_006",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.08777,
+      3.80306,
+      2.79528
+     ]
+    },
+    {
+     "name": "Flower_C07_S_007",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.11403,
+      3.79285,
+      2.76884
+     ]
+    },
+    {
+     "name": "Flower_C07_S_008",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.09461,
+      3.78419,
+      2.72596
+     ]
+    },
+    {
+     "name": "Flower_C08_K_001",
+     "corymb": 8,
+     "role": "K",
+     "position": [
+      1.60726,
+      3.58226,
+      3.75203
+     ]
+    },
+    {
+     "name": "Flower_C08_S_004",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.63442,
+      3.56781,
+      3.76052
+     ]
+    },
+    {
+     "name": "Flower_C08_S_005",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.61124,
+      3.58749,
+      3.78437
+     ]
+    },
+    {
+     "name": "Flower_C08_S_006",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.62719,
+      3.59966,
+      3.76578
+     ]
+    },
+    {
+     "name": "Flower_C08_S_007",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.63882,
+      3.5866,
+      3.74856
+     ]
+    },
+    {
+     "name": "Flower_C09_K_001",
+     "corymb": 9,
+     "role": "K",
+     "position": [
+      1.78859,
+      3.36927,
+      1.71852
+     ]
+    },
+    {
+     "name": "Flower_C09_S_004",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.80079,
+      3.39424,
+      1.71384
+     ]
+    },
+    {
+     "name": "Flower_C09_S_005",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.76465,
+      3.3785,
+      1.7301
+     ]
+    },
+    {
+     "name": "Flower_C09_S_006",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.77769,
+      3.36177,
+      1.69042
+     ]
+    },
+    {
+     "name": "Flower_C10_K_001",
+     "corymb": 10,
+     "role": "K",
+     "position": [
+      1.48832,
+      3.52423,
+      3.75907
+     ]
+    },
+    {
+     "name": "Flower_C10_S_003",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.49835,
+      3.54869,
+      3.76965
+     ]
+    },
+    {
+     "name": "Flower_C10_S_004",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.49422,
+      3.52388,
+      3.79528
+     ]
+    },
+    {
+     "name": "Flower_C10_S_005",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.45179,
+      3.52307,
+      3.77086
+     ]
+    },
+    {
+     "name": "Flower_C10_S_006",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.4767,
+      3.55337,
+      3.75305
+     ]
+    },
+    {
+     "name": "Flower_C11_K_001",
+     "corymb": 11,
+     "role": "K",
+     "position": [
+      1.41737,
+      3.47133,
+      3.44268
+     ]
+    },
+    {
+     "name": "Flower_C11_S_004",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.41601,
+      3.43956,
+      3.44294
+     ]
+    },
+    {
+     "name": "Flower_C11_S_005",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.43709,
+      3.47461,
+      3.46483
+     ]
+    },
+    {
+     "name": "Flower_C11_S_006",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.4406,
+      3.47326,
+      3.42495
+     ]
+    },
+    {
+     "name": "Flower_C12_K_001",
+     "corymb": 12,
+     "role": "K",
+     "position": [
+      1.42206,
+      3.69837,
+      4.00267
+     ]
+    },
+    {
+     "name": "Flower_C12_S_004",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.39251,
+      3.69405,
+      4.01934
+     ]
+    },
+    {
+     "name": "Flower_C12_S_005",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.41668,
+      3.68419,
+      4.03491
+     ]
+    },
+    {
+     "name": "Flower_C12_S_006",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.44068,
+      3.67655,
+      4.01565
+     ]
+    },
+    {
+     "name": "Flower_C12_S_007",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.4144,
+      3.66505,
+      4.01095
+     ]
+    },
+    {
+     "name": "Flower_C13_K_001",
+     "corymb": 13,
+     "role": "K",
+     "position": [
+      1.45793,
+      3.6009,
+      3.9643
+     ]
+    },
+    {
+     "name": "Flower_C13_S_004",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.46685,
+      3.62514,
+      3.9596
+     ]
+    },
+    {
+     "name": "Flower_C13_S_005",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.4487,
+      3.62017,
+      3.98117
+     ]
+    },
+    {
+     "name": "Flower_C13_S_006",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.43206,
+      3.5891,
+      3.98094
+     ]
+    },
+    {
+     "name": "Flower_C13_S_007",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.43101,
+      3.5967,
+      3.95147
+     ]
+    },
+    {
+     "name": "Flower_C13_S_008",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.45101,
+      3.61867,
+      3.94322
+     ]
+    },
+    {
+     "name": "Flower_C14_K_001",
+     "corymb": 14,
+     "role": "K",
+     "position": [
+      1.50422,
+      3.34937,
+      3.81286
+     ]
+    },
+    {
+     "name": "Flower_C14_S_004",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.53206,
+      3.34265,
+      3.80272
+     ]
+    },
+    {
+     "name": "Flower_C14_S_005",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.523,
+      3.3683,
+      3.82128
+     ]
+    },
+    {
+     "name": "Flower_C14_S_006",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.50353,
+      3.37489,
+      3.80062
+     ]
+    },
+    {
+     "name": "Flower_C14_S_007",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.50469,
+      3.33985,
+      3.77965
+     ]
+    },
+    {
+     "name": "Flower_C15_K_001",
+     "corymb": 15,
+     "role": "K",
+     "position": [
+      1.38665,
+      3.34246,
+      2.26119
+     ]
+    },
+    {
+     "name": "Flower_C15_S_003",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.39235,
+      3.37228,
+      2.26435
+     ]
+    },
+    {
+     "name": "Flower_C15_S_004",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.37097,
+      3.35758,
+      2.28229
+     ]
+    },
+    {
+     "name": "Flower_C15_S_005",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.35706,
+      3.34653,
+      2.26286
+     ]
+    },
+    {
+     "name": "Flower_C15_S_006",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.37104,
+      3.3591,
+      2.24313
+     ]
+    },
+    {
+     "name": "Flower_C16_K_001",
+     "corymb": 16,
+     "role": "K",
+     "position": [
+      1.54482,
+      3.74662,
+      1.57598
+     ]
+    },
+    {
+     "name": "Flower_C16_S_003",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.52623,
+      3.72167,
+      1.56849
+     ]
+    },
+    {
+     "name": "Flower_C16_S_004",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.55471,
+      3.72191,
+      1.59326
+     ]
+    },
+    {
+     "name": "Flower_C16_S_005",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.57548,
+      3.74937,
+      1.56347
+     ]
+    },
+    {
+     "name": "Flower_C16_S_006",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.54855,
+      3.73943,
+      1.54904
+     ]
+    },
+    {
+     "name": "Flower_C17_K_001",
+     "corymb": 17,
+     "role": "K",
+     "position": [
+      1.42467,
+      3.30491,
+      1.54267
+     ]
+    },
+    {
+     "name": "Flower_C17_S_004",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.43004,
+      3.2761,
+      1.54288
+     ]
+    },
+    {
+     "name": "Flower_C17_S_005",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.44228,
+      3.29738,
+      1.56467
+     ]
+    },
+    {
+     "name": "Flower_C17_S_006",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.45047,
+      3.32652,
+      1.53681
+     ]
+    },
+    {
+     "name": "Flower_C17_S_007",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.43986,
+      3.29379,
+      1.51972
+     ]
+    },
+    {
+     "name": "Flower_C18_K_001",
+     "corymb": 18,
+     "role": "K",
+     "position": [
+      1.81029,
+      3.47231,
+      2.20165
+     ]
+    },
+    {
+     "name": "Flower_C18_S_004",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.80966,
+      3.50336,
+      2.19717
+     ]
+    },
+    {
+     "name": "Flower_C18_S_005",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.78242,
+      3.48441,
+      2.20204
+     ]
+    },
+    {
+     "name": "Flower_C18_S_006",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.78623,
+      3.45709,
+      2.19076
+     ]
+    },
+    {
+     "name": "Flower_C18_S_007",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.80494,
+      3.47386,
+      2.16791
+     ]
+    },
+    {
+     "name": "Flower_C19_K_001",
+     "corymb": 19,
+     "role": "K",
+     "position": [
+      1.91495,
+      3.21758,
+      1.9646
+     ]
+    },
+    {
+     "name": "Flower_C19_S_003",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.92067,
+      3.23864,
+      1.95034
+     ]
+    },
+    {
+     "name": "Flower_C19_S_004",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.88552,
+      3.22771,
+      1.97597
+     ]
+    },
+    {
+     "name": "Flower_C19_S_005",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.89609,
+      3.20673,
+      1.94913
+     ]
+    },
+    {
+     "name": "Flower_C19_S_006",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.91867,
+      3.21546,
+      1.94258
+     ]
+    },
+    {
+     "name": "Flower_C20_K_001",
+     "corymb": 20,
+     "role": "K",
+     "position": [
+      1.34874,
+      3.66806,
+      3.4521
+     ]
+    },
+    {
+     "name": "Flower_C20_S_004",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.33795,
+      3.65054,
+      3.46279
+     ]
+    },
+    {
+     "name": "Flower_C20_S_005",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.3458,
+      3.68511,
+      3.47585
+     ]
+    },
+    {
+     "name": "Flower_C20_S_006",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.36931,
+      3.66663,
+      3.46384
+     ]
+    },
+    {
+     "name": "Flower_C20_S_007",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.35666,
+      3.64169,
+      3.44712
+     ]
+    },
+    {
+     "name": "Flower_C21_K_001",
+     "corymb": 21,
+     "role": "K",
+     "position": [
+      1.4485,
+      3.5136,
+      3.01147
+     ]
+    },
+    {
+     "name": "Flower_C21_S_004",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.45069,
+      3.48275,
+      3.01501
+     ]
+    },
+    {
+     "name": "Flower_C21_S_005",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.44764,
+      3.51005,
+      3.04585
+     ]
+    },
+    {
+     "name": "Flower_C21_S_006",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.47293,
+      3.52632,
+      3.0205
+     ]
+    },
+    {
+     "name": "Flower_C21_S_007",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.47118,
+      3.49967,
+      2.99486
+     ]
+    },
+    {
+     "name": "Flower_C22_K_001",
+     "corymb": 22,
+     "role": "K",
+     "position": [
+      1.64974,
+      3.77828,
+      3.2637
+     ]
+    },
+    {
+     "name": "Flower_C22_S_003",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.63736,
+      3.74651,
+      3.25507
+     ]
+    },
+    {
+     "name": "Flower_C22_S_004",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.65538,
+      3.74564,
+      3.26813
+     ]
+    },
+    {
+     "name": "Flower_C22_S_005",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.67772,
+      3.75831,
+      3.2567
+     ]
+    },
+    {
+     "name": "Flower_C22_S_006",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.64978,
+      3.7565,
+      3.23795
+     ]
+    },
+    {
+     "name": "Flower_C23_K_001",
+     "corymb": 23,
+     "role": "K",
+     "position": [
+      1.95335,
+      3.37346,
+      3.52954
+     ]
+    },
+    {
+     "name": "Flower_C23_S_003",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.94461,
+      3.40555,
+      3.52004
+     ]
+    },
+    {
+     "name": "Flower_C23_S_004",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.93191,
+      3.39581,
+      3.5416
+     ]
+    },
+    {
+     "name": "Flower_C23_S_005",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.92095,
+      3.38624,
+      3.52985
+     ]
+    },
+    {
+     "name": "Flower_C23_S_006",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.92473,
+      3.36937,
+      3.51309
+     ]
+    },
+    {
+     "name": "Flower_C23_S_007",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.93964,
+      3.39155,
+      3.50602
+     ]
+    },
+    {
+     "name": "Flower_C24_S_001",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.59362,
+      3.44496,
+      2.12763
+     ]
+    },
+    {
+     "name": "Flower_C24_S_002",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.6114,
+      3.41043,
+      2.11799
+     ]
+    },
+    {
+     "name": "Flower_C24_S_003",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.59803,
+      3.43821,
+      2.09336
+     ]
+    },
+    {
+     "name": "Flower_C25_S_001",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.66049,
+      3.76767,
+      1.69754
+     ]
+    },
+    {
+     "name": "Flower_C25_S_002",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.64614,
+      3.79094,
+      1.67851
+     ]
+    },
+    {
+     "name": "Flower_C25_S_003",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.64038,
+      3.76384,
+      1.65769
+     ]
+    },
+    {
+     "name": "Flower_C26_S_001",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      1.52949,
+      3.63147,
+      3.18568
+     ]
+    },
+    {
+     "name": "Flower_C26_S_002",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      1.4863,
+      3.64217,
+      3.15813
+     ]
+    },
+    {
+     "name": "Flower_C26_S_003",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      1.52369,
+      3.62557,
+      3.14432
+     ]
+    },
+    {
+     "name": "Flower_C27_S_001",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      1.31587,
+      3.52647,
+      3.98506
+     ]
+    },
+    {
+     "name": "Flower_C27_S_002",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      1.29248,
+      3.50504,
+      3.9709
+     ]
+    },
+    {
+     "name": "Flower_C27_S_003",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      1.31859,
+      3.51173,
+      3.95325
+     ]
+    },
+    {
+     "name": "Flower_C28_S_001",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.55097,
+      3.24288,
+      1.54518
+     ]
+    },
+    {
+     "name": "Flower_C28_S_002",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.57378,
+      3.26335,
+      1.51483
+     ]
+    },
+    {
+     "name": "Flower_C28_S_003",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.57908,
+      3.24355,
+      1.48706
+     ]
+    },
+    {
+     "name": "Flower_C29_S_001",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      1.52142,
+      3.2525,
+      3.2106
+     ]
+    },
+    {
+     "name": "Flower_C29_S_002",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      1.51651,
+      3.28665,
+      3.21118
+     ]
+    },
+    {
+     "name": "Flower_C29_S_003",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      1.53399,
+      3.27518,
+      3.17959
+     ]
+    },
+    {
+     "name": "Flower_C29_S_004",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      1.52395,
+      3.24568,
+      3.16234
+     ]
+    },
+    {
+     "name": "Flower_C30_S_001",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.26241,
+      3.95631,
+      1.4038
+     ]
+    },
+    {
+     "name": "Flower_C30_S_002",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.25287,
+      3.97991,
+      1.38156
+     ]
+    },
+    {
+     "name": "Flower_C30_S_003",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.26287,
+      3.9531,
+      1.36381
+     ]
+    },
+    {
+     "name": "Flower_C31_S_001",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.1483,
+      3.71327,
+      1.75815
+     ]
+    },
+    {
+     "name": "Flower_C31_S_002",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.1534,
+      3.69378,
+      1.75067
+     ]
+    },
+    {
+     "name": "Flower_C31_S_003",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.12467,
+      3.69086,
+      1.74841
+     ]
+    },
+    {
+     "name": "Flower_C31_S_004",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.11755,
+      3.70979,
+      1.73929
+     ]
+    },
+    {
+     "name": "Flower_C32_S_001",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.54731,
+      3.12667,
+      2.72099
+     ]
+    },
+    {
+     "name": "Flower_C32_S_002",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.55372,
+      3.10966,
+      2.68073
+     ]
+    },
+    {
+     "name": "Flower_C32_S_003",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.57148,
+      3.13061,
+      2.64992
+     ]
+    },
+    {
+     "name": "Flower_C33_S_001",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.55574,
+      3.29861,
+      2.74932
+     ]
+    },
+    {
+     "name": "Flower_C33_S_002",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.55083,
+      3.30232,
+      2.71032
+     ]
+    },
+    {
+     "name": "Flower_C34_S_001",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.49356,
+      3.50895,
+      1.96368
+     ]
+    },
+    {
+     "name": "Flower_C34_S_002",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.46058,
+      3.50326,
+      1.96255
+     ]
+    },
+    {
+     "name": "Flower_C35_S_001",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.59987,
+      3.85353,
+      2.12084
+     ]
+    },
+    {
+     "name": "Flower_C35_S_002",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.62107,
+      3.88255,
+      2.10023
+     ]
+    },
+    {
+     "name": "Flower_C35_S_003",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.59813,
+      3.86693,
+      2.07338
+     ]
+    },
+    {
+     "name": "Flower_C36_S_001",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.74319,
+      3.47903,
+      3.02621
+     ]
+    },
+    {
+     "name": "Flower_C36_S_002",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.76893,
+      3.46106,
+      3.01573
+     ]
+    },
+    {
+     "name": "Flower_C36_S_003",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.76345,
+      3.43608,
+      2.99426
+     ]
+    },
+    {
+     "name": "Flower_C36_S_004",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.73596,
+      3.44038,
+      2.99812
+     ]
+    },
+    {
+     "name": "Flower_C37_S_001",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.08016,
+      3.76628,
+      2.77346
+     ]
+    },
+    {
+     "name": "Flower_C37_S_002",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.07739,
+      3.79173,
+      2.76669
+     ]
+    },
+    {
+     "name": "Flower_C37_S_003",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.09455,
+      3.7932,
+      2.7423
+     ]
+    },
+    {
+     "name": "Flower_C37_S_004",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.09322,
+      3.75786,
+      2.7446
+     ]
+    },
+    {
+     "name": "Flower_C38_S_001",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.5776,
+      3.51867,
+      1.59473
+     ]
+    },
+    {
+     "name": "Flower_C38_S_002",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.55196,
+      3.51413,
+      1.57365
+     ]
+    },
+    {
+     "name": "Flower_C38_S_003",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.57043,
+      3.53144,
+      1.53625
+     ]
+    },
+    {
+     "name": "Flower_C39_S_001",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.59661,
+      3.61833,
+      2.93885
+     ]
+    },
+    {
+     "name": "Flower_C39_S_002",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.62255,
+      3.63813,
+      2.91919
+     ]
+    },
+    {
+     "name": "Flower_C39_S_003",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.61805,
+      3.6492,
+      2.90139
+     ]
+    },
+    {
+     "name": "Flower_C39_S_004",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.59303,
+      3.65359,
+      2.89444
+     ]
+    },
+    {
+     "name": "Flower_C40_S_001",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      1.67197,
+      3.36962,
+      2.3883
+     ]
+    },
+    {
+     "name": "Flower_C40_S_002",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      1.6676,
+      3.35815,
+      2.33792
+     ]
+    },
+    {
+     "name": "Flower_C41_S_001",
+     "corymb": 41,
+     "role": "S",
+     "position": [
+      1.56755,
+      3.4255,
+      2.65291
+     ]
+    },
+    {
+     "name": "Flower_C41_S_002",
+     "corymb": 41,
+     "role": "S",
+     "position": [
+      1.53949,
+      3.44453,
+      2.63225
+     ]
+    },
+    {
+     "name": "Flower_C42_S_001",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      1.63414,
+      3.87912,
+      2.12131
+     ]
+    },
+    {
+     "name": "Flower_C42_S_002",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      1.60219,
+      3.86241,
+      2.10846
+     ]
+    },
+    {
+     "name": "Flower_C42_S_003",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      1.60416,
+      3.86631,
+      2.07412
+     ]
+    },
+    {
+     "name": "Flower_C42_S_004",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      1.62302,
+      3.87661,
+      2.06263
+     ]
+    },
+    {
+     "name": "Flower_C43_S_001",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      1.88732,
+      3.6609,
+      2.68893
+     ]
+    },
+    {
+     "name": "Flower_C43_S_002",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      1.86881,
+      3.66504,
+      2.66976
+     ]
+    },
+    {
+     "name": "Flower_C43_S_003",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      1.8849,
+      3.67556,
+      2.64184
+     ]
+    },
+    {
+     "name": "Flower_C44_S_001",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      1.76029,
+      3.44947,
+      3.04244
+     ]
+    },
+    {
+     "name": "Flower_C44_S_002",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      1.7815,
+      3.43086,
+      3.02442
+     ]
+    },
+    {
+     "name": "Flower_C44_S_003",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      1.76582,
+      3.45263,
+      3.0066
+     ]
+    },
+    {
+     "name": "Flower_C45_S_001",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      1.66579,
+      3.59868,
+      3.79132
+     ]
+    },
+    {
+     "name": "Flower_C45_S_002",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      1.62855,
+      3.61285,
+      3.78106
+     ]
+    },
+    {
+     "name": "Flower_C45_S_003",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      1.60275,
+      3.57768,
+      3.76494
+     ]
+    },
+    {
+     "name": "Flower_C45_S_004",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      1.63066,
+      3.54071,
+      3.75844
+     ]
+    },
+    {
+     "name": "Flower_C46_S_001",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      1.26194,
+      3.32755,
+      3.35697
+     ]
+    },
+    {
+     "name": "Flower_C46_S_002",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      1.24765,
+      3.34661,
+      3.33825
+     ]
+    },
+    {
+     "name": "Flower_C46_S_003",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      1.26764,
+      3.35632,
+      3.32253
+     ]
+    },
+    {
+     "name": "Flower_C47_S_001",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      1.37471,
+      3.46336,
+      2.04556
+     ]
+    },
+    {
+     "name": "Flower_C47_S_002",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      1.39855,
+      3.45107,
+      2.02228
+     ]
+    },
+    {
+     "name": "Flower_C47_S_003",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      1.37097,
+      3.45518,
+      1.99065
+     ]
+    },
+    {
+     "name": "Flower_C48_S_001",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      1.19249,
+      3.68803,
+      1.78621
+     ]
+    },
+    {
+     "name": "Flower_C48_S_002",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      1.22897,
+      3.68208,
+      1.77314
+     ]
+    },
+    {
+     "name": "Flower_C48_S_003",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      1.21451,
+      3.65592,
+      1.76753
+     ]
+    },
+    {
+     "name": "Flower_C49_S_001",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      1.58548,
+      3.07302,
+      1.53101
+     ]
+    },
+    {
+     "name": "Flower_C49_S_002",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      1.57207,
+      3.04559,
+      1.51402
+     ]
+    },
+    {
+     "name": "Flower_C49_S_003",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      1.55614,
+      3.07606,
+      1.49867
+     ]
+    },
+    {
+     "name": "Flower_C50_S_001",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      1.43952,
+      3.50152,
+      3.48909
+     ]
+    },
+    {
+     "name": "Flower_C50_S_002",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      1.4483,
+      3.51517,
+      3.46351
+     ]
+    },
+    {
+     "name": "Flower_C50_S_003",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      1.44712,
+      3.50175,
+      3.43258
+     ]
+    },
+    {
+     "name": "Flower_C51_S_001",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      1.69652,
+      3.45852,
+      2.99621
+     ]
+    },
+    {
+     "name": "Flower_C51_S_002",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      1.72486,
+      3.48161,
+      2.95285
+     ]
+    },
+    {
+     "name": "Flower_C52_S_001",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      1.56372,
+      3.55509,
+      2.3759
+     ]
+    },
+    {
+     "name": "Flower_C52_S_002",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      1.54004,
+      3.53216,
+      2.38664
+     ]
+    },
+    {
+     "name": "Flower_C52_S_003",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      1.51282,
+      3.54412,
+      2.387
+     ]
+    },
+    {
+     "name": "Flower_C53_S_001",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      1.90971,
+      3.20339,
+      1.9797
+     ]
+    },
+    {
+     "name": "Flower_C53_S_002",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      1.89679,
+      3.17106,
+      1.97941
+     ]
+    },
+    {
+     "name": "Flower_C53_S_003",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      1.91025,
+      3.17561,
+      1.95605
+     ]
+    },
+    {
+     "name": "Flower_C53_S_004",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      1.92007,
+      3.18675,
+      1.95213
+     ]
+    },
+    {
+     "name": "Flower_C54_S_001",
+     "corymb": 54,
+     "role": "S",
+     "position": [
+      1.68205,
+      3.7548,
+      1.65336
+     ]
+    },
+    {
+     "name": "Flower_C54_S_002",
+     "corymb": 54,
+     "role": "S",
+     "position": [
+      1.63818,
+      3.74611,
+      1.6649
+     ]
+    },
+    {
+     "name": "Flower_C55_S_001",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      1.60709,
+      3.48419,
+      1.86551
+     ]
+    },
+    {
+     "name": "Flower_C55_S_002",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      1.63168,
+      3.48805,
+      1.82856
+     ]
+    },
+    {
+     "name": "Flower_C56_S_001",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      1.73779,
+      3.55292,
+      1.36866
+     ]
+    },
+    {
+     "name": "Flower_C56_S_002",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      1.71489,
+      3.53174,
+      1.37947
+     ]
+    },
+    {
+     "name": "Flower_C56_S_003",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      1.69158,
+      3.54515,
+      1.38199
+     ]
+    },
+    {
+     "name": "Flower_C57_S_001",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      1.5498,
+      3.482,
+      3.195
+     ]
+    },
+    {
+     "name": "Flower_C57_S_002",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      1.55652,
+      3.44648,
+      3.18967
+     ]
+    },
+    {
+     "name": "Flower_C57_S_003",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      1.515,
+      3.44203,
+      3.19491
+     ]
+    },
+    {
+     "name": "Flower_C57_S_004",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      1.50228,
+      3.47662,
+      3.1903
+     ]
+    },
+    {
+     "name": "Flower_C58_S_001",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      1.38605,
+      3.34044,
+      3.57683
+     ]
+    },
+    {
+     "name": "Flower_C58_S_002",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      1.38272,
+      3.32152,
+      3.5709
+     ]
+    },
+    {
+     "name": "Flower_C58_S_003",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      1.38258,
+      3.32341,
+      3.5519
+     ]
+    },
+    {
+     "name": "Flower_C58_S_004",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      1.38829,
+      3.33774,
+      3.53734
+     ]
+    },
+    {
+     "name": "Flower_C59_S_001",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      1.34607,
+      3.40593,
+      3.45077
+     ]
+    },
+    {
+     "name": "Flower_C59_S_002",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      1.35393,
+      3.43669,
+      3.43268
+     ]
+    },
+    {
+     "name": "Flower_C59_S_003",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      1.35751,
+      3.43567,
+      3.40199
+     ]
+    },
+    {
+     "name": "Flower_C59_S_004",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      1.35752,
+      3.40841,
+      3.39383
+     ]
+    },
+    {
+     "name": "Flower_C60_S_001",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      1.6627,
+      3.77345,
+      1.68886
+     ]
+    },
+    {
+     "name": "Flower_C60_S_002",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      1.68093,
+      3.78487,
+      1.67264
+     ]
+    },
+    {
+     "name": "Flower_C60_S_003",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      1.6569,
+      3.77663,
+      1.6441
+     ]
+    },
+    {
+     "name": "Flower_C61_S_001",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      1.84527,
+      3.71315,
+      2.88421
+     ]
+    },
+    {
+     "name": "Flower_C61_S_002",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      1.86823,
+      3.73813,
+      2.88388
+     ]
+    },
+    {
+     "name": "Flower_C61_S_003",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      1.86897,
+      3.71746,
+      2.85587
+     ]
+    },
+    {
+     "name": "Flower_C61_S_004",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      1.8481,
+      3.70052,
+      2.84386
+     ]
+    },
+    {
+     "name": "Flower_C62_S_001",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      1.226,
+      3.35518,
+      3.49489
+     ]
+    },
+    {
+     "name": "Flower_C62_S_002",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      1.21288,
+      3.38132,
+      3.49726
+     ]
+    },
+    {
+     "name": "Flower_C62_S_003",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      1.19037,
+      3.38743,
+      3.50928
+     ]
+    },
+    {
+     "name": "Flower_C62_S_004",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      1.18233,
+      3.35215,
+      3.50546
+     ]
+    },
+    {
+     "name": "Flower_C63_S_001",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      1.46689,
+      3.67673,
+      3.01666
+     ]
+    },
+    {
+     "name": "Flower_C63_S_002",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      1.48106,
+      3.69163,
+      3.00758
+     ]
+    },
+    {
+     "name": "Flower_C63_S_003",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      1.46616,
+      3.71308,
+      2.98804
+     ]
+    },
+    {
+     "name": "Flower_C63_S_004",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      1.44259,
+      3.69394,
+      2.98259
+     ]
+    },
+    {
+     "name": "Flower_C64_S_001",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      1.57091,
+      3.28774,
+      1.59918
+     ]
+    },
+    {
+     "name": "Flower_C64_S_002",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      1.58439,
+      3.3116,
+      1.58525
+     ]
+    },
+    {
+     "name": "Flower_C64_S_003",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      1.57567,
+      3.32421,
+      1.56756
+     ]
+    },
+    {
+     "name": "Flower_C64_S_004",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      1.5493,
+      3.30822,
+      1.55687
+     ]
+    },
+    {
+     "name": "Flower_C65_S_001",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      1.58383,
+      3.50174,
+      1.73001
+     ]
+    },
+    {
+     "name": "Flower_C65_S_002",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      1.59992,
+      3.48365,
+      1.71856
+     ]
+    },
+    {
+     "name": "Flower_C65_S_003",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      1.59736,
+      3.47543,
+      1.69894
+     ]
+    },
+    {
+     "name": "Flower_C65_S_004",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      1.57918,
+      3.48487,
+      1.68725
+     ]
+    },
+    {
+     "name": "Flower_C66_S_001",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      1.50443,
+      3.63438,
+      3.4418
+     ]
+    },
+    {
+     "name": "Flower_C66_S_002",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      1.54413,
+      3.62179,
+      3.43111
+     ]
+    },
+    {
+     "name": "Flower_C66_S_003",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      1.53616,
+      3.60507,
+      3.39821
+     ]
+    },
+    {
+     "name": "Flower_C66_S_004",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      1.51002,
+      3.61363,
+      3.39859
+     ]
+    },
+    {
+     "name": "Flower_C67_S_001",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      1.55484,
+      3.84514,
+      3.19562
+     ]
+    },
+    {
+     "name": "Flower_C67_S_002",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      1.57991,
+      3.86409,
+      3.16448
+     ]
+    },
+    {
+     "name": "Flower_C67_S_003",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      1.5437,
+      3.85713,
+      3.13725
+     ]
+    },
+    {
+     "name": "Flower_C68_S_001",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      1.40015,
+      3.4059,
+      2.63608
+     ]
+    },
+    {
+     "name": "Flower_C68_S_002",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      1.39257,
+      3.45108,
+      2.61156
+     ]
+    },
+    {
+     "name": "Flower_C68_S_003",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      1.43639,
+      3.44134,
+      2.60097
+     ]
+    },
+    {
+     "name": "Flower_C69_S_001",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      1.28329,
+      3.47975,
+      1.7649
+     ]
+    },
+    {
+     "name": "Flower_C69_S_002",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      1.26167,
+      3.46077,
+      1.77164
+     ]
+    },
+    {
+     "name": "Flower_C69_S_003",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      1.24328,
+      3.47734,
+      1.77207
+     ]
+    },
+    {
+     "name": "Flower_C70_S_001",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      1.58479,
+      3.27065,
+      2.0469
+     ]
+    },
+    {
+     "name": "Flower_C70_S_002",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      1.59514,
+      3.29622,
+      2.0234
+     ]
+    },
+    {
+     "name": "Flower_C70_S_003",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      1.60011,
+      3.26617,
+      1.99198
+     ]
+    },
+    {
+     "name": "Flower_C71_S_001",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      1.44017,
+      3.75767,
+      1.48307
+     ]
+    },
+    {
+     "name": "Flower_C71_S_002",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      1.45983,
+      3.73975,
+      1.4577
+     ]
+    },
+    {
+     "name": "Flower_C71_S_003",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      1.44157,
+      3.74209,
+      1.43795
+     ]
+    },
+    {
+     "name": "Flower_C72_S_001",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      1.64997,
+      3.57678,
+      3.75315
+     ]
+    },
+    {
+     "name": "Flower_C72_S_002",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      1.63093,
+      3.59728,
+      3.75956
+     ]
+    },
+    {
+     "name": "Flower_C72_S_003",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      1.61335,
+      3.56811,
+      3.74193
+     ]
+    },
+    {
+     "name": "Flower_C73_S_001",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      1.49463,
+      3.56527,
+      2.59149
+     ]
+    },
+    {
+     "name": "Flower_C73_S_002",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      1.49836,
+      3.55854,
+      2.53967
+     ]
+    },
+    {
+     "name": "Flower_C74_S_001",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      1.96701,
+      3.5976,
+      1.40705
+     ]
+    },
+    {
+     "name": "Flower_C74_S_002",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      1.9603,
+      3.62795,
+      1.38585
+     ]
+    },
+    {
+     "name": "Flower_C74_S_003",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      1.92722,
+      3.60954,
+      1.37406
+     ]
+    },
+    {
+     "name": "Flower_C75_S_001",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      1.53178,
+      3.52204,
+      2.44701
+     ]
+    },
+    {
+     "name": "Flower_C75_S_002",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      1.57897,
+      3.51492,
+      2.42109
+     ]
+    },
+    {
+     "name": "Flower_C76_S_001",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      1.74601,
+      3.71651,
+      2.93496
+     ]
+    },
+    {
+     "name": "Flower_C76_S_002",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      1.76728,
+      3.69768,
+      2.92408
+     ]
+    },
+    {
+     "name": "Flower_C76_S_003",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      1.76483,
+      3.7285,
+      2.90148
+     ]
+    },
+    {
+     "name": "Flower_C77_S_001",
+     "corymb": 77,
+     "role": "S",
+     "position": [
+      1.49129,
+      3.54074,
+      2.14728
+     ]
+    },
+    {
+     "name": "Flower_C77_S_002",
+     "corymb": 77,
+     "role": "S",
+     "position": [
+      1.48207,
+      3.53577,
+      2.09434
+     ]
+    },
+    {
+     "name": "Flower_C78_S_001",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      1.44206,
+      3.69719,
+      4.31351
+     ]
+    },
+    {
+     "name": "Flower_C78_S_002",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      1.41928,
+      3.71444,
+      4.31363
+     ]
+    },
+    {
+     "name": "Flower_C78_S_003",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      1.39912,
+      3.70696,
+      4.30492
+     ]
+    },
+    {
+     "name": "Flower_C78_S_004",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      1.41067,
+      3.67554,
+      4.29506
+     ]
+    },
+    {
+     "name": "Flower_C79_S_001",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      1.4396,
+      3.76895,
+      3.84641
+     ]
+    },
+    {
+     "name": "Flower_C79_S_002",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      1.45474,
+      3.79609,
+      3.82686
+     ]
+    },
+    {
+     "name": "Flower_C79_S_003",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      1.46009,
+      3.7639,
+      3.8219
+     ]
+    },
+    {
+     "name": "Flower_C80_S_001",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      1.44191,
+      3.60454,
+      2.91321
+     ]
+    },
+    {
+     "name": "Flower_C80_S_002",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      1.43654,
+      3.62682,
+      2.89554
+     ]
+    },
+    {
+     "name": "Flower_C80_S_003",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      1.42764,
+      3.60773,
+      2.86743
+     ]
+    },
+    {
+     "name": "Flower_C81_S_001",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      1.72161,
+      3.42751,
+      2.05469
+     ]
+    },
+    {
+     "name": "Flower_C81_S_002",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      1.7248,
+      3.39104,
+      2.04156
+     ]
+    },
+    {
+     "name": "Flower_C81_S_003",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      1.71116,
+      3.37626,
+      2.01928
+     ]
+    },
+    {
+     "name": "Flower_C81_S_004",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      1.69088,
+      3.39996,
+      2.02233
+     ]
+    },
+    {
+     "name": "Flower_C82_S_001",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      1.38248,
+      3.54628,
+      1.9089
+     ]
+    },
+    {
+     "name": "Flower_C82_S_002",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      1.36557,
+      3.5546,
+      1.89121
+     ]
+    },
+    {
+     "name": "Flower_C82_S_003",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      1.37272,
+      3.53503,
+      1.86917
+     ]
+    },
+    {
+     "name": "Flower_C83_S_001",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      1.72673,
+      3.35006,
+      2.75314
+     ]
+    },
+    {
+     "name": "Flower_C83_S_002",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      1.71734,
+      3.32762,
+      2.70949
+     ]
+    },
+    {
+     "name": "Flower_C84_S_001",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      1.42149,
+      3.66791,
+      4.20994
+     ]
+    },
+    {
+     "name": "Flower_C84_S_002",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      1.4198,
+      3.64834,
+      4.19791
+     ]
+    },
+    {
+     "name": "Flower_C84_S_003",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      1.44516,
+      3.65505,
+      4.17516
+     ]
+    },
+    {
+     "name": "Flower_C85_S_001",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      1.77133,
+      3.35326,
+      3.11221
+     ]
+    },
+    {
+     "name": "Flower_C85_S_002",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      1.79416,
+      3.36134,
+      3.0993
+     ]
+    },
+    {
+     "name": "Flower_C85_S_003",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      1.77414,
+      3.37356,
+      3.08492
+     ]
+    },
+    {
+     "name": "Flower_C86_S_001",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      1.3129,
+      3.69824,
+      1.58103
+     ]
+    },
+    {
+     "name": "Flower_C86_S_002",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      1.30185,
+      3.71057,
+      1.57864
+     ]
+    },
+    {
+     "name": "Flower_C86_S_003",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      1.29218,
+      3.70526,
+      1.56312
+     ]
+    },
+    {
+     "name": "Flower_C86_S_004",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      1.29298,
+      3.68012,
+      1.54603
+     ]
+    },
+    {
+     "name": "Flower_C87_S_001",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      1.15238,
+      3.62233,
+      2.81147
+     ]
+    },
+    {
+     "name": "Flower_C87_S_002",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      1.1894,
+      3.60291,
+      2.7945
+     ]
+    },
+    {
+     "name": "Flower_C87_S_003",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      1.14608,
+      3.60788,
+      2.76843
+     ]
+    }
+   ]
+  },
+  "2": {
+   "usd_name": "AppleTree_02",
+   "trunk_xy": [
+    0.4016,
+    10.0513
+   ],
+   "ground_z": -0.0339,
+   "trunk_diameter": 0.082,
+   "n_flowers": 444,
+   "n_corymbs": 90,
+   "n_king": 88,
+   "canopy_z": [
+    0.805,
+    2.818
+   ],
+   "flowers": [
+    {
+     "name": "Flower_C00_K_002",
+     "corymb": 0,
+     "role": "K",
+     "position": [
+      0.7334,
+      10.17336,
+      2.34524
+     ]
+    },
+    {
+     "name": "Flower_C00_S_007",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.722,
+      10.19482,
+      2.33174
+     ]
+    },
+    {
+     "name": "Flower_C00_S_008",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.70878,
+      10.18424,
+      2.36062
+     ]
+    },
+    {
+     "name": "Flower_C00_S_009",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.71746,
+      10.14986,
+      2.33434
+     ]
+    },
+    {
+     "name": "Flower_C00_S_010",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      0.7343,
+      10.16674,
+      2.31205
+     ]
+    },
+    {
+     "name": "Flower_C01_K_002",
+     "corymb": 1,
+     "role": "K",
+     "position": [
+      0.54817,
+      9.83217,
+      1.89703
+     ]
+    },
+    {
+     "name": "Flower_C01_S_008",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.52357,
+      9.86723,
+      1.9007
+     ]
+    },
+    {
+     "name": "Flower_C01_S_009",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.54817,
+      9.83445,
+      1.92087
+     ]
+    },
+    {
+     "name": "Flower_C01_S_010",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.54012,
+      9.80251,
+      1.90078
+     ]
+    },
+    {
+     "name": "Flower_C01_S_011",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      0.52392,
+      9.82636,
+      1.89029
+     ]
+    },
+    {
+     "name": "Flower_C02_K_002",
+     "corymb": 2,
+     "role": "K",
+     "position": [
+      0.25942,
+      9.83386,
+      1.71918
+     ]
+    },
+    {
+     "name": "Flower_C02_S_009",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.28126,
+      9.81358,
+      1.73065
+     ]
+    },
+    {
+     "name": "Flower_C02_S_010",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.24781,
+      9.81858,
+      1.74651
+     ]
+    },
+    {
+     "name": "Flower_C02_S_011",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.24972,
+      9.85515,
+      1.73159
+     ]
+    },
+    {
+     "name": "Flower_C02_S_012",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      0.27805,
+      9.85185,
+      1.72394
+     ]
+    },
+    {
+     "name": "Flower_C03_K_002",
+     "corymb": 3,
+     "role": "K",
+     "position": [
+      0.43758,
+      10.08162,
+      2.33614
+     ]
+    },
+    {
+     "name": "Flower_C03_S_008",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.4065,
+      10.08133,
+      2.32646
+     ]
+    },
+    {
+     "name": "Flower_C03_S_009",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.41359,
+      10.06072,
+      2.35167
+     ]
+    },
+    {
+     "name": "Flower_C03_S_010",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.43443,
+      10.04966,
+      2.33242
+     ]
+    },
+    {
+     "name": "Flower_C03_S_011",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      0.42441,
+      10.07143,
+      2.3099
+     ]
+    },
+    {
+     "name": "Flower_C04_K_002",
+     "corymb": 4,
+     "role": "K",
+     "position": [
+      0.35835,
+      10.12047,
+      1.03556
+     ]
+    },
+    {
+     "name": "Flower_C04_S_007",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      0.35468,
+      10.14643,
+      1.05132
+     ]
+    },
+    {
+     "name": "Flower_C04_S_008",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      0.361,
+      10.105,
+      1.06018
+     ]
+    },
+    {
+     "name": "Flower_C04_S_009",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      0.32475,
+      10.11983,
+      1.03901
+     ]
+    },
+    {
+     "name": "Flower_C05_K_002",
+     "corymb": 5,
+     "role": "K",
+     "position": [
+      0.63989,
+      9.96341,
+      2.10644
+     ]
+    },
+    {
+     "name": "Flower_C05_S_007",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      0.62096,
+      9.93805,
+      2.11159
+     ]
+    },
+    {
+     "name": "Flower_C05_S_008",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      0.64652,
+      9.9817,
+      2.14028
+     ]
+    },
+    {
+     "name": "Flower_C05_S_009",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      0.66684,
+      9.9506,
+      2.08579
+     ]
+    },
+    {
+     "name": "Flower_C06_K_002",
+     "corymb": 6,
+     "role": "K",
+     "position": [
+      0.29148,
+      10.19237,
+      2.41485
+     ]
+    },
+    {
+     "name": "Flower_C06_S_007",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.31709,
+      10.16963,
+      2.42516
+     ]
+    },
+    {
+     "name": "Flower_C06_S_008",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.30297,
+      10.18685,
+      2.44516
+     ]
+    },
+    {
+     "name": "Flower_C06_S_009",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.29594,
+      10.2164,
+      2.43547
+     ]
+    },
+    {
+     "name": "Flower_C06_S_010",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.30847,
+      10.21726,
+      2.41264
+     ]
+    },
+    {
+     "name": "Flower_C06_S_011",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      0.31511,
+      10.19716,
+      2.39665
+     ]
+    },
+    {
+     "name": "Flower_C07_K_002",
+     "corymb": 7,
+     "role": "K",
+     "position": [
+      0.1726,
+      10.20826,
+      2.57494
+     ]
+    },
+    {
+     "name": "Flower_C07_S_009",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      0.17018,
+      10.17716,
+      2.56109
+     ]
+    },
+    {
+     "name": "Flower_C07_S_010",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      0.19357,
+      10.19689,
+      2.5569
+     ]
+    },
+    {
+     "name": "Flower_C07_S_011",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      0.18485,
+      10.21878,
+      2.5459
+     ]
+    },
+    {
+     "name": "Flower_C07_S_012",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      0.16334,
+      10.21233,
+      2.54085
+     ]
+    },
+    {
+     "name": "Flower_C07_S_013",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      0.15804,
+      10.19171,
+      2.54841
+     ]
+    },
+    {
+     "name": "Flower_C08_K_002",
+     "corymb": 8,
+     "role": "K",
+     "position": [
+      0.51944,
+      9.91314,
+      1.08146
+     ]
+    },
+    {
+     "name": "Flower_C08_S_008",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.51695,
+      9.89356,
+      1.06525
+     ]
+    },
+    {
+     "name": "Flower_C08_S_009",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.54247,
+      9.90961,
+      1.05898
+     ]
+    },
+    {
+     "name": "Flower_C08_S_010",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.53051,
+      9.92782,
+      1.06134
+     ]
+    },
+    {
+     "name": "Flower_C08_S_011",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.50323,
+      9.93615,
+      1.06631
+     ]
+    },
+    {
+     "name": "Flower_C08_S_012",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      0.50248,
+      9.9096,
+      1.06033
+     ]
+    },
+    {
+     "name": "Flower_C09_K_002",
+     "corymb": 9,
+     "role": "K",
+     "position": [
+      0.52786,
+      10.05192,
+      1.71116
+     ]
+    },
+    {
+     "name": "Flower_C09_S_007",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.51769,
+      10.02216,
+      1.69843
+     ]
+    },
+    {
+     "name": "Flower_C09_S_008",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.55281,
+      10.0478,
+      1.68408
+     ]
+    },
+    {
+     "name": "Flower_C09_S_009",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.5181,
+      10.06732,
+      1.68526
+     ]
+    },
+    {
+     "name": "Flower_C09_S_010",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      0.50801,
+      10.04433,
+      1.68267
+     ]
+    },
+    {
+     "name": "Flower_C10_K_002",
+     "corymb": 10,
+     "role": "K",
+     "position": [
+      0.35354,
+      10.04054,
+      1.56159
+     ]
+    },
+    {
+     "name": "Flower_C10_S_007",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.35578,
+      10.07043,
+      1.56562
+     ]
+    },
+    {
+     "name": "Flower_C10_S_008",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.35304,
+      10.0449,
+      1.59209
+     ]
+    },
+    {
+     "name": "Flower_C10_S_009",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.33164,
+      10.03446,
+      1.58078
+     ]
+    },
+    {
+     "name": "Flower_C10_S_010",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.32424,
+      10.03286,
+      1.5551
+     ]
+    },
+    {
+     "name": "Flower_C10_S_011",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      0.33654,
+      10.06092,
+      1.55369
+     ]
+    },
+    {
+     "name": "Flower_C11_K_002",
+     "corymb": 11,
+     "role": "K",
+     "position": [
+      0.17018,
+      9.97059,
+      2.17729
+     ]
+    },
+    {
+     "name": "Flower_C11_S_007",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      0.16841,
+      9.99635,
+      2.19137
+     ]
+    },
+    {
+     "name": "Flower_C11_S_008",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      0.18155,
+      9.96558,
+      2.20429
+     ]
+    },
+    {
+     "name": "Flower_C11_S_009",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      0.15468,
+      9.96368,
+      2.19835
+     ]
+    },
+    {
+     "name": "Flower_C12_K_002",
+     "corymb": 12,
+     "role": "K",
+     "position": [
+      0.5246,
+      10.22608,
+      2.80028
+     ]
+    },
+    {
+     "name": "Flower_C12_S_008",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.5518,
+      10.25474,
+      2.80399
+     ]
+    },
+    {
+     "name": "Flower_C12_S_009",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.51508,
+      10.25077,
+      2.81791
+     ]
+    },
+    {
+     "name": "Flower_C12_S_010",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.50278,
+      10.23591,
+      2.81271
+     ]
+    },
+    {
+     "name": "Flower_C12_S_011",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.49992,
+      10.22215,
+      2.77627
+     ]
+    },
+    {
+     "name": "Flower_C12_S_012",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      0.51996,
+      10.24277,
+      2.76988
+     ]
+    },
+    {
+     "name": "Flower_C13_K_002",
+     "corymb": 13,
+     "role": "K",
+     "position": [
+      0.16377,
+      9.96338,
+      1.49393
+     ]
+    },
+    {
+     "name": "Flower_C13_S_009",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.15956,
+      9.97559,
+      1.52765
+     ]
+    },
+    {
+     "name": "Flower_C13_S_010",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.19377,
+      9.95517,
+      1.50502
+     ]
+    },
+    {
+     "name": "Flower_C13_S_011",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.16288,
+      9.94262,
+      1.51672
+     ]
+    },
+    {
+     "name": "Flower_C13_S_012",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      0.14888,
+      9.95903,
+      1.52461
+     ]
+    },
+    {
+     "name": "Flower_C14_K_002",
+     "corymb": 14,
+     "role": "K",
+     "position": [
+      0.82508,
+      9.87238,
+      1.621
+     ]
+    },
+    {
+     "name": "Flower_C14_S_008",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.82475,
+      9.91682,
+      1.61669
+     ]
+    },
+    {
+     "name": "Flower_C14_S_009",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.86148,
+      9.8884,
+      1.63696
+     ]
+    },
+    {
+     "name": "Flower_C14_S_010",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.82229,
+      9.85335,
+      1.64551
+     ]
+    },
+    {
+     "name": "Flower_C14_S_011",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      0.78652,
+      9.869,
+      1.63091
+     ]
+    },
+    {
+     "name": "Flower_C15_K_002",
+     "corymb": 15,
+     "role": "K",
+     "position": [
+      0.16249,
+      9.99678,
+      2.04794
+     ]
+    },
+    {
+     "name": "Flower_C15_S_007",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      0.14557,
+      10.02018,
+      2.03997
+     ]
+    },
+    {
+     "name": "Flower_C15_S_008",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      0.13877,
+      10.0058,
+      2.06627
+     ]
+    },
+    {
+     "name": "Flower_C15_S_009",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      0.13822,
+      9.97895,
+      2.03911
+     ]
+    },
+    {
+     "name": "Flower_C15_S_010",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      0.15395,
+      10.00437,
+      2.02128
+     ]
+    },
+    {
+     "name": "Flower_C16_K_002",
+     "corymb": 16,
+     "role": "K",
+     "position": [
+      0.44462,
+      10.30974,
+      1.63748
+     ]
+    },
+    {
+     "name": "Flower_C16_S_007",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      0.40978,
+      10.29916,
+      1.64358
+     ]
+    },
+    {
+     "name": "Flower_C16_S_008",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      0.45462,
+      10.29708,
+      1.66794
+     ]
+    },
+    {
+     "name": "Flower_C16_S_009",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      0.46632,
+      10.28933,
+      1.61537
+     ]
+    },
+    {
+     "name": "Flower_C17_K_002",
+     "corymb": 17,
+     "role": "K",
+     "position": [
+      0.24446,
+      10.18576,
+      1.33051
+     ]
+    },
+    {
+     "name": "Flower_C17_S_008",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.22619,
+      10.16178,
+      1.33429
+     ]
+    },
+    {
+     "name": "Flower_C17_S_009",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.25206,
+      10.17298,
+      1.3511
+     ]
+    },
+    {
+     "name": "Flower_C17_S_010",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.27202,
+      10.18153,
+      1.33708
+     ]
+    },
+    {
+     "name": "Flower_C17_S_011",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      0.25453,
+      10.16635,
+      1.30779
+     ]
+    },
+    {
+     "name": "Flower_C18_K_002",
+     "corymb": 18,
+     "role": "K",
+     "position": [
+      0.17283,
+      10.0368,
+      1.73356
+     ]
+    },
+    {
+     "name": "Flower_C18_S_008",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.18154,
+      10.00801,
+      1.73465
+     ]
+    },
+    {
+     "name": "Flower_C18_S_009",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.18269,
+      10.03234,
+      1.76059
+     ]
+    },
+    {
+     "name": "Flower_C18_S_010",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.19608,
+      10.05294,
+      1.73371
+     ]
+    },
+    {
+     "name": "Flower_C18_S_011",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      0.19679,
+      10.02742,
+      1.7182
+     ]
+    },
+    {
+     "name": "Flower_C19_K_002",
+     "corymb": 19,
+     "role": "K",
+     "position": [
+      0.31362,
+      10.13635,
+      1.91219
+     ]
+    },
+    {
+     "name": "Flower_C19_S_007",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.28974,
+      10.15115,
+      1.93187
+     ]
+    },
+    {
+     "name": "Flower_C19_S_008",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.30036,
+      10.12911,
+      1.94326
+     ]
+    },
+    {
+     "name": "Flower_C19_S_009",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.29734,
+      10.112,
+      1.93157
+     ]
+    },
+    {
+     "name": "Flower_C19_S_010",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      0.28216,
+      10.12526,
+      1.90818
+     ]
+    },
+    {
+     "name": "Flower_C20_K_002",
+     "corymb": 20,
+     "role": "K",
+     "position": [
+      0.39512,
+      10.03207,
+      1.24643
+     ]
+    },
+    {
+     "name": "Flower_C20_S_008",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      0.36229,
+      10.02622,
+      1.25353
+     ]
+    },
+    {
+     "name": "Flower_C20_S_009",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      0.38578,
+      10.02886,
+      1.27614
+     ]
+    },
+    {
+     "name": "Flower_C20_S_010",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      0.40974,
+      10.00742,
+      1.25314
+     ]
+    },
+    {
+     "name": "Flower_C20_S_011",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      0.38759,
+      10.00692,
+      1.23423
+     ]
+    },
+    {
+     "name": "Flower_C21_K_002",
+     "corymb": 21,
+     "role": "K",
+     "position": [
+      0.44455,
+      10.23605,
+      1.7848
+     ]
+    },
+    {
+     "name": "Flower_C21_S_008",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.41758,
+      10.21765,
+      1.79526
+     ]
+    },
+    {
+     "name": "Flower_C21_S_009",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.45539,
+      10.23159,
+      1.81156
+     ]
+    },
+    {
+     "name": "Flower_C21_S_010",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      0.46298,
+      10.21349,
+      1.7805
+     ]
+    },
+    {
+     "name": "Flower_C22_K_002",
+     "corymb": 22,
+     "role": "K",
+     "position": [
+      0.48469,
+      10.06383,
+      2.12319
+     ]
+    },
+    {
+     "name": "Flower_C22_S_007",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.48052,
+      10.04846,
+      2.10038
+     ]
+    },
+    {
+     "name": "Flower_C22_S_008",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.51371,
+      10.06625,
+      2.111
+     ]
+    },
+    {
+     "name": "Flower_C22_S_009",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.48566,
+      10.09655,
+      2.11799
+     ]
+    },
+    {
+     "name": "Flower_C22_S_010",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      0.45983,
+      10.06531,
+      2.10867
+     ]
+    },
+    {
+     "name": "Flower_C23_K_002",
+     "corymb": 23,
+     "role": "K",
+     "position": [
+      0.4377,
+      9.74168,
+      2.68259
+     ]
+    },
+    {
+     "name": "Flower_C23_S_008",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      0.43191,
+      9.71646,
+      2.66406
+     ]
+    },
+    {
+     "name": "Flower_C23_S_009",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      0.45937,
+      9.76503,
+      2.67091
+     ]
+    },
+    {
+     "name": "Flower_C23_S_010",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      0.41417,
+      9.75286,
+      2.67533
+     ]
+    },
+    {
+     "name": "Flower_C24_K_001",
+     "corymb": 24,
+     "role": "K",
+     "position": [
+      0.63382,
+      10.18557,
+      1.17936
+     ]
+    },
+    {
+     "name": "Flower_C24_S_004",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      0.60376,
+      10.17918,
+      1.17205
+     ]
+    },
+    {
+     "name": "Flower_C24_S_005",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      0.61613,
+      10.16313,
+      1.19114
+     ]
+    },
+    {
+     "name": "Flower_C24_S_006",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      0.63359,
+      10.15364,
+      1.17538
+     ]
+    },
+    {
+     "name": "Flower_C24_S_007",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      0.62463,
+      10.18208,
+      1.14317
+     ]
+    },
+    {
+     "name": "Flower_C25_K_001",
+     "corymb": 25,
+     "role": "K",
+     "position": [
+      0.2027,
+      10.05574,
+      1.89639
+     ]
+    },
+    {
+     "name": "Flower_C25_S_004",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      0.19295,
+      10.07654,
+      1.90628
+     ]
+    },
+    {
+     "name": "Flower_C25_S_005",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      0.20849,
+      10.05183,
+      1.92917
+     ]
+    },
+    {
+     "name": "Flower_C25_S_006",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      0.18318,
+      10.03591,
+      1.89801
+     ]
+    },
+    {
+     "name": "Flower_C25_S_007",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      0.17519,
+      10.05627,
+      1.88495
+     ]
+    },
+    {
+     "name": "Flower_C26_K_001",
+     "corymb": 26,
+     "role": "K",
+     "position": [
+      0.14858,
+      10.20978,
+      2.50342
+     ]
+    },
+    {
+     "name": "Flower_C26_S_004",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      0.15821,
+      10.17746,
+      2.51103
+     ]
+    },
+    {
+     "name": "Flower_C26_S_005",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      0.17084,
+      10.19485,
+      2.52386
+     ]
+    },
+    {
+     "name": "Flower_C26_S_006",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      0.17983,
+      10.20511,
+      2.51361
+     ]
+    },
+    {
+     "name": "Flower_C26_S_007",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      0.17854,
+      10.19244,
+      2.4889
+     ]
+    },
+    {
+     "name": "Flower_C27_K_001",
+     "corymb": 27,
+     "role": "K",
+     "position": [
+      0.43442,
+      10.23464,
+      1.76939
+     ]
+    },
+    {
+     "name": "Flower_C27_S_004",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      0.43222,
+      10.25787,
+      1.79498
+     ]
+    },
+    {
+     "name": "Flower_C27_S_005",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      0.462,
+      10.22356,
+      1.78721
+     ]
+    },
+    {
+     "name": "Flower_C27_S_006",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      0.43567,
+      10.20836,
+      1.77934
+     ]
+    },
+    {
+     "name": "Flower_C27_S_007",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      0.39203,
+      10.23838,
+      1.77611
+     ]
+    },
+    {
+     "name": "Flower_C28_K_001",
+     "corymb": 28,
+     "role": "K",
+     "position": [
+      0.57236,
+      10.03399,
+      2.41823
+     ]
+    },
+    {
+     "name": "Flower_C28_S_004",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      0.58269,
+      10.05565,
+      2.44189
+     ]
+    },
+    {
+     "name": "Flower_C28_S_005",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      0.59734,
+      10.03248,
+      2.44619
+     ]
+    },
+    {
+     "name": "Flower_C28_S_006",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      0.57642,
+      10.01153,
+      2.44193
+     ]
+    },
+    {
+     "name": "Flower_C28_S_007",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      0.55048,
+      10.02783,
+      2.44516
+     ]
+    },
+    {
+     "name": "Flower_C29_K_001",
+     "corymb": 29,
+     "role": "K",
+     "position": [
+      0.13377,
+      9.87164,
+      1.1644
+     ]
+    },
+    {
+     "name": "Flower_C29_S_005",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      0.16299,
+      9.85841,
+      1.15377
+     ]
+    },
+    {
+     "name": "Flower_C29_S_006",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      0.15904,
+      9.8929,
+      1.17941
+     ]
+    },
+    {
+     "name": "Flower_C29_S_007",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      0.13273,
+      9.89483,
+      1.15122
+     ]
+    },
+    {
+     "name": "Flower_C29_S_008",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      0.13097,
+      9.87516,
+      1.13832
+     ]
+    },
+    {
+     "name": "Flower_C30_K_001",
+     "corymb": 30,
+     "role": "K",
+     "position": [
+      0.58641,
+      10.1321,
+      2.15115
+     ]
+    },
+    {
+     "name": "Flower_C30_S_004",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      0.58504,
+      10.15864,
+      2.17323
+     ]
+    },
+    {
+     "name": "Flower_C30_S_005",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      0.60924,
+      10.12709,
+      2.16338
+     ]
+    },
+    {
+     "name": "Flower_C30_S_006",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      0.59449,
+      10.09708,
+      2.15126
+     ]
+    },
+    {
+     "name": "Flower_C30_S_007",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      0.56128,
+      10.1232,
+      2.16723
+     ]
+    },
+    {
+     "name": "Flower_C31_K_001",
+     "corymb": 31,
+     "role": "K",
+     "position": [
+      0.66344,
+      10.1996,
+      1.20617
+     ]
+    },
+    {
+     "name": "Flower_C31_S_005",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      0.63772,
+      10.1833,
+      1.2233
+     ]
+    },
+    {
+     "name": "Flower_C31_S_006",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      0.6623,
+      10.18254,
+      1.23327
+     ]
+    },
+    {
+     "name": "Flower_C31_S_007",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      0.66014,
+      10.16554,
+      1.2073
+     ]
+    },
+    {
+     "name": "Flower_C32_K_001",
+     "corymb": 32,
+     "role": "K",
+     "position": [
+      0.51215,
+      10.09593,
+      2.57536
+     ]
+    },
+    {
+     "name": "Flower_C32_S_004",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      0.52018,
+      10.07872,
+      2.59868
+     ]
+    },
+    {
+     "name": "Flower_C32_S_005",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      0.50853,
+      10.09674,
+      2.60741
+     ]
+    },
+    {
+     "name": "Flower_C32_S_006",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      0.53181,
+      10.11444,
+      2.59364
+     ]
+    },
+    {
+     "name": "Flower_C32_S_007",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      0.54326,
+      10.0877,
+      2.57579
+     ]
+    },
+    {
+     "name": "Flower_C33_K_001",
+     "corymb": 33,
+     "role": "K",
+     "position": [
+      0.3319,
+      10.01207,
+      2.31027
+     ]
+    },
+    {
+     "name": "Flower_C33_S_003",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      0.34081,
+      10.03486,
+      2.30021
+     ]
+    },
+    {
+     "name": "Flower_C33_S_004",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      0.31903,
+      10.03201,
+      2.31906
+     ]
+    },
+    {
+     "name": "Flower_C33_S_005",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      0.30462,
+      10.01801,
+      2.30051
+     ]
+    },
+    {
+     "name": "Flower_C33_S_006",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      0.33012,
+      10.02078,
+      2.28533
+     ]
+    },
+    {
+     "name": "Flower_C34_K_001",
+     "corymb": 34,
+     "role": "K",
+     "position": [
+      0.30529,
+      9.77133,
+      2.00183
+     ]
+    },
+    {
+     "name": "Flower_C34_S_003",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      0.31746,
+      9.74641,
+      1.97979
+     ]
+    },
+    {
+     "name": "Flower_C34_S_004",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      0.33882,
+      9.76128,
+      2.0017
+     ]
+    },
+    {
+     "name": "Flower_C34_S_005",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      0.33651,
+      9.79019,
+      2.00246
+     ]
+    },
+    {
+     "name": "Flower_C34_S_006",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      0.31422,
+      9.78542,
+      1.97366
+     ]
+    },
+    {
+     "name": "Flower_C34_S_007",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      0.30439,
+      9.76377,
+      1.97148
+     ]
+    },
+    {
+     "name": "Flower_C35_K_001",
+     "corymb": 35,
+     "role": "K",
+     "position": [
+      0.49676,
+      10.08245,
+      1.79283
+     ]
+    },
+    {
+     "name": "Flower_C35_S_004",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      0.4983,
+      10.05375,
+      1.80417
+     ]
+    },
+    {
+     "name": "Flower_C35_S_005",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      0.49747,
+      10.0825,
+      1.82031
+     ]
+    },
+    {
+     "name": "Flower_C35_S_006",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      0.51349,
+      10.0998,
+      1.80603
+     ]
+    },
+    {
+     "name": "Flower_C35_S_007",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      0.5224,
+      10.06608,
+      1.77521
+     ]
+    },
+    {
+     "name": "Flower_C36_K_001",
+     "corymb": 36,
+     "role": "K",
+     "position": [
+      0.3699,
+      9.78665,
+      1.6969
+     ]
+    },
+    {
+     "name": "Flower_C36_S_005",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      0.37791,
+      9.81801,
+      1.69398
+     ]
+    },
+    {
+     "name": "Flower_C36_S_006",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      0.35083,
+      9.81098,
+      1.71154
+     ]
+    },
+    {
+     "name": "Flower_C36_S_007",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      0.34194,
+      9.80191,
+      1.68963
+     ]
+    },
+    {
+     "name": "Flower_C36_S_008",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      0.37446,
+      9.79442,
+      1.66395
+     ]
+    },
+    {
+     "name": "Flower_C37_K_001",
+     "corymb": 37,
+     "role": "K",
+     "position": [
+      0.40601,
+      10.24609,
+      1.46794
+     ]
+    },
+    {
+     "name": "Flower_C37_S_005",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      0.38652,
+      10.2189,
+      1.46997
+     ]
+    },
+    {
+     "name": "Flower_C37_S_006",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      0.41759,
+      10.22184,
+      1.49594
+     ]
+    },
+    {
+     "name": "Flower_C37_S_007",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      0.41626,
+      10.21595,
+      1.4593
+     ]
+    },
+    {
+     "name": "Flower_C38_K_001",
+     "corymb": 38,
+     "role": "K",
+     "position": [
+      0.50418,
+      9.70119,
+      1.05614
+     ]
+    },
+    {
+     "name": "Flower_C38_S_004",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      0.54151,
+      9.70077,
+      1.0455
+     ]
+    },
+    {
+     "name": "Flower_C38_S_005",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      0.53141,
+      9.72044,
+      1.07835
+     ]
+    },
+    {
+     "name": "Flower_C38_S_006",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      0.51962,
+      9.73405,
+      1.04582
+     ]
+    },
+    {
+     "name": "Flower_C38_S_007",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      0.52087,
+      9.71186,
+      1.02274
+     ]
+    },
+    {
+     "name": "Flower_C39_K_001",
+     "corymb": 39,
+     "role": "K",
+     "position": [
+      0.36617,
+      10.02703,
+      1.20984
+     ]
+    },
+    {
+     "name": "Flower_C39_S_005",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      0.38302,
+      10.00103,
+      1.21407
+     ]
+    },
+    {
+     "name": "Flower_C39_S_006",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      0.37601,
+      10.04071,
+      1.23524
+     ]
+    },
+    {
+     "name": "Flower_C39_S_007",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      0.38911,
+      10.03586,
+      1.1914
+     ]
+    },
+    {
+     "name": "Flower_C40_K_001",
+     "corymb": 40,
+     "role": "K",
+     "position": [
+      0.08625,
+      9.85432,
+      1.12444
+     ]
+    },
+    {
+     "name": "Flower_C40_S_003",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      0.11399,
+      9.85342,
+      1.13796
+     ]
+    },
+    {
+     "name": "Flower_C40_S_004",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      0.09266,
+      9.8682,
+      1.15055
+     ]
+    },
+    {
+     "name": "Flower_C40_S_005",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      0.09795,
+      9.88024,
+      1.11819
+     ]
+    },
+    {
+     "name": "Flower_C41_K_001",
+     "corymb": 41,
+     "role": "K",
+     "position": [
+      0.41553,
+      10.00239,
+      1.46998
+     ]
+    },
+    {
+     "name": "Flower_C41_S_003",
+     "corymb": 41,
+     "role": "S",
+     "position": [
+      0.44865,
+      10.00766,
+      1.4681
+     ]
+    },
+    {
+     "name": "Flower_C41_S_004",
+     "corymb": 41,
+     "role": "S",
+     "position": [
+      0.40412,
+      10.02532,
+      1.49109
+     ]
+    },
+    {
+     "name": "Flower_C41_S_005",
+     "corymb": 41,
+     "role": "S",
+     "position": [
+      0.40725,
+      10.01794,
+      1.43859
+     ]
+    },
+    {
+     "name": "Flower_C42_K_001",
+     "corymb": 42,
+     "role": "K",
+     "position": [
+      0.2773,
+      10.03763,
+      2.5189
+     ]
+    },
+    {
+     "name": "Flower_C42_S_005",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      0.30001,
+      10.02059,
+      2.52127
+     ]
+    },
+    {
+     "name": "Flower_C42_S_006",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      0.29446,
+      10.04787,
+      2.5498
+     ]
+    },
+    {
+     "name": "Flower_C42_S_007",
+     "corymb": 42,
+     "role": "S",
+     "position": [
+      0.28822,
+      10.05982,
+      2.49748
+     ]
+    },
+    {
+     "name": "Flower_C43_K_001",
+     "corymb": 43,
+     "role": "K",
+     "position": [
+      0.46748,
+      9.55248,
+      1.41318
+     ]
+    },
+    {
+     "name": "Flower_C43_S_004",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      0.46091,
+      9.5823,
+      1.42288
+     ]
+    },
+    {
+     "name": "Flower_C43_S_005",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      0.48551,
+      9.56146,
+      1.43583
+     ]
+    },
+    {
+     "name": "Flower_C43_S_006",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      0.47056,
+      9.52722,
+      1.44201
+     ]
+    },
+    {
+     "name": "Flower_C43_S_007",
+     "corymb": 43,
+     "role": "S",
+     "position": [
+      0.43938,
+      9.55981,
+      1.42966
+     ]
+    },
+    {
+     "name": "Flower_C44_K_001",
+     "corymb": 44,
+     "role": "K",
+     "position": [
+      0.49091,
+      10.07686,
+      0.80778
+     ]
+    },
+    {
+     "name": "Flower_C44_S_004",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      0.49263,
+      10.10837,
+      0.83265
+     ]
+    },
+    {
+     "name": "Flower_C44_S_005",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      0.51819,
+      10.07748,
+      0.82205
+     ]
+    },
+    {
+     "name": "Flower_C44_S_006",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      0.48687,
+      10.03522,
+      0.80511
+     ]
+    },
+    {
+     "name": "Flower_C44_S_007",
+     "corymb": 44,
+     "role": "S",
+     "position": [
+      0.46879,
+      10.06305,
+      0.82552
+     ]
+    },
+    {
+     "name": "Flower_C45_K_001",
+     "corymb": 45,
+     "role": "K",
+     "position": [
+      0.40055,
+      9.79048,
+      2.14997
+     ]
+    },
+    {
+     "name": "Flower_C45_S_005",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      0.41341,
+      9.76394,
+      2.14577
+     ]
+    },
+    {
+     "name": "Flower_C45_S_006",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      0.42558,
+      9.77987,
+      2.16047
+     ]
+    },
+    {
+     "name": "Flower_C45_S_007",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      0.42961,
+      9.80114,
+      2.16254
+     ]
+    },
+    {
+     "name": "Flower_C45_S_008",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      0.41934,
+      9.81233,
+      2.13062
+     ]
+    },
+    {
+     "name": "Flower_C45_S_009",
+     "corymb": 45,
+     "role": "S",
+     "position": [
+      0.41392,
+      9.78034,
+      2.12207
+     ]
+    },
+    {
+     "name": "Flower_C46_K_001",
+     "corymb": 46,
+     "role": "K",
+     "position": [
+      0.62189,
+      9.79418,
+      1.58078
+     ]
+    },
+    {
+     "name": "Flower_C46_S_004",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      0.60092,
+      9.80781,
+      1.56606
+     ]
+    },
+    {
+     "name": "Flower_C46_S_005",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      0.59893,
+      9.76678,
+      1.58444
+     ]
+    },
+    {
+     "name": "Flower_C46_S_006",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      0.64637,
+      9.76925,
+      1.57154
+     ]
+    },
+    {
+     "name": "Flower_C46_S_007",
+     "corymb": 46,
+     "role": "S",
+     "position": [
+      0.63873,
+      9.81034,
+      1.55494
+     ]
+    },
+    {
+     "name": "Flower_C47_K_001",
+     "corymb": 47,
+     "role": "K",
+     "position": [
+      0.46109,
+      9.95341,
+      2.1247
+     ]
+    },
+    {
+     "name": "Flower_C47_S_004",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      0.46116,
+      9.91096,
+      2.11818
+     ]
+    },
+    {
+     "name": "Flower_C47_S_005",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      0.48235,
+      9.94951,
+      2.14009
+     ]
+    },
+    {
+     "name": "Flower_C47_S_006",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      0.4786,
+      9.98081,
+      2.12691
+     ]
+    },
+    {
+     "name": "Flower_C47_S_007",
+     "corymb": 47,
+     "role": "S",
+     "position": [
+      0.46272,
+      9.95691,
+      2.08436
+     ]
+    },
+    {
+     "name": "Flower_C48_K_001",
+     "corymb": 48,
+     "role": "K",
+     "position": [
+      0.37537,
+      9.90576,
+      2.1937
+     ]
+    },
+    {
+     "name": "Flower_C48_S_004",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      0.38085,
+      9.93794,
+      2.20636
+     ]
+    },
+    {
+     "name": "Flower_C48_S_005",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      0.37007,
+      9.93015,
+      2.21934
+     ]
+    },
+    {
+     "name": "Flower_C48_S_006",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      0.35293,
+      9.91111,
+      2.21591
+     ]
+    },
+    {
+     "name": "Flower_C48_S_007",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      0.34572,
+      9.91904,
+      2.18622
+     ]
+    },
+    {
+     "name": "Flower_C48_S_008",
+     "corymb": 48,
+     "role": "S",
+     "position": [
+      0.36852,
+      9.93937,
+      2.18586
+     ]
+    },
+    {
+     "name": "Flower_C49_K_001",
+     "corymb": 49,
+     "role": "K",
+     "position": [
+      0.48475,
+      9.73357,
+      2.04621
+     ]
+    },
+    {
+     "name": "Flower_C49_S_004",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      0.51845,
+      9.73353,
+      2.04179
+     ]
+    },
+    {
+     "name": "Flower_C49_S_005",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      0.5034,
+      9.7467,
+      2.07372
+     ]
+    },
+    {
+     "name": "Flower_C49_S_006",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      0.50279,
+      9.76567,
+      2.04476
+     ]
+    },
+    {
+     "name": "Flower_C49_S_007",
+     "corymb": 49,
+     "role": "S",
+     "position": [
+      0.50735,
+      9.75043,
+      2.02478
+     ]
+    },
+    {
+     "name": "Flower_C50_K_001",
+     "corymb": 50,
+     "role": "K",
+     "position": [
+      0.29073,
+      10.37839,
+      1.65886
+     ]
+    },
+    {
+     "name": "Flower_C50_S_004",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      0.26524,
+      10.34936,
+      1.66188
+     ]
+    },
+    {
+     "name": "Flower_C50_S_005",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      0.29823,
+      10.37637,
+      1.68352
+     ]
+    },
+    {
+     "name": "Flower_C50_S_006",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      0.31897,
+      10.39224,
+      1.66338
+     ]
+    },
+    {
+     "name": "Flower_C50_S_007",
+     "corymb": 50,
+     "role": "S",
+     "position": [
+      0.30575,
+      10.35876,
+      1.63955
+     ]
+    },
+    {
+     "name": "Flower_C51_K_001",
+     "corymb": 51,
+     "role": "K",
+     "position": [
+      0.52608,
+      10.28097,
+      2.68814
+     ]
+    },
+    {
+     "name": "Flower_C51_S_003",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      0.5202,
+      10.24542,
+      2.70182
+     ]
+    },
+    {
+     "name": "Flower_C51_S_004",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      0.52398,
+      10.27896,
+      2.71419
+     ]
+    },
+    {
+     "name": "Flower_C51_S_005",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      0.5353,
+      10.31194,
+      2.70385
+     ]
+    },
+    {
+     "name": "Flower_C51_S_006",
+     "corymb": 51,
+     "role": "S",
+     "position": [
+      0.55287,
+      10.27204,
+      2.68377
+     ]
+    },
+    {
+     "name": "Flower_C52_K_001",
+     "corymb": 52,
+     "role": "K",
+     "position": [
+      0.28348,
+      10.09109,
+      1.51325
+     ]
+    },
+    {
+     "name": "Flower_C52_S_004",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      0.29908,
+      10.06458,
+      1.5313
+     ]
+    },
+    {
+     "name": "Flower_C52_S_005",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      0.29665,
+      10.09119,
+      1.54449
+     ]
+    },
+    {
+     "name": "Flower_C52_S_006",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      0.30522,
+      10.10864,
+      1.53047
+     ]
+    },
+    {
+     "name": "Flower_C52_S_007",
+     "corymb": 52,
+     "role": "S",
+     "position": [
+      0.31517,
+      10.08929,
+      1.50896
+     ]
+    },
+    {
+     "name": "Flower_C53_K_001",
+     "corymb": 53,
+     "role": "K",
+     "position": [
+      0.35878,
+      10.07581,
+      1.99933
+     ]
+    },
+    {
+     "name": "Flower_C53_S_005",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      0.33995,
+      10.06456,
+      2.01555
+     ]
+    },
+    {
+     "name": "Flower_C53_S_006",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      0.35633,
+      10.08292,
+      2.02809
+     ]
+    },
+    {
+     "name": "Flower_C53_S_007",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      0.38106,
+      10.06087,
+      2.01443
+     ]
+    },
+    {
+     "name": "Flower_C53_S_008",
+     "corymb": 53,
+     "role": "S",
+     "position": [
+      0.3519,
+      10.04791,
+      1.99019
+     ]
+    },
+    {
+     "name": "Flower_C54_K_001",
+     "corymb": 54,
+     "role": "K",
+     "position": [
+      0.69352,
+      10.18707,
+      2.29224
+     ]
+    },
+    {
+     "name": "Flower_C54_S_003",
+     "corymb": 54,
+     "role": "S",
+     "position": [
+      0.70506,
+      10.2068,
+      2.31803
+     ]
+    },
+    {
+     "name": "Flower_C54_S_004",
+     "corymb": 54,
+     "role": "S",
+     "position": [
+      0.72599,
+      10.16846,
+      2.291
+     ]
+    },
+    {
+     "name": "Flower_C54_S_005",
+     "corymb": 54,
+     "role": "S",
+     "position": [
+      0.69198,
+      10.17188,
+      2.32463
+     ]
+    },
+    {
+     "name": "Flower_C55_K_001",
+     "corymb": 55,
+     "role": "K",
+     "position": [
+      0.48944,
+      9.83966,
+      0.89586
+     ]
+    },
+    {
+     "name": "Flower_C55_S_003",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      0.51655,
+      9.85649,
+      0.90474
+     ]
+    },
+    {
+     "name": "Flower_C55_S_004",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      0.48909,
+      9.83562,
+      0.92755
+     ]
+    },
+    {
+     "name": "Flower_C55_S_005",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      0.47014,
+      9.85587,
+      0.90252
+     ]
+    },
+    {
+     "name": "Flower_C55_S_006",
+     "corymb": 55,
+     "role": "S",
+     "position": [
+      0.49476,
+      9.86855,
+      0.88172
+     ]
+    },
+    {
+     "name": "Flower_C56_K_001",
+     "corymb": 56,
+     "role": "K",
+     "position": [
+      0.70123,
+      10.15536,
+      1.37078
+     ]
+    },
+    {
+     "name": "Flower_C56_S_004",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      0.66958,
+      10.15296,
+      1.36259
+     ]
+    },
+    {
+     "name": "Flower_C56_S_005",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      0.67852,
+      10.13984,
+      1.3913
+     ]
+    },
+    {
+     "name": "Flower_C56_S_006",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      0.69101,
+      10.12396,
+      1.37765
+     ]
+    },
+    {
+     "name": "Flower_C56_S_007",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      0.68469,
+      10.13064,
+      1.35507
+     ]
+    },
+    {
+     "name": "Flower_C56_S_008",
+     "corymb": 56,
+     "role": "S",
+     "position": [
+      0.68236,
+      10.15165,
+      1.34657
+     ]
+    },
+    {
+     "name": "Flower_C57_K_001",
+     "corymb": 57,
+     "role": "K",
+     "position": [
+      0.24409,
+      10.18806,
+      1.75707
+     ]
+    },
+    {
+     "name": "Flower_C57_S_005",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      0.27472,
+      10.18973,
+      1.75564
+     ]
+    },
+    {
+     "name": "Flower_C57_S_006",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      0.25256,
+      10.2053,
+      1.77442
+     ]
+    },
+    {
+     "name": "Flower_C57_S_007",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      0.23883,
+      10.21409,
+      1.75949
+     ]
+    },
+    {
+     "name": "Flower_C57_S_008",
+     "corymb": 57,
+     "role": "S",
+     "position": [
+      0.24686,
+      10.19598,
+      1.71718
+     ]
+    },
+    {
+     "name": "Flower_C58_K_001",
+     "corymb": 58,
+     "role": "K",
+     "position": [
+      0.3549,
+      10.04833,
+      2.30094
+     ]
+    },
+    {
+     "name": "Flower_C58_S_005",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      0.36342,
+      10.02067,
+      2.30413
+     ]
+    },
+    {
+     "name": "Flower_C58_S_006",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      0.37982,
+      10.0556,
+      2.3138
+     ]
+    },
+    {
+     "name": "Flower_C58_S_007",
+     "corymb": 58,
+     "role": "S",
+     "position": [
+      0.37274,
+      10.05492,
+      2.28274
+     ]
+    },
+    {
+     "name": "Flower_C59_K_001",
+     "corymb": 59,
+     "role": "K",
+     "position": [
+      0.25593,
+      10.01947,
+      2.45651
+     ]
+    },
+    {
+     "name": "Flower_C59_S_005",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      0.25607,
+      10.05537,
+      2.44814
+     ]
+    },
+    {
+     "name": "Flower_C59_S_006",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      0.22815,
+      10.0244,
+      2.45678
+     ]
+    },
+    {
+     "name": "Flower_C59_S_007",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      0.23364,
+      9.9923,
+      2.45159
+     ]
+    },
+    {
+     "name": "Flower_C59_S_008",
+     "corymb": 59,
+     "role": "S",
+     "position": [
+      0.27045,
+      10.00946,
+      2.43429
+     ]
+    },
+    {
+     "name": "Flower_C60_K_001",
+     "corymb": 60,
+     "role": "K",
+     "position": [
+      0.37362,
+      9.93474,
+      2.24004
+     ]
+    },
+    {
+     "name": "Flower_C60_S_004",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      0.40283,
+      9.94635,
+      2.23853
+     ]
+    },
+    {
+     "name": "Flower_C60_S_005",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      0.39245,
+      9.94683,
+      2.26278
+     ]
+    },
+    {
+     "name": "Flower_C60_S_006",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      0.3695,
+      9.96505,
+      2.25178
+     ]
+    },
+    {
+     "name": "Flower_C60_S_007",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      0.35438,
+      9.95457,
+      2.21881
+     ]
+    },
+    {
+     "name": "Flower_C60_S_008",
+     "corymb": 60,
+     "role": "S",
+     "position": [
+      0.39007,
+      9.94441,
+      2.21706
+     ]
+    },
+    {
+     "name": "Flower_C61_K_001",
+     "corymb": 61,
+     "role": "K",
+     "position": [
+      0.43199,
+      9.74949,
+      2.14175
+     ]
+    },
+    {
+     "name": "Flower_C61_S_005",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      0.45177,
+      9.77718,
+      2.14938
+     ]
+    },
+    {
+     "name": "Flower_C61_S_006",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      0.43898,
+      9.74475,
+      2.16881
+     ]
+    },
+    {
+     "name": "Flower_C61_S_007",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      0.40882,
+      9.73975,
+      2.15058
+     ]
+    },
+    {
+     "name": "Flower_C61_S_008",
+     "corymb": 61,
+     "role": "S",
+     "position": [
+      0.41217,
+      9.76841,
+      2.13277
+     ]
+    },
+    {
+     "name": "Flower_C62_K_001",
+     "corymb": 62,
+     "role": "K",
+     "position": [
+      0.20319,
+      10.21543,
+      1.02892
+     ]
+    },
+    {
+     "name": "Flower_C62_S_005",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      0.18269,
+      10.23045,
+      1.00659
+     ]
+    },
+    {
+     "name": "Flower_C62_S_006",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      0.1728,
+      10.20449,
+      1.02483
+     ]
+    },
+    {
+     "name": "Flower_C62_S_007",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      0.1936,
+      10.18955,
+      1.00791
+     ]
+    },
+    {
+     "name": "Flower_C62_S_008",
+     "corymb": 62,
+     "role": "S",
+     "position": [
+      0.21737,
+      10.21918,
+      0.99484
+     ]
+    },
+    {
+     "name": "Flower_C63_K_001",
+     "corymb": 63,
+     "role": "K",
+     "position": [
+      0.51596,
+      10.09226,
+      1.94179
+     ]
+    },
+    {
+     "name": "Flower_C63_S_005",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      0.5101,
+      10.11768,
+      1.94772
+     ]
+    },
+    {
+     "name": "Flower_C63_S_006",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      0.50454,
+      10.10348,
+      1.96131
+     ]
+    },
+    {
+     "name": "Flower_C63_S_007",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      0.48976,
+      10.07082,
+      1.95141
+     ]
+    },
+    {
+     "name": "Flower_C63_S_008",
+     "corymb": 63,
+     "role": "S",
+     "position": [
+      0.50063,
+      10.10058,
+      1.9094
+     ]
+    },
+    {
+     "name": "Flower_C64_K_001",
+     "corymb": 64,
+     "role": "K",
+     "position": [
+      0.53772,
+      9.95576,
+      2.36268
+     ]
+    },
+    {
+     "name": "Flower_C64_S_005",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      0.56484,
+      9.9648,
+      2.35427
+     ]
+    },
+    {
+     "name": "Flower_C64_S_006",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      0.55496,
+      9.97776,
+      2.37467
+     ]
+    },
+    {
+     "name": "Flower_C64_S_007",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      0.52961,
+      9.98485,
+      2.37327
+     ]
+    },
+    {
+     "name": "Flower_C64_S_008",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      0.53322,
+      9.97712,
+      2.34271
+     ]
+    },
+    {
+     "name": "Flower_C64_S_009",
+     "corymb": 64,
+     "role": "S",
+     "position": [
+      0.54724,
+      9.96674,
+      2.33444
+     ]
+    },
+    {
+     "name": "Flower_C65_K_001",
+     "corymb": 65,
+     "role": "K",
+     "position": [
+      0.30813,
+      9.95094,
+      1.53831
+     ]
+    },
+    {
+     "name": "Flower_C65_S_005",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      0.30348,
+      9.92969,
+      1.56518
+     ]
+    },
+    {
+     "name": "Flower_C65_S_006",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      0.30894,
+      9.95226,
+      1.57469
+     ]
+    },
+    {
+     "name": "Flower_C65_S_007",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      0.32922,
+      9.95259,
+      1.56644
+     ]
+    },
+    {
+     "name": "Flower_C65_S_008",
+     "corymb": 65,
+     "role": "S",
+     "position": [
+      0.33042,
+      9.93261,
+      1.55533
+     ]
+    },
+    {
+     "name": "Flower_C66_K_001",
+     "corymb": 66,
+     "role": "K",
+     "position": [
+      0.30611,
+      10.20103,
+      0.86122
+     ]
+    },
+    {
+     "name": "Flower_C66_S_005",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      0.30576,
+      10.22863,
+      0.87559
+     ]
+    },
+    {
+     "name": "Flower_C66_S_006",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      0.33284,
+      10.19409,
+      0.87925
+     ]
+    },
+    {
+     "name": "Flower_C66_S_007",
+     "corymb": 66,
+     "role": "S",
+     "position": [
+      0.29579,
+      10.20398,
+      0.88888
+     ]
+    },
+    {
+     "name": "Flower_C67_K_001",
+     "corymb": 67,
+     "role": "K",
+     "position": [
+      0.55526,
+      10.08089,
+      2.14539
+     ]
+    },
+    {
+     "name": "Flower_C67_S_004",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      0.55915,
+      10.06019,
+      2.12285
+     ]
+    },
+    {
+     "name": "Flower_C67_S_005",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      0.57467,
+      10.08961,
+      2.12331
+     ]
+    },
+    {
+     "name": "Flower_C67_S_006",
+     "corymb": 67,
+     "role": "S",
+     "position": [
+      0.53495,
+      10.10029,
+      2.12603
+     ]
+    },
+    {
+     "name": "Flower_C68_K_001",
+     "corymb": 68,
+     "role": "K",
+     "position": [
+      0.34417,
+      9.95214,
+      1.5843
+     ]
+    },
+    {
+     "name": "Flower_C68_S_004",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      0.34493,
+      9.93476,
+      1.55995
+     ]
+    },
+    {
+     "name": "Flower_C68_S_005",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      0.35868,
+      9.96914,
+      1.56065
+     ]
+    },
+    {
+     "name": "Flower_C68_S_006",
+     "corymb": 68,
+     "role": "S",
+     "position": [
+      0.32852,
+      9.96415,
+      1.56153
+     ]
+    },
+    {
+     "name": "Flower_C69_K_001",
+     "corymb": 69,
+     "role": "K",
+     "position": [
+      0.28188,
+      9.87188,
+      2.35211
+     ]
+    },
+    {
+     "name": "Flower_C69_S_004",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      0.29988,
+      9.85371,
+      2.3373
+     ]
+    },
+    {
+     "name": "Flower_C69_S_005",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      0.31386,
+      9.88408,
+      2.35279
+     ]
+    },
+    {
+     "name": "Flower_C69_S_006",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      0.29264,
+      9.89661,
+      2.34188
+     ]
+    },
+    {
+     "name": "Flower_C69_S_007",
+     "corymb": 69,
+     "role": "S",
+     "position": [
+      0.26587,
+      9.86577,
+      2.31852
+     ]
+    },
+    {
+     "name": "Flower_C70_K_001",
+     "corymb": 70,
+     "role": "K",
+     "position": [
+      0.59417,
+      9.87907,
+      1.13866
+     ]
+    },
+    {
+     "name": "Flower_C70_S_004",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      0.57718,
+      9.89496,
+      1.12857
+     ]
+    },
+    {
+     "name": "Flower_C70_S_005",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      0.56569,
+      9.87061,
+      1.14848
+     ]
+    },
+    {
+     "name": "Flower_C70_S_006",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      0.58969,
+      9.84851,
+      1.12678
+     ]
+    },
+    {
+     "name": "Flower_C70_S_007",
+     "corymb": 70,
+     "role": "S",
+     "position": [
+      0.59497,
+      9.87445,
+      1.11101
+     ]
+    },
+    {
+     "name": "Flower_C71_K_001",
+     "corymb": 71,
+     "role": "K",
+     "position": [
+      0.05427,
+      10.11374,
+      2.2922
+     ]
+    },
+    {
+     "name": "Flower_C71_S_004",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      0.05859,
+      10.08885,
+      2.30975
+     ]
+    },
+    {
+     "name": "Flower_C71_S_005",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      0.05596,
+      10.12314,
+      2.32397
+     ]
+    },
+    {
+     "name": "Flower_C71_S_006",
+     "corymb": 71,
+     "role": "S",
+     "position": [
+      0.08381,
+      10.11496,
+      2.29082
+     ]
+    },
+    {
+     "name": "Flower_C72_K_001",
+     "corymb": 72,
+     "role": "K",
+     "position": [
+      0.34399,
+      10.0025,
+      1.62963
+     ]
+    },
+    {
+     "name": "Flower_C72_S_004",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      0.35927,
+      9.97866,
+      1.64934
+     ]
+    },
+    {
+     "name": "Flower_C72_S_005",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      0.34332,
+      10.00844,
+      1.66395
+     ]
+    },
+    {
+     "name": "Flower_C72_S_006",
+     "corymb": 72,
+     "role": "S",
+     "position": [
+      0.3742,
+      10.01813,
+      1.64204
+     ]
+    },
+    {
+     "name": "Flower_C73_K_001",
+     "corymb": 73,
+     "role": "K",
+     "position": [
+      0.46741,
+      10.26871,
+      1.61727
+     ]
+    },
+    {
+     "name": "Flower_C73_S_003",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      0.43205,
+      10.28502,
+      1.61236
+     ]
+    },
+    {
+     "name": "Flower_C73_S_004",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      0.45331,
+      10.25592,
+      1.63563
+     ]
+    },
+    {
+     "name": "Flower_C73_S_005",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      0.48238,
+      10.24031,
+      1.61892
+     ]
+    },
+    {
+     "name": "Flower_C73_S_006",
+     "corymb": 73,
+     "role": "S",
+     "position": [
+      0.45594,
+      10.25925,
+      1.58874
+     ]
+    },
+    {
+     "name": "Flower_C74_K_001",
+     "corymb": 74,
+     "role": "K",
+     "position": [
+      0.55246,
+      10.13841,
+      1.55635
+     ]
+    },
+    {
+     "name": "Flower_C74_S_004",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      0.54678,
+      10.17313,
+      1.56963
+     ]
+    },
+    {
+     "name": "Flower_C74_S_005",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      0.57749,
+      10.13349,
+      1.57353
+     ]
+    },
+    {
+     "name": "Flower_C74_S_006",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      0.54773,
+      10.12051,
+      1.57958
+     ]
+    },
+    {
+     "name": "Flower_C74_S_007",
+     "corymb": 74,
+     "role": "S",
+     "position": [
+      0.52344,
+      10.13986,
+      1.56915
+     ]
+    },
+    {
+     "name": "Flower_C75_K_001",
+     "corymb": 75,
+     "role": "K",
+     "position": [
+      0.47367,
+      10.27032,
+      0.96877
+     ]
+    },
+    {
+     "name": "Flower_C75_S_003",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      0.45769,
+      10.24191,
+      0.96138
+     ]
+    },
+    {
+     "name": "Flower_C75_S_004",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      0.4839,
+      10.24619,
+      0.98475
+     ]
+    },
+    {
+     "name": "Flower_C75_S_005",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      0.50097,
+      10.2513,
+      0.96519
+     ]
+    },
+    {
+     "name": "Flower_C75_S_006",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      0.49555,
+      10.25354,
+      0.9458
+     ]
+    },
+    {
+     "name": "Flower_C75_S_007",
+     "corymb": 75,
+     "role": "S",
+     "position": [
+      0.4668,
+      10.25701,
+      0.93838
+     ]
+    },
+    {
+     "name": "Flower_C76_K_001",
+     "corymb": 76,
+     "role": "K",
+     "position": [
+      0.57329,
+      9.92385,
+      2.4638
+     ]
+    },
+    {
+     "name": "Flower_C76_S_004",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      0.56862,
+      9.95048,
+      2.44679
+     ]
+    },
+    {
+     "name": "Flower_C76_S_005",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      0.54876,
+      9.93429,
+      2.4457
+     ]
+    },
+    {
+     "name": "Flower_C76_S_006",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      0.54611,
+      9.90986,
+      2.46023
+     ]
+    },
+    {
+     "name": "Flower_C76_S_007",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      0.57028,
+      9.89889,
+      2.43885
+     ]
+    },
+    {
+     "name": "Flower_C76_S_008",
+     "corymb": 76,
+     "role": "S",
+     "position": [
+      0.57794,
+      9.92522,
+      2.43088
+     ]
+    },
+    {
+     "name": "Flower_C77_K_001",
+     "corymb": 77,
+     "role": "K",
+     "position": [
+      0.51682,
+      9.90721,
+      2.17149
+     ]
+    },
+    {
+     "name": "Flower_C77_S_003",
+     "corymb": 77,
+     "role": "S",
+     "position": [
+      0.53664,
+      9.92178,
+      2.18636
+     ]
+    },
+    {
+     "name": "Flower_C77_S_004",
+     "corymb": 77,
+     "role": "S",
+     "position": [
+      0.50788,
+      9.90604,
+      2.1966
+     ]
+    },
+    {
+     "name": "Flower_C77_S_005",
+     "corymb": 77,
+     "role": "S",
+     "position": [
+      0.50375,
+      9.93237,
+      2.17214
+     ]
+    },
+    {
+     "name": "Flower_C78_K_001",
+     "corymb": 78,
+     "role": "K",
+     "position": [
+      0.12706,
+      10.03129,
+      1.70791
+     ]
+    },
+    {
+     "name": "Flower_C78_S_005",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      0.10158,
+      10.0358,
+      1.70831
+     ]
+    },
+    {
+     "name": "Flower_C78_S_006",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      0.12593,
+      10.03103,
+      1.73968
+     ]
+    },
+    {
+     "name": "Flower_C78_S_007",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      0.13627,
+      9.99851,
+      1.70605
+     ]
+    },
+    {
+     "name": "Flower_C78_S_008",
+     "corymb": 78,
+     "role": "S",
+     "position": [
+      0.11394,
+      10.01881,
+      1.69394
+     ]
+    },
+    {
+     "name": "Flower_C79_K_001",
+     "corymb": 79,
+     "role": "K",
+     "position": [
+      0.54273,
+      9.87406,
+      2.56969
+     ]
+    },
+    {
+     "name": "Flower_C79_S_004",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      0.51819,
+      9.86751,
+      2.5736
+     ]
+    },
+    {
+     "name": "Flower_C79_S_005",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      0.53036,
+      9.87277,
+      2.59438
+     ]
+    },
+    {
+     "name": "Flower_C79_S_006",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      0.55192,
+      9.8493,
+      2.5837
+     ]
+    },
+    {
+     "name": "Flower_C79_S_007",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      0.54271,
+      9.84666,
+      2.56348
+     ]
+    },
+    {
+     "name": "Flower_C79_S_008",
+     "corymb": 79,
+     "role": "S",
+     "position": [
+      0.51995,
+      9.86374,
+      2.55452
+     ]
+    },
+    {
+     "name": "Flower_C80_K_001",
+     "corymb": 80,
+     "role": "K",
+     "position": [
+      0.57387,
+      10.17805,
+      1.46935
+     ]
+    },
+    {
+     "name": "Flower_C80_S_004",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      0.54399,
+      10.17915,
+      1.47138
+     ]
+    },
+    {
+     "name": "Flower_C80_S_005",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      0.55647,
+      10.16605,
+      1.4826
+     ]
+    },
+    {
+     "name": "Flower_C80_S_006",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      0.57563,
+      10.15471,
+      1.47549
+     ]
+    },
+    {
+     "name": "Flower_C80_S_007",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      0.57891,
+      10.1517,
+      1.45903
+     ]
+    },
+    {
+     "name": "Flower_C80_S_008",
+     "corymb": 80,
+     "role": "S",
+     "position": [
+      0.56327,
+      10.16579,
+      1.44759
+     ]
+    },
+    {
+     "name": "Flower_C81_K_001",
+     "corymb": 81,
+     "role": "K",
+     "position": [
+      0.57727,
+      9.82669,
+      2.5773
+     ]
+    },
+    {
+     "name": "Flower_C81_S_005",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      0.55822,
+      9.85056,
+      2.58284
+     ]
+    },
+    {
+     "name": "Flower_C81_S_006",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      0.56076,
+      9.82804,
+      2.60382
+     ]
+    },
+    {
+     "name": "Flower_C81_S_007",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      0.57414,
+      9.80281,
+      2.601
+     ]
+    },
+    {
+     "name": "Flower_C81_S_008",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      0.56418,
+      9.80072,
+      2.55359
+     ]
+    },
+    {
+     "name": "Flower_C81_S_009",
+     "corymb": 81,
+     "role": "S",
+     "position": [
+      0.55893,
+      9.83042,
+      2.54786
+     ]
+    },
+    {
+     "name": "Flower_C82_K_001",
+     "corymb": 82,
+     "role": "K",
+     "position": [
+      0.61892,
+      9.8769,
+      0.96791
+     ]
+    },
+    {
+     "name": "Flower_C82_S_004",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      0.61567,
+      9.90623,
+      0.98005
+     ]
+    },
+    {
+     "name": "Flower_C82_S_005",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      0.62167,
+      9.87771,
+      1.00109
+     ]
+    },
+    {
+     "name": "Flower_C82_S_006",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      0.59344,
+      9.85362,
+      0.9778
+     ]
+    },
+    {
+     "name": "Flower_C82_S_007",
+     "corymb": 82,
+     "role": "S",
+     "position": [
+      0.59757,
+      9.89392,
+      0.96237
+     ]
+    },
+    {
+     "name": "Flower_C83_K_001",
+     "corymb": 83,
+     "role": "K",
+     "position": [
+      0.42442,
+      10.3491,
+      1.08965
+     ]
+    },
+    {
+     "name": "Flower_C83_S_003",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      0.44128,
+      10.37567,
+      1.08951
+     ]
+    },
+    {
+     "name": "Flower_C83_S_004",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      0.42488,
+      10.37602,
+      1.10662
+     ]
+    },
+    {
+     "name": "Flower_C83_S_005",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      0.40628,
+      10.37446,
+      1.093
+     ]
+    },
+    {
+     "name": "Flower_C83_S_006",
+     "corymb": 83,
+     "role": "S",
+     "position": [
+      0.42506,
+      10.37209,
+      1.06969
+     ]
+    },
+    {
+     "name": "Flower_C84_K_001",
+     "corymb": 84,
+     "role": "K",
+     "position": [
+      0.3146,
+      9.98099,
+      1.02427
+     ]
+    },
+    {
+     "name": "Flower_C84_S_004",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      0.33913,
+      9.97182,
+      1.03415
+     ]
+    },
+    {
+     "name": "Flower_C84_S_005",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      0.31193,
+      9.98035,
+      1.05463
+     ]
+    },
+    {
+     "name": "Flower_C84_S_006",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      0.31536,
+      10.00962,
+      1.03676
+     ]
+    },
+    {
+     "name": "Flower_C84_S_007",
+     "corymb": 84,
+     "role": "S",
+     "position": [
+      0.34217,
+      9.99504,
+      1.02398
+     ]
+    },
+    {
+     "name": "Flower_C85_K_001",
+     "corymb": 85,
+     "role": "K",
+     "position": [
+      0.53647,
+      10.30655,
+      1.98082
+     ]
+    },
+    {
+     "name": "Flower_C85_S_004",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      0.56004,
+      10.30376,
+      1.96357
+     ]
+    },
+    {
+     "name": "Flower_C85_S_005",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      0.5654,
+      10.32372,
+      1.98421
+     ]
+    },
+    {
+     "name": "Flower_C85_S_006",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      0.52866,
+      10.33968,
+      1.97478
+     ]
+    },
+    {
+     "name": "Flower_C85_S_007",
+     "corymb": 85,
+     "role": "S",
+     "position": [
+      0.5321,
+      10.30812,
+      1.94982
+     ]
+    },
+    {
+     "name": "Flower_C86_K_001",
+     "corymb": 86,
+     "role": "K",
+     "position": [
+      0.41147,
+      10.20588,
+      2.69381
+     ]
+    },
+    {
+     "name": "Flower_C86_S_005",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      0.4318,
+      10.19132,
+      2.68078
+     ]
+    },
+    {
+     "name": "Flower_C86_S_006",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      0.43383,
+      10.2152,
+      2.70946
+     ]
+    },
+    {
+     "name": "Flower_C86_S_007",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      0.40668,
+      10.23694,
+      2.68236
+     ]
+    },
+    {
+     "name": "Flower_C86_S_008",
+     "corymb": 86,
+     "role": "S",
+     "position": [
+      0.40745,
+      10.20895,
+      2.66109
+     ]
+    },
+    {
+     "name": "Flower_C87_K_001",
+     "corymb": 87,
+     "role": "K",
+     "position": [
+      0.45089,
+      10.1296,
+      0.92321
+     ]
+    },
+    {
+     "name": "Flower_C87_S_004",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      0.4653,
+      10.11071,
+      0.94772
+     ]
+    },
+    {
+     "name": "Flower_C87_S_005",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      0.44561,
+      10.13382,
+      0.96108
+     ]
+    },
+    {
+     "name": "Flower_C87_S_006",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      0.46588,
+      10.15128,
+      0.94926
+     ]
+    },
+    {
+     "name": "Flower_C87_S_007",
+     "corymb": 87,
+     "role": "S",
+     "position": [
+      0.47924,
+      10.1322,
+      0.94555
+     ]
+    },
+    {
+     "name": "Flower_C88_S_001",
+     "corymb": 88,
+     "role": "S",
+     "position": [
+      0.60502,
+      9.68885,
+      2.13342
+     ]
+    },
+    {
+     "name": "Flower_C88_S_002",
+     "corymb": 88,
+     "role": "S",
+     "position": [
+      0.57771,
+      9.67187,
+      2.1224
+     ]
+    },
+    {
+     "name": "Flower_C88_S_003",
+     "corymb": 88,
+     "role": "S",
+     "position": [
+      0.56877,
+      9.7073,
+      2.09956
+     ]
+    },
+    {
+     "name": "Flower_C88_S_004",
+     "corymb": 88,
+     "role": "S",
+     "position": [
+      0.59286,
+      9.71959,
+      2.10524
+     ]
+    },
+    {
+     "name": "Flower_C89_S_001",
+     "corymb": 89,
+     "role": "S",
+     "position": [
+      0.45562,
+      9.89439,
+      1.75127
+     ]
+    },
+    {
+     "name": "Flower_C89_S_002",
+     "corymb": 89,
+     "role": "S",
+     "position": [
+      0.4604,
+      9.86401,
+      1.74587
+     ]
+    },
+    {
+     "name": "Flower_C89_S_003",
+     "corymb": 89,
+     "role": "S",
+     "position": [
+      0.45339,
+      9.8648,
+      1.71231
+     ]
+    },
+    {
+     "name": "Flower_C89_S_004",
+     "corymb": 89,
+     "role": "S",
+     "position": [
+      0.44727,
+      9.88636,
+      1.71021
+     ]
+    }
+   ]
+  },
+  "3": {
+   "usd_name": "AppleTree_03",
+   "trunk_xy": [
+    1.6983,
+    9.8791
+   ],
+   "ground_z": -0.0339,
+   "trunk_diameter": 0.119,
+   "n_flowers": 202,
+   "n_corymbs": 41,
+   "n_king": 41,
+   "canopy_z": [
+    1.223,
+    3.993
+   ],
+   "flowers": [
+    {
+     "name": "Flower_C00_K_003",
+     "corymb": 0,
+     "role": "K",
+     "position": [
+      1.81101,
+      10.05151,
+      1.66391
+     ]
+    },
+    {
+     "name": "Flower_C00_S_011",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.838,
+      10.03161,
+      1.67382
+     ]
+    },
+    {
+     "name": "Flower_C00_S_012",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.81093,
+      10.04706,
+      1.70055
+     ]
+    },
+    {
+     "name": "Flower_C00_S_013",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.83426,
+      10.06589,
+      1.6831
+     ]
+    },
+    {
+     "name": "Flower_C00_S_014",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.83187,
+      10.075,
+      1.66076
+     ]
+    },
+    {
+     "name": "Flower_C00_S_015",
+     "corymb": 0,
+     "role": "S",
+     "position": [
+      1.84174,
+      10.05046,
+      1.65005
+     ]
+    },
+    {
+     "name": "Flower_C01_K_003",
+     "corymb": 1,
+     "role": "K",
+     "position": [
+      1.46931,
+      10.04604,
+      1.38026
+     ]
+    },
+    {
+     "name": "Flower_C01_S_012",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.4858,
+      10.02163,
+      1.40256
+     ]
+    },
+    {
+     "name": "Flower_C01_S_013",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.46441,
+      10.03326,
+      1.41376
+     ]
+    },
+    {
+     "name": "Flower_C01_S_014",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.49858,
+      10.04322,
+      1.40508
+     ]
+    },
+    {
+     "name": "Flower_C01_S_015",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.50463,
+      10.03927,
+      1.39809
+     ]
+    },
+    {
+     "name": "Flower_C01_S_016",
+     "corymb": 1,
+     "role": "S",
+     "position": [
+      1.49164,
+      10.02356,
+      1.37984
+     ]
+    },
+    {
+     "name": "Flower_C02_K_003",
+     "corymb": 2,
+     "role": "K",
+     "position": [
+      1.60048,
+      10.28271,
+      3.73205
+     ]
+    },
+    {
+     "name": "Flower_C02_S_013",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.61545,
+      10.2584,
+      3.72518
+     ]
+    },
+    {
+     "name": "Flower_C02_S_014",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.62003,
+      10.27615,
+      3.75212
+     ]
+    },
+    {
+     "name": "Flower_C02_S_015",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.60631,
+      10.30925,
+      3.74654
+     ]
+    },
+    {
+     "name": "Flower_C02_S_016",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.60703,
+      10.3034,
+      3.71241
+     ]
+    },
+    {
+     "name": "Flower_C02_S_017",
+     "corymb": 2,
+     "role": "S",
+     "position": [
+      1.61383,
+      10.26854,
+      3.69488
+     ]
+    },
+    {
+     "name": "Flower_C03_K_003",
+     "corymb": 3,
+     "role": "K",
+     "position": [
+      2.0129,
+      9.82739,
+      1.32157
+     ]
+    },
+    {
+     "name": "Flower_C03_S_012",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      2.00546,
+      9.79742,
+      1.3148
+     ]
+    },
+    {
+     "name": "Flower_C03_S_013",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      2.03035,
+      9.83232,
+      1.2994
+     ]
+    },
+    {
+     "name": "Flower_C03_S_014",
+     "corymb": 3,
+     "role": "S",
+     "position": [
+      1.98318,
+      9.83965,
+      1.31034
+     ]
+    },
+    {
+     "name": "Flower_C04_K_003",
+     "corymb": 4,
+     "role": "K",
+     "position": [
+      1.73349,
+      9.77869,
+      1.93953
+     ]
+    },
+    {
+     "name": "Flower_C04_S_010",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.72793,
+      9.80435,
+      1.95679
+     ]
+    },
+    {
+     "name": "Flower_C04_S_011",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.73485,
+      9.78286,
+      1.97071
+     ]
+    },
+    {
+     "name": "Flower_C04_S_012",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.71611,
+      9.76428,
+      1.96134
+     ]
+    },
+    {
+     "name": "Flower_C04_S_013",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.7069,
+      9.77042,
+      1.94425
+     ]
+    },
+    {
+     "name": "Flower_C04_S_014",
+     "corymb": 4,
+     "role": "S",
+     "position": [
+      1.70612,
+      9.80443,
+      1.92949
+     ]
+    },
+    {
+     "name": "Flower_C05_K_003",
+     "corymb": 5,
+     "role": "K",
+     "position": [
+      1.46964,
+      9.28832,
+      1.44406
+     ]
+    },
+    {
+     "name": "Flower_C05_S_010",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.4441,
+      9.29102,
+      1.45492
+     ]
+    },
+    {
+     "name": "Flower_C05_S_011",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.46839,
+      9.27621,
+      1.4696
+     ]
+    },
+    {
+     "name": "Flower_C05_S_012",
+     "corymb": 5,
+     "role": "S",
+     "position": [
+      1.46078,
+      9.26202,
+      1.43319
+     ]
+    },
+    {
+     "name": "Flower_C06_K_003",
+     "corymb": 6,
+     "role": "K",
+     "position": [
+      1.61831,
+      10.31984,
+      2.37165
+     ]
+    },
+    {
+     "name": "Flower_C06_S_012",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.61827,
+      10.289,
+      2.38078
+     ]
+    },
+    {
+     "name": "Flower_C06_S_013",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.61773,
+      10.31408,
+      2.40231
+     ]
+    },
+    {
+     "name": "Flower_C06_S_014",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.64545,
+      10.31644,
+      2.38176
+     ]
+    },
+    {
+     "name": "Flower_C06_S_015",
+     "corymb": 6,
+     "role": "S",
+     "position": [
+      1.64305,
+      10.30015,
+      2.36194
+     ]
+    },
+    {
+     "name": "Flower_C07_K_003",
+     "corymb": 7,
+     "role": "K",
+     "position": [
+      1.46367,
+      9.82992,
+      2.98843
+     ]
+    },
+    {
+     "name": "Flower_C07_S_014",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.45006,
+      9.85538,
+      2.99857
+     ]
+    },
+    {
+     "name": "Flower_C07_S_015",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.46376,
+      9.82507,
+      3.01523
+     ]
+    },
+    {
+     "name": "Flower_C07_S_016",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.4432,
+      9.80683,
+      3.00028
+     ]
+    },
+    {
+     "name": "Flower_C07_S_017",
+     "corymb": 7,
+     "role": "S",
+     "position": [
+      1.43492,
+      9.83534,
+      2.97973
+     ]
+    },
+    {
+     "name": "Flower_C08_K_003",
+     "corymb": 8,
+     "role": "K",
+     "position": [
+      1.85811,
+      10.22574,
+      2.8339
+     ]
+    },
+    {
+     "name": "Flower_C08_S_013",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.84666,
+      10.20129,
+      2.83744
+     ]
+    },
+    {
+     "name": "Flower_C08_S_014",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.85682,
+      10.21096,
+      2.85756
+     ]
+    },
+    {
+     "name": "Flower_C08_S_015",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.8802,
+      10.22337,
+      2.85344
+     ]
+    },
+    {
+     "name": "Flower_C08_S_016",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.88323,
+      10.22028,
+      2.81607
+     ]
+    },
+    {
+     "name": "Flower_C08_S_017",
+     "corymb": 8,
+     "role": "S",
+     "position": [
+      1.85745,
+      10.20534,
+      2.80118
+     ]
+    },
+    {
+     "name": "Flower_C09_K_003",
+     "corymb": 9,
+     "role": "K",
+     "position": [
+      1.86749,
+      9.92027,
+      1.74717
+     ]
+    },
+    {
+     "name": "Flower_C09_S_011",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.86652,
+      9.94828,
+      1.76915
+     ]
+    },
+    {
+     "name": "Flower_C09_S_012",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.88604,
+      9.92798,
+      1.77419
+     ]
+    },
+    {
+     "name": "Flower_C09_S_013",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.88106,
+      9.89878,
+      1.75906
+     ]
+    },
+    {
+     "name": "Flower_C09_S_014",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.85634,
+      9.90864,
+      1.77591
+     ]
+    },
+    {
+     "name": "Flower_C09_S_015",
+     "corymb": 9,
+     "role": "S",
+     "position": [
+      1.8522,
+      9.92939,
+      1.7751
+     ]
+    },
+    {
+     "name": "Flower_C10_K_003",
+     "corymb": 10,
+     "role": "K",
+     "position": [
+      1.29592,
+      9.76405,
+      2.02483
+     ]
+    },
+    {
+     "name": "Flower_C10_S_012",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.27374,
+      9.74591,
+      2.04742
+     ]
+    },
+    {
+     "name": "Flower_C10_S_013",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.29367,
+      9.76576,
+      2.05639
+     ]
+    },
+    {
+     "name": "Flower_C10_S_014",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.31663,
+      9.76256,
+      2.04453
+     ]
+    },
+    {
+     "name": "Flower_C10_S_015",
+     "corymb": 10,
+     "role": "S",
+     "position": [
+      1.30724,
+      9.73013,
+      2.01884
+     ]
+    },
+    {
+     "name": "Flower_C11_K_003",
+     "corymb": 11,
+     "role": "K",
+     "position": [
+      1.63609,
+      9.82876,
+      2.73402
+     ]
+    },
+    {
+     "name": "Flower_C11_S_010",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.63804,
+      9.79092,
+      2.74008
+     ]
+    },
+    {
+     "name": "Flower_C11_S_011",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.65236,
+      9.8263,
+      2.75278
+     ]
+    },
+    {
+     "name": "Flower_C11_S_012",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.65121,
+      9.86503,
+      2.74343
+     ]
+    },
+    {
+     "name": "Flower_C11_S_013",
+     "corymb": 11,
+     "role": "S",
+     "position": [
+      1.65096,
+      9.82929,
+      2.70781
+     ]
+    },
+    {
+     "name": "Flower_C12_K_003",
+     "corymb": 12,
+     "role": "K",
+     "position": [
+      1.74078,
+      9.73878,
+      3.33349
+     ]
+    },
+    {
+     "name": "Flower_C12_S_013",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.74085,
+      9.76826,
+      3.34317
+     ]
+    },
+    {
+     "name": "Flower_C12_S_014",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.73971,
+      9.75285,
+      3.35883
+     ]
+    },
+    {
+     "name": "Flower_C12_S_015",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.71783,
+      9.7423,
+      3.34444
+     ]
+    },
+    {
+     "name": "Flower_C12_S_016",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.71476,
+      9.73668,
+      3.32356
+     ]
+    },
+    {
+     "name": "Flower_C12_S_017",
+     "corymb": 12,
+     "role": "S",
+     "position": [
+      1.72863,
+      9.76356,
+      3.3268
+     ]
+    },
+    {
+     "name": "Flower_C13_K_003",
+     "corymb": 13,
+     "role": "K",
+     "position": [
+      1.62836,
+      10.20393,
+      3.96478
+     ]
+    },
+    {
+     "name": "Flower_C13_S_013",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.65685,
+      10.19199,
+      3.97412
+     ]
+    },
+    {
+     "name": "Flower_C13_S_014",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.62967,
+      10.21016,
+      3.99305
+     ]
+    },
+    {
+     "name": "Flower_C13_S_015",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.6223,
+      10.23078,
+      3.97682
+     ]
+    },
+    {
+     "name": "Flower_C13_S_016",
+     "corymb": 13,
+     "role": "S",
+     "position": [
+      1.64007,
+      10.22613,
+      3.94848
+     ]
+    },
+    {
+     "name": "Flower_C14_K_003",
+     "corymb": 14,
+     "role": "K",
+     "position": [
+      1.51242,
+      9.93978,
+      3.20725
+     ]
+    },
+    {
+     "name": "Flower_C14_S_012",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.52444,
+      9.91137,
+      3.19355
+     ]
+    },
+    {
+     "name": "Flower_C14_S_013",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.54241,
+      9.94982,
+      3.22302
+     ]
+    },
+    {
+     "name": "Flower_C14_S_014",
+     "corymb": 14,
+     "role": "S",
+     "position": [
+      1.52101,
+      9.9514,
+      3.1838
+     ]
+    },
+    {
+     "name": "Flower_C15_K_003",
+     "corymb": 15,
+     "role": "K",
+     "position": [
+      1.88601,
+      9.93054,
+      1.55423
+     ]
+    },
+    {
+     "name": "Flower_C15_S_011",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.90303,
+      9.91037,
+      1.56624
+     ]
+    },
+    {
+     "name": "Flower_C15_S_012",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.886,
+      9.92801,
+      1.57902
+     ]
+    },
+    {
+     "name": "Flower_C15_S_013",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.87864,
+      9.96215,
+      1.58377
+     ]
+    },
+    {
+     "name": "Flower_C15_S_014",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.90608,
+      9.94642,
+      1.55536
+     ]
+    },
+    {
+     "name": "Flower_C15_S_015",
+     "corymb": 15,
+     "role": "S",
+     "position": [
+      1.91123,
+      9.92692,
+      1.54282
+     ]
+    },
+    {
+     "name": "Flower_C16_K_003",
+     "corymb": 16,
+     "role": "K",
+     "position": [
+      2.00287,
+      9.87947,
+      3.25029
+     ]
+    },
+    {
+     "name": "Flower_C16_S_010",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      2.00606,
+      9.90765,
+      3.23165
+     ]
+    },
+    {
+     "name": "Flower_C16_S_011",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.98312,
+      9.90332,
+      3.23257
+     ]
+    },
+    {
+     "name": "Flower_C16_S_012",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      1.97564,
+      9.86749,
+      3.23694
+     ]
+    },
+    {
+     "name": "Flower_C16_S_013",
+     "corymb": 16,
+     "role": "S",
+     "position": [
+      2.00369,
+      9.88192,
+      3.21417
+     ]
+    },
+    {
+     "name": "Flower_C17_K_003",
+     "corymb": 17,
+     "role": "K",
+     "position": [
+      1.37926,
+      9.95385,
+      2.2295
+     ]
+    },
+    {
+     "name": "Flower_C17_S_012",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.37628,
+      9.92692,
+      2.23935
+     ]
+    },
+    {
+     "name": "Flower_C17_S_013",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.37919,
+      9.95098,
+      2.25597
+     ]
+    },
+    {
+     "name": "Flower_C17_S_014",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.40198,
+      9.9777,
+      2.23774
+     ]
+    },
+    {
+     "name": "Flower_C17_S_015",
+     "corymb": 17,
+     "role": "S",
+     "position": [
+      1.40357,
+      9.94225,
+      2.21582
+     ]
+    },
+    {
+     "name": "Flower_C18_K_003",
+     "corymb": 18,
+     "role": "K",
+     "position": [
+      1.4097,
+      9.99966,
+      2.3624
+     ]
+    },
+    {
+     "name": "Flower_C18_S_012",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.43744,
+      9.99354,
+      2.37511
+     ]
+    },
+    {
+     "name": "Flower_C18_S_013",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.38799,
+      10.00882,
+      2.38858
+     ]
+    },
+    {
+     "name": "Flower_C18_S_014",
+     "corymb": 18,
+     "role": "S",
+     "position": [
+      1.41959,
+      10.02797,
+      2.37037
+     ]
+    },
+    {
+     "name": "Flower_C19_K_003",
+     "corymb": 19,
+     "role": "K",
+     "position": [
+      1.32051,
+      10.15154,
+      2.8382
+     ]
+    },
+    {
+     "name": "Flower_C19_S_011",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.3394,
+      10.12073,
+      2.83066
+     ]
+    },
+    {
+     "name": "Flower_C19_S_012",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.34579,
+      10.15901,
+      2.8634
+     ]
+    },
+    {
+     "name": "Flower_C19_S_013",
+     "corymb": 19,
+     "role": "S",
+     "position": [
+      1.32249,
+      10.17041,
+      2.80536
+     ]
+    },
+    {
+     "name": "Flower_C20_K_003",
+     "corymb": 20,
+     "role": "K",
+     "position": [
+      1.3298,
+      10.27401,
+      2.65193
+     ]
+    },
+    {
+     "name": "Flower_C20_S_012",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.33124,
+      10.24608,
+      2.65379
+     ]
+    },
+    {
+     "name": "Flower_C20_S_013",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.33719,
+      10.28933,
+      2.68646
+     ]
+    },
+    {
+     "name": "Flower_C20_S_014",
+     "corymb": 20,
+     "role": "S",
+     "position": [
+      1.35626,
+      10.27078,
+      2.63326
+     ]
+    },
+    {
+     "name": "Flower_C21_K_003",
+     "corymb": 21,
+     "role": "K",
+     "position": [
+      1.57283,
+      9.98608,
+      1.49079
+     ]
+    },
+    {
+     "name": "Flower_C21_S_011",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.56955,
+      10.02114,
+      1.48656
+     ]
+    },
+    {
+     "name": "Flower_C21_S_012",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.54935,
+      9.98759,
+      1.50138
+     ]
+    },
+    {
+     "name": "Flower_C21_S_013",
+     "corymb": 21,
+     "role": "S",
+     "position": [
+      1.55681,
+      9.97862,
+      1.46755
+     ]
+    },
+    {
+     "name": "Flower_C22_K_003",
+     "corymb": 22,
+     "role": "K",
+     "position": [
+      1.17443,
+      9.80319,
+      2.15057
+     ]
+    },
+    {
+     "name": "Flower_C22_S_011",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.17811,
+      9.77808,
+      2.16091
+     ]
+    },
+    {
+     "name": "Flower_C22_S_012",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.16134,
+      9.80321,
+      2.18148
+     ]
+    },
+    {
+     "name": "Flower_C22_S_013",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.19281,
+      9.81946,
+      2.16332
+     ]
+    },
+    {
+     "name": "Flower_C22_S_014",
+     "corymb": 22,
+     "role": "S",
+     "position": [
+      1.20306,
+      9.78921,
+      2.13581
+     ]
+    },
+    {
+     "name": "Flower_C23_K_003",
+     "corymb": 23,
+     "role": "K",
+     "position": [
+      1.50893,
+      10.33068,
+      1.30938
+     ]
+    },
+    {
+     "name": "Flower_C23_S_011",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.50756,
+      10.3014,
+      1.32283
+     ]
+    },
+    {
+     "name": "Flower_C23_S_012",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.52055,
+      10.33305,
+      1.33818
+     ]
+    },
+    {
+     "name": "Flower_C23_S_013",
+     "corymb": 23,
+     "role": "S",
+     "position": [
+      1.53639,
+      10.31516,
+      1.30733
+     ]
+    },
+    {
+     "name": "Flower_C24_K_002",
+     "corymb": 24,
+     "role": "K",
+     "position": [
+      1.73034,
+      9.81287,
+      2.11529
+     ]
+    },
+    {
+     "name": "Flower_C24_S_008",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.71978,
+      9.83674,
+      2.11024
+     ]
+    },
+    {
+     "name": "Flower_C24_S_009",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.71026,
+      9.82095,
+      2.12826
+     ]
+    },
+    {
+     "name": "Flower_C24_S_010",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.70434,
+      9.80002,
+      2.11495
+     ]
+    },
+    {
+     "name": "Flower_C24_S_011",
+     "corymb": 24,
+     "role": "S",
+     "position": [
+      1.72308,
+      9.8158,
+      2.08509
+     ]
+    },
+    {
+     "name": "Flower_C25_K_002",
+     "corymb": 25,
+     "role": "K",
+     "position": [
+      1.84914,
+      10.29161,
+      1.90942
+     ]
+    },
+    {
+     "name": "Flower_C25_S_008",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.85242,
+      10.3128,
+      1.93021
+     ]
+    },
+    {
+     "name": "Flower_C25_S_009",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.86357,
+      10.27787,
+      1.92244
+     ]
+    },
+    {
+     "name": "Flower_C25_S_010",
+     "corymb": 25,
+     "role": "S",
+     "position": [
+      1.83581,
+      10.27721,
+      1.92635
+     ]
+    },
+    {
+     "name": "Flower_C26_K_002",
+     "corymb": 26,
+     "role": "K",
+     "position": [
+      2.03687,
+      9.82758,
+      2.90884
+     ]
+    },
+    {
+     "name": "Flower_C26_S_008",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      2.04246,
+      9.86147,
+      2.91231
+     ]
+    },
+    {
+     "name": "Flower_C26_S_009",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      2.0225,
+      9.84033,
+      2.93427
+     ]
+    },
+    {
+     "name": "Flower_C26_S_010",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      2.02313,
+      9.8075,
+      2.93572
+     ]
+    },
+    {
+     "name": "Flower_C26_S_011",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      2.00573,
+      9.82292,
+      2.89944
+     ]
+    },
+    {
+     "name": "Flower_C26_S_012",
+     "corymb": 26,
+     "role": "S",
+     "position": [
+      2.01891,
+      9.84727,
+      2.89517
+     ]
+    },
+    {
+     "name": "Flower_C27_K_002",
+     "corymb": 27,
+     "role": "K",
+     "position": [
+      2.06247,
+      9.76559,
+      2.1736
+     ]
+    },
+    {
+     "name": "Flower_C27_S_008",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      2.07585,
+      9.73921,
+      2.18487
+     ]
+    },
+    {
+     "name": "Flower_C27_S_009",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      2.03866,
+      9.78195,
+      2.20472
+     ]
+    },
+    {
+     "name": "Flower_C27_S_010",
+     "corymb": 27,
+     "role": "S",
+     "position": [
+      2.08719,
+      9.78571,
+      2.17174
+     ]
+    },
+    {
+     "name": "Flower_C28_K_002",
+     "corymb": 28,
+     "role": "K",
+     "position": [
+      1.54512,
+      10.09517,
+      1.40068
+     ]
+    },
+    {
+     "name": "Flower_C28_S_008",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.56321,
+      10.08044,
+      1.40486
+     ]
+    },
+    {
+     "name": "Flower_C28_S_009",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.55444,
+      10.09976,
+      1.4243
+     ]
+    },
+    {
+     "name": "Flower_C28_S_010",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.55276,
+      10.11786,
+      1.40781
+     ]
+    },
+    {
+     "name": "Flower_C28_S_011",
+     "corymb": 28,
+     "role": "S",
+     "position": [
+      1.57009,
+      10.10137,
+      1.36461
+     ]
+    },
+    {
+     "name": "Flower_C29_K_002",
+     "corymb": 29,
+     "role": "K",
+     "position": [
+      2.1994,
+      9.79982,
+      1.35632
+     ]
+    },
+    {
+     "name": "Flower_C29_S_009",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      2.18927,
+      9.77468,
+      1.34358
+     ]
+    },
+    {
+     "name": "Flower_C29_S_010",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      2.22692,
+      9.78262,
+      1.38228
+     ]
+    },
+    {
+     "name": "Flower_C29_S_011",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      2.22282,
+      9.82306,
+      1.34688
+     ]
+    },
+    {
+     "name": "Flower_C29_S_012",
+     "corymb": 29,
+     "role": "S",
+     "position": [
+      2.19544,
+      9.80661,
+      1.32778
+     ]
+    },
+    {
+     "name": "Flower_C30_K_002",
+     "corymb": 30,
+     "role": "K",
+     "position": [
+      1.5808,
+      9.64198,
+      2.27366
+     ]
+    },
+    {
+     "name": "Flower_C30_S_008",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.59392,
+      9.67373,
+      2.28884
+     ]
+    },
+    {
+     "name": "Flower_C30_S_009",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.61205,
+      9.64665,
+      2.27968
+     ]
+    },
+    {
+     "name": "Flower_C30_S_010",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.59175,
+      9.62728,
+      2.30115
+     ]
+    },
+    {
+     "name": "Flower_C30_S_011",
+     "corymb": 30,
+     "role": "S",
+     "position": [
+      1.5801,
+      9.64055,
+      2.3053
+     ]
+    },
+    {
+     "name": "Flower_C31_K_002",
+     "corymb": 31,
+     "role": "K",
+     "position": [
+      1.58618,
+      10.07517,
+      2.30402
+     ]
+    },
+    {
+     "name": "Flower_C31_S_008",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.57982,
+      10.0488,
+      2.30007
+     ]
+    },
+    {
+     "name": "Flower_C31_S_009",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.6002,
+      10.06523,
+      2.33531
+     ]
+    },
+    {
+     "name": "Flower_C31_S_010",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.61338,
+      10.07105,
+      2.29649
+     ]
+    },
+    {
+     "name": "Flower_C31_S_011",
+     "corymb": 31,
+     "role": "S",
+     "position": [
+      1.59403,
+      10.07346,
+      2.27487
+     ]
+    },
+    {
+     "name": "Flower_C32_K_002",
+     "corymb": 32,
+     "role": "K",
+     "position": [
+      1.46997,
+      10.26136,
+      1.44004
+     ]
+    },
+    {
+     "name": "Flower_C32_S_008",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.46444,
+      10.22674,
+      1.44446
+     ]
+    },
+    {
+     "name": "Flower_C32_S_009",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.48358,
+      10.25596,
+      1.46456
+     ]
+    },
+    {
+     "name": "Flower_C32_S_010",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.49202,
+      10.26861,
+      1.44589
+     ]
+    },
+    {
+     "name": "Flower_C32_S_011",
+     "corymb": 32,
+     "role": "S",
+     "position": [
+      1.48889,
+      10.25419,
+      1.42612
+     ]
+    },
+    {
+     "name": "Flower_C33_K_002",
+     "corymb": 33,
+     "role": "K",
+     "position": [
+      1.86904,
+      9.95775,
+      2.68165
+     ]
+    },
+    {
+     "name": "Flower_C33_S_007",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.84141,
+      9.97725,
+      2.68678
+     ]
+    },
+    {
+     "name": "Flower_C33_S_008",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.84667,
+      9.96038,
+      2.707
+     ]
+    },
+    {
+     "name": "Flower_C33_S_009",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.84607,
+      9.94055,
+      2.68738
+     ]
+    },
+    {
+     "name": "Flower_C33_S_010",
+     "corymb": 33,
+     "role": "S",
+     "position": [
+      1.8364,
+      9.96154,
+      2.67798
+     ]
+    },
+    {
+     "name": "Flower_C34_K_002",
+     "corymb": 34,
+     "role": "K",
+     "position": [
+      1.80003,
+      9.91162,
+      2.32756
+     ]
+    },
+    {
+     "name": "Flower_C34_S_008",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.78039,
+      9.88465,
+      2.33231
+     ]
+    },
+    {
+     "name": "Flower_C34_S_009",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.80011,
+      9.89987,
+      2.36151
+     ]
+    },
+    {
+     "name": "Flower_C34_S_010",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.82651,
+      9.89659,
+      2.34102
+     ]
+    },
+    {
+     "name": "Flower_C34_S_011",
+     "corymb": 34,
+     "role": "S",
+     "position": [
+      1.80358,
+      9.88144,
+      2.32018
+     ]
+    },
+    {
+     "name": "Flower_C35_K_002",
+     "corymb": 35,
+     "role": "K",
+     "position": [
+      1.35777,
+      9.94705,
+      2.01099
+     ]
+    },
+    {
+     "name": "Flower_C35_S_008",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.35565,
+      9.91227,
+      2.0001
+     ]
+    },
+    {
+     "name": "Flower_C35_S_009",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.3894,
+      9.94103,
+      2.01171
+     ]
+    },
+    {
+     "name": "Flower_C35_S_010",
+     "corymb": 35,
+     "role": "S",
+     "position": [
+      1.36133,
+      9.95363,
+      1.97985
+     ]
+    },
+    {
+     "name": "Flower_C36_K_002",
+     "corymb": 36,
+     "role": "K",
+     "position": [
+      1.28348,
+      9.78391,
+      1.24777
+     ]
+    },
+    {
+     "name": "Flower_C36_S_009",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.28244,
+      9.75374,
+      1.2463
+     ]
+    },
+    {
+     "name": "Flower_C36_S_010",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.28553,
+      9.7831,
+      1.28261
+     ]
+    },
+    {
+     "name": "Flower_C36_S_011",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.3079,
+      9.79744,
+      1.2497
+     ]
+    },
+    {
+     "name": "Flower_C36_S_012",
+     "corymb": 36,
+     "role": "S",
+     "position": [
+      1.29485,
+      9.77581,
+      1.22349
+     ]
+    },
+    {
+     "name": "Flower_C37_K_002",
+     "corymb": 37,
+     "role": "K",
+     "position": [
+      1.68111,
+      9.74557,
+      1.38296
+     ]
+    },
+    {
+     "name": "Flower_C37_S_008",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.65406,
+      9.75621,
+      1.39265
+     ]
+    },
+    {
+     "name": "Flower_C37_S_009",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.66396,
+      9.73651,
+      1.40815
+     ]
+    },
+    {
+     "name": "Flower_C37_S_010",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.67256,
+      9.70397,
+      1.38385
+     ]
+    },
+    {
+     "name": "Flower_C37_S_011",
+     "corymb": 37,
+     "role": "S",
+     "position": [
+      1.65229,
+      9.7379,
+      1.36887
+     ]
+    },
+    {
+     "name": "Flower_C38_K_002",
+     "corymb": 38,
+     "role": "K",
+     "position": [
+      1.3253,
+      10.04948,
+      2.72718
+     ]
+    },
+    {
+     "name": "Flower_C38_S_008",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.32894,
+      10.02833,
+      2.70463
+     ]
+    },
+    {
+     "name": "Flower_C38_S_009",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.34349,
+      10.05108,
+      2.70653
+     ]
+    },
+    {
+     "name": "Flower_C38_S_010",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.32705,
+      10.07606,
+      2.7124
+     ]
+    },
+    {
+     "name": "Flower_C38_S_011",
+     "corymb": 38,
+     "role": "S",
+     "position": [
+      1.28221,
+      10.04617,
+      2.72036
+     ]
+    },
+    {
+     "name": "Flower_C39_K_002",
+     "corymb": 39,
+     "role": "K",
+     "position": [
+      1.63331,
+      9.99295,
+      3.27018
+     ]
+    },
+    {
+     "name": "Flower_C39_S_008",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.66354,
+      10.00093,
+      3.26829
+     ]
+    },
+    {
+     "name": "Flower_C39_S_009",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.65089,
+      10.01671,
+      3.28624
+     ]
+    },
+    {
+     "name": "Flower_C39_S_010",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.63876,
+      10.02287,
+      3.26891
+     ]
+    },
+    {
+     "name": "Flower_C39_S_011",
+     "corymb": 39,
+     "role": "S",
+     "position": [
+      1.64431,
+      10.01086,
+      3.2483
+     ]
+    },
+    {
+     "name": "Flower_C40_K_002",
+     "corymb": 40,
+     "role": "K",
+     "position": [
+      1.76505,
+      9.95077,
+      3.71355
+     ]
+    },
+    {
+     "name": "Flower_C40_S_006",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      1.75744,
+      9.98005,
+      3.7095
+     ]
+    },
+    {
+     "name": "Flower_C40_S_007",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      1.73205,
+      9.95451,
+      3.72266
+     ]
+    },
+    {
+     "name": "Flower_C40_S_008",
+     "corymb": 40,
+     "role": "S",
+     "position": [
+      1.74824,
+      9.94183,
+      3.68443
+     ]
+    }
+   ]
+  }
+ }
+}

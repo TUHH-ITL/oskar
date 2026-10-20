@@ -1,0 +1,7 @@
+# Pure geometry: tool-tip stand-off pose for one candidate, no planning or motion.
+oskar_msgs/ThinningCandidate candidate
+float32 standoff 0.10            # [m] distance from the object along its approach axis
+---
+bool success
+geometry_msgs/PoseStamped pose   # tool +Z points from the stand-off toward the object
+string message

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>oskar_mission</name>
+  <version>0.1.0</version>
+  <description>Drive, scan, thin, move on: the mission and the top-level launch files</description>
+  <maintainer email="markusknitt@web.de">Markus Knitt</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>oskar_msgs</exec_depend>
+  <exec_depend>oskar_orchard</exec_depend>
+  <exec_depend>oskar_online_perception</exec_depend>
+  <exec_depend>oskar_thinning_decision</exec_depend>
+  <exec_depend>oskar_removal</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

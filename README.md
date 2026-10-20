@@ -38,7 +38,19 @@ cd ~/tipard_ws/src
 
 Clone this repo in your `src` folder in the ros2 workspace.
 
-`oskar_msgs` is required by `oskar_mapping` for the custom mapping messages. If you only want the Tipard base, UR20 MoveIt, and joystick launch files, `oskar_mapping` and `oskar_msgs` are optional.
+| Package | Content |
+|---|---|
+| `oskar_offline_perception` | mapping phase, Basler stereo, plain Python (no ROS): segmentation → depth → 3D → per-tree counts |
+| `oskar_online_perception` | pruning phase, ZED / sim, ROS: detect, localize and map objects while scanning a tree |
+| `oskar_detection` | model files and the one loader both perception packages use |
+| `oskar_orchard` | tree maps and simulated ground truth |
+| `oskar_thinning_decision` | which flowers or fruitlets stay on a tree |
+| `oskar_removal` | approach geometry, removal order, removal loop on MoveIt |
+| `oskar_mission` | drive, scan, thin, move on; top-level launch files |
+| `oskar_hardware`, `oskar_scene`, `oskar_sensing` | tool and arm motion, collision map, ZED snapshot |
+| `oskar_msgs` | interfaces between them |
+
+If you only want the Tipard base, UR20 MoveIt, and joystick launch files, the `oskar_*` packages are optional.
 
 No additional local source packages are required for the Tipard base, UR20 MoveIt, and joystick launch files. The runtime robot meshes are already inside `tipard_ur20_combined/meshes`, and the MoveIt package only depends on the local `tipard_ur20_combined` package.
 
@@ -58,7 +70,7 @@ These external packages are required for:
 - `ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedx sim_mode:=true use_sim_time:=true`
 - `ros2 launch zed_display_rviz2 display_zed_cam.launch.py camera_model:=zedx sim_mode:=true use_sim_time:=true`
 
-`Fast-FoundationStereo` is also required by the `oskar_mapping` disparity node.
+`Fast-FoundationStereo` is also required by `oskar_offline_perception`.
 
 ## ROS Dependencies
 
@@ -129,7 +141,7 @@ rosdep install --from-paths src --ignore-src -r -y --rosdistro jazzy
 
 `rosdep` does not cover everything — `tipard_control/package.xml` omits some of the Python and launch dependencies its nodes use, which is why the apt list above is explicit.
 
-`oskar_mapping` also imports Python packages such as OpenCV, NumPy, PyTorch, scikit-learn, Detectron2, and Fast Foundation Stereo. Install those according to the mapping environment you use.
+`oskar_offline_perception`, `oskar_online_perception` and `oskar_detection` also import Python packages such as OpenCV, NumPy, PyTorch, scikit-learn, Detectron2, and Fast Foundation Stereo. Install those according to the perception environment you use.
 
 ## Build
 
@@ -257,7 +269,7 @@ python3 -m pip install --user --break-system-packages numpy==1.26.4
 
 ### Launching
 
-These commands require the optional ZED and mapping packages listed above.
+These commands require the optional ZED and perception packages listed above.
 
 Launch the ZED camera driver in simulation mode:
 
@@ -271,16 +283,16 @@ Launch the ZED RViz display:
 ros2 launch zed_display_rviz2 display_zed_cam.launch.py camera_model:=zedx sim_mode:=true use_sim_time:=true
 ```
 
-Run Fast Foundation Stereo mapping:
+Run the pruning phase against the Isaac Sim orchard (scan only, or scan and thin):
 
 ```bash
-ros2 launch oskar_mapping mapping_sim.launch.py
+ros2 launch oskar_mission mission_sim.launch.py
+ros2 launch oskar_mission mission_sim.launch.py thin:=true
 ```
 
-The mapping launch publishes:
+Run the offline perception on the Basler recording (no ROS):
 
-```text
-/stereo/depth
-/stereo/disparity
-/stereo/points
+```bash
+cd oskar_offline_perception
+python3 run_pipeline.py --max-frames -1
 ```

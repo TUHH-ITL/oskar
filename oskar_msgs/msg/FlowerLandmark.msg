@@ -1,6 +1,0 @@
-uint32 landmark_id
-geometry_msgs/Point position
-uint32 observation_count
-float32 mean_confidence
-bool is_inferred
-uint32 tree_id

@@ -1,0 +1,5 @@
+# Mask R-CNN trained on flowers rendered in the Isaac Sim orchard; fastest of
+# the three, for bringing up the online stack in simulation.
+class_label: flower
+architecture: maskrcnn
+weights: ~/oskar/synthetic_apple_flowers/results/exp_sim_maskrcnn/train/model_final.pth

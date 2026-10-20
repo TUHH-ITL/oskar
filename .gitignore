@@ -4,11 +4,17 @@ oskar_simulation/urdf/**
 **/meshes/
 oskar_perception/IMPLEMENTATION_SUMMARY.md
 oskar_perception/CLAUDE.md
-datasets/**
-oskar_mapping/bagfile_data/**
+dataset/**
+oskar_offline_perception/bagfile_data/**
+oskar_offline_perception/offline_pipeline_trial2/**
+
 docs/**
-oskar_mapping/offline_pipeline/data/**
-oskar_mapping/offline_pipeline/data_archive/**
-oskar_mapping/offline_pipeline/offline_pipeline_trial2/fresh_cache
-oskar_mapping/offline_pipeline/offline_pipeline_trial2/data/**
+oskar_offline_perception/data/**
+oskar_offline_perception/data_archive/**
+oskar_offline_perception/offline_pipeline_trial2/fresh_cache
+oskar_offline_perception/offline_pipeline_trial2/data/**
+2025-transformers-for-apple-flower-segmentation-bhangale-main/**
+oskar_offline_perception/helpers_1/**
+VO_Test/**
+oskar_offline_perception/experiments/**
 

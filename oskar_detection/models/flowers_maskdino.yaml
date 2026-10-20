@@ -1,0 +1,9 @@
+# MaskDINO trained on the real apple-flower data; the model behind the offline
+# Blühstärke results and the best of the three in the training experiments.
+class_label: flower
+architecture: maskdino
+weights: ~/oskar/2025-transformers-for-apple-flower-segmentation-bhangale/experiments/training_outputs/maskdino/egrun_2106/pretrain/model_final.pth
+config: ~/oskar/2025-transformers-for-apple-flower-segmentation-bhangale/experiments/training_outputs/maskdino/egrun_2106/pretrain/detectron2_config.yaml
+source_roots:
+  mask2former: ~/oskar/synthetic_apple_flowers/external/Mask2Former
+  maskdino: ~/oskar/synthetic_apple_flowers/external/MaskDINO

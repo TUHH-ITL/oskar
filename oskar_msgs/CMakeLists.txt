@@ -7,28 +7,47 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
 
 set(msg_files
-  "msg/StereoPair.msg"
-  "msg/FlowerMask.msg"
-  "msg/FlowerMasks.msg"
-  "msg/FlowerDetection3D.msg"
-  "msg/FlowerDetections3D.msg"
-  "msg/FlowerLandmark.msg"
-  "msg/FlowerLandmarks.msg"
-  "msg/PerTreeFlowers.msg"
-  "msg/ThinningPlan.msg"
-  "msg/PruningTargets.msg"
-  "msg/PruningStatus.msg"
+  # perception
+  "msg/Detection3D.msg"
+  "msg/Detections3D.msg"
+  "msg/Landmark.msg"
+  "msg/Landmarks.msg"
+  "msg/PerTreeLandmarks.msg"
   "msg/ScanRequest.msg"
+  # mission
+  "msg/MissionStatus.msg"
+  # thinning decision
+  "msg/ThinningCandidate.msg"
+  "msg/ThinningCandidates.msg"
+  "msg/ThinningDecision.msg"
+  # removal
+  "msg/RemovalTarget.msg"
+  "msg/RemovalSequence.msg"
+  "msg/RemovalResult.msg"
+)
+
+set(srv_files
+  "srv/DecideThinning.srv"
+  "srv/ComputeApproachPose.srv"
+  "srv/SetToolState.srv"
+)
+
+set(action_files
+  "action/ExecuteApproach.action"
+  "action/PlanRemovalSequence.action"
+  "action/RemoveTargets.action"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES geometry_msgs std_msgs sensor_msgs
+  ${srv_files}
+  ${action_files}
+  DEPENDENCIES builtin_interfaces geometry_msgs std_msgs
 )
 
 ament_package()

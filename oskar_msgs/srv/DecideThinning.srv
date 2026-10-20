@@ -1,0 +1,10 @@
+# Decide which candidates stay on one tree: at most max_kept, as far apart as
+# possible. Pure computation, no motion.
+
+oskar_msgs/ThinningCandidates candidates
+uint32 max_kept
+uint32[] keep_ids                # must stay: unreachable, failed removals, protected
+---
+bool success
+oskar_msgs/ThinningDecision decision
+string message

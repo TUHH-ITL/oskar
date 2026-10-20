@@ -1,0 +1,1 @@
+"""OSKAR hardware skeleton package."""

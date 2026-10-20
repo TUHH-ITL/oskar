@@ -1,0 +1,66 @@
+# Removal stack against the Isaac Sim orchard. use_sim_time is set by the launch.
+
+removal_planner_node:
+  ros__parameters:
+    roll_reference: [0.0, 0.0, 1.0]
+    default_standoff_m: 0.10
+    # Robotiq 2F-85 finger pad centre along tool0 +Z, from tipard_ur20_combined.urdf.
+    tcp_offset_m: 0.130
+    tool_link: tool0
+    planning_group: ur_manipulator
+    planning_frame: base_link
+    ik_timeout_s: 0.5
+    ik_attempts: 3
+
+removal_executor_node:
+  ros__parameters:
+    scene_namespace: /scene
+    scene_capture_timeout_s: 10.0
+    step_timeout_s: 90.0
+
+execute_approach_node:
+  ros__parameters:
+    planning_group: ur_manipulator
+    planning_frame: base_link
+    tool_link: tool0
+    tcp_offset: 0.130
+    planning_time: 5.0
+    velocity_scaling: 0.15
+    acceleration_scaling: 0.15
+    cartesian_step: 0.005
+    minimum_cartesian_fraction: 0.99
+
+tool_node:
+  ros__parameters:
+    use_fake_hardware: true
+    prepare_duration: 0.5
+    remove_duration: 1.5
+
+/scene/local_scene_node:
+  ros__parameters:
+    planning_frame: base_link
+    octomap_frame: world
+    octomap_resolution: 0.02
+    roi_size_xyz: [1.0, 1.0, 1.0]
+    carve_margin: 0.02
+    # Stand-off plus the tool's reach past the object, and the open 2F-85's
+    # half width with margin.
+    corridor_length: 0.15
+    corridor_radius: 0.08
+    voxel_leaf_size: 0.01
+    min_range: 0.15
+    max_range: 2.5
+    accumulate_views: 3
+    clear_before_capture: true
+    tf_timeout: 1.0
+    scene_update_timeout: 5.0
+    view_publish_interval: 0.10
+
+/scene/depth_cloud_node:
+  ros__parameters:
+    depth_topic: /wrist_cam/left/depth
+    camera_info_topic: /wrist_cam/left/camera_info
+    cloud_topic: /scene/input_cloud
+    stride: 4
+    max_range: 2.5
+    max_rate_hz: 5.0

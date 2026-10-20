@@ -1,0 +1,15 @@
+# Execute a RemovalSequence in order. All decisions were made before.
+
+oskar_msgs/RemovalSequence sequence
+bool dry_run false               # move, but do not actuate the tool
+bool stop_on_failure false       # false = skip a failed target and continue
+---
+bool success                     # true if every target was removed
+oskar_msgs/RemovalResult[] results
+uint32 num_removed
+uint32 num_failed
+---
+uint32 current_index
+uint32 total
+uint32 current_candidate_id
+string status                    # "approaching", "removing", "retracting"
