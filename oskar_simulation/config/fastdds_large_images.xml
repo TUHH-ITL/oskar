@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Fast DDS profile for the wrist camera streams.
+
+One 1280x720 depth or instance-segmentation frame is 3.7 MB, which UDP has to
+split into thousands of datagrams; if the receive buffer overflows, the whole
+sample is lost, so the topic stutters rather than merely slowing down. Shared
+memory moves same-host traffic out of the UDP path entirely, and the buffer
+sizes below cover a whole frame either way.
+
+Both ends must load it, the simulator and the ROS side:
+    export FASTRTPS_DEFAULT_PROFILES_FILE=<this file>
+-->
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <profiles>
+    <transport_descriptors>
+      <transport_descriptor>
+        <transport_id>shm_transport</transport_id>
+        <type>SHM</type>
+        <segment_size>67108864</segment_size>
+      </transport_descriptor>
+      <transport_descriptor>
+        <transport_id>udp_transport</transport_id>
+        <type>UDPv4</type>
+        <sendBufferSize>16777216</sendBufferSize>
+        <receiveBufferSize>16777216</receiveBufferSize>
+        <maxMessageSize>65500</maxMessageSize>
+      </transport_descriptor>
+    </transport_descriptors>
+
+    <participant profile_name="large_image_participant" is_default_profile="true">
+      <rtps>
+        <userTransports>
+          <transport_id>shm_transport</transport_id>
+          <transport_id>udp_transport</transport_id>
+        </userTransports>
+        <useBuiltinTransports>false</useBuiltinTransports>
+      </rtps>
+    </participant>
+  </profiles>
+</dds>
