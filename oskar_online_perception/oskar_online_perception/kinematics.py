@@ -22,7 +22,7 @@ JOINT_NAMES = [
 ]
 
 # (translation, rpy) of each joint relative to the previous link.
-BASE_TO_ARM = ((0.0, 1.2, 0.7), (-1.5708, 1.5708, 0.0))
+BASE_TO_ARM = ((-0.006, -0.42, 0.881), (1.5708, 1.5708, 0.0))
 JOINT_ORIGINS = [
     ((0.0, 0.0, 0.2363), (0.0, 0.0, 0.0)),
     ((0.0, 0.0, 0.0), (1.570796327, 0.0, 0.0)),

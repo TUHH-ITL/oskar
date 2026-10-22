@@ -69,8 +69,8 @@ scan_controller_node:
     joint_state_topic: /isaac_joint_states
     base_frame: base_link
     map_frame: map
-    tool_translation: [-0.16426, -0.00909, 0.05994]
-    tool_rotation_xyzw: [0.5, 0.5, -0.5, 0.5]
+    tool_translation: [-0.085, 0.0599, 0.035]
+    tool_rotation_xyzw: [0.092296, -0.092296, 0.701057, -0.701057]
     command_rate_hz: 30.0
     # Bounded by the frame rate in simulation time, which is what the tracker
     # runs on; the wall clock only decides how long a scan takes to watch.

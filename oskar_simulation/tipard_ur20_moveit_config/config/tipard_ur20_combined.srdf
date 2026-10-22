@@ -68,128 +68,46 @@
     <disable_collisions link1="back_left_steer_link" link2="front_left_wheel_link" reason="Never"/>
     <disable_collisions link1="back_left_steer_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="back_left_steer_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="back_left_steer_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="back_left_steer_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="back_left_steer_link" link2="ur20_base_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="back_right_steer_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="back_right_wheel_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="base_link" reason="Never"/>
-    <disable_collisions link1="back_left_wheel_link" link2="forearm_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="front_left_steer_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="front_left_wheel_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="back_left_wheel_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="back_left_wheel_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="back_left_wheel_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="back_left_wheel_link" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="back_right_wheel_link" reason="Adjacent"/>
     <disable_collisions link1="back_right_steer_link" link2="base_link" reason="Adjacent"/>
-    <disable_collisions link1="back_right_steer_link" link2="forearm_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="front_left_steer_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="front_left_wheel_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="left_inner_finger" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="left_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="left_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="left_outer_finger" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="left_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="right_inner_finger" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="right_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="right_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="right_outer_finger" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="right_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="robotiq_arg2f_base_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="back_right_steer_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="wrist_1_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="wrist_2_link" reason="Never"/>
-    <disable_collisions link1="back_right_steer_link" link2="wrist_3_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="base_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="forearm_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="front_left_steer_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="front_left_wheel_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="left_inner_finger" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="left_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="left_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="left_outer_finger" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="left_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="right_inner_finger" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="right_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="right_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="right_outer_finger" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="right_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="robotiq_arg2f_base_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="back_right_wheel_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="wrist_1_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="wrist_2_link" reason="Never"/>
-    <disable_collisions link1="back_right_wheel_link" link2="wrist_3_link" reason="Never"/>
     <disable_collisions link1="base_link" link2="front_left_steer_link" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="front_left_wheel_link" reason="Never"/>
     <disable_collisions link1="base_link" link2="front_right_steer_link" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="base_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="base_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="base_link" link2="ur20_base_link" reason="Adjacent"/>
-    <disable_collisions link1="forearm_link" link2="front_left_wheel_link" reason="Never"/>
-    <disable_collisions link1="forearm_link" link2="front_right_steer_link" reason="Never"/>
-    <disable_collisions link1="forearm_link" link2="front_right_wheel_link" reason="Never"/>
     <disable_collisions link1="forearm_link" link2="upper_arm_link" reason="Adjacent"/>
     <disable_collisions link1="forearm_link" link2="wrist_1_link" reason="Adjacent"/>
     <disable_collisions link1="forearm_link" link2="wrist_2_link" reason="Never"/>
     <disable_collisions link1="front_left_steer_link" link2="front_left_wheel_link" reason="Adjacent"/>
     <disable_collisions link1="front_left_steer_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="front_left_steer_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="front_left_steer_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="front_left_steer_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="front_left_steer_link" link2="ur20_base_link" reason="Never"/>
     <disable_collisions link1="front_left_wheel_link" link2="front_right_steer_link" reason="Never"/>
     <disable_collisions link1="front_left_wheel_link" link2="front_right_wheel_link" reason="Never"/>
-    <disable_collisions link1="front_left_wheel_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="front_left_wheel_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="front_left_wheel_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="front_left_wheel_link" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="front_right_steer_link" link2="front_right_wheel_link" reason="Adjacent"/>
-    <disable_collisions link1="front_right_steer_link" link2="left_inner_finger" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="left_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="left_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="left_outer_finger" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="left_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="right_inner_finger" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="right_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="right_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="right_outer_finger" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="right_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="robotiq_arg2f_base_link" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="front_right_steer_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="wrist_1_link" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="wrist_2_link" reason="Never"/>
-    <disable_collisions link1="front_right_steer_link" link2="wrist_3_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="left_inner_finger" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="left_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="left_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="left_outer_finger" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="left_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="right_inner_finger" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="right_inner_finger_pad" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="right_inner_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="right_outer_finger" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="right_outer_knuckle" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="robotiq_arg2f_base_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="shoulder_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="front_right_wheel_link" link2="ur20_base_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="wrist_1_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="wrist_2_link" reason="Never"/>
-    <disable_collisions link1="front_right_wheel_link" link2="wrist_3_link" reason="Never"/>
     <disable_collisions link1="left_inner_finger" link2="left_inner_finger_pad" reason="Adjacent"/>
     <disable_collisions link1="left_inner_finger" link2="left_inner_knuckle" reason="Default"/>
     <disable_collisions link1="left_inner_finger" link2="left_outer_finger" reason="Adjacent"/>
@@ -285,4 +203,17 @@
     <disable_collisions link1="wrist_1_link" link2="wrist_2_link" reason="Adjacent"/>
     <disable_collisions link1="wrist_1_link" link2="wrist_3_link" reason="Never"/>
     <disable_collisions link1="wrist_2_link" link2="wrist_3_link" reason="Adjacent"/>
+    <!--Pairs between the arm and the vehicle were computed for the old left-side mount and are left checked.-->
+    <disable_collisions link1="base_link" link2="ur20_bracket" reason="Adjacent"/>
+    <disable_collisions link1="ur20_base_link" link2="ur20_bracket" reason="Adjacent"/>
+    <disable_collisions link1="back_left_steer_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="back_left_wheel_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="back_right_steer_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="back_right_wheel_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="front_left_steer_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="front_left_wheel_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="front_right_steer_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="front_right_wheel_link" link2="ur20_bracket" reason="Never"/>
+    <disable_collisions link1="wrist_3_link" link2="wrist_camera" reason="Adjacent"/>
+    <disable_collisions link1="robotiq_arg2f_base_link" link2="wrist_camera" reason="Adjacent"/>
 </robot>

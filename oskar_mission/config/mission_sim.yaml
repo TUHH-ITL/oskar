@@ -7,7 +7,12 @@ mission_node:
     trees_to_thin: [0, 1]
     map_frame: map
     base_frame: base_link
-    base_gap_m: 2.0
+    # The arm sits on the right, 0.42 m from base_link, and the right wheels
+    # 0.80 m out; 1.65 m leaves the wheels 0.85 m from the trunk, the clearance
+    # that kept the chassis out of the neighbouring tree's lower branches.
+    # The 0.35 m offset keeps the scan sweep whole for base yaw within +-10 deg.
+    base_gap_m: 1.65
+    base_along_row_offset_m: 0.35
     scan_standoff_m: 0.6
     # The arm puts the camera between 0.30 m and 3.55 m once the chassis has
     # settled onto its wheels, which drops base_link from the 1.4546 m the USD

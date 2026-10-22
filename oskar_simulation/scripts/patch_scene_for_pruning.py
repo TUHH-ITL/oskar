@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare the Isaac Sim orchard scene for the real-time pruning stack.
 
-Three changes, all idempotent:
+Six changes, all idempotent:
 
 1. Reparent ZED_X under wrist_3_link and make it passive. The ZED X asset
    applies PhysicsRigidBodyAPI at its root, so the camera is a rigid body held
@@ -17,6 +17,18 @@ Three changes, all idempotent:
 3. Add a WristCamera graph publishing the ZED's left and right eyes plus a
    depth image. This bypasses the ZED SDK path (the sl.sensor.camera extension
    and pyzed), which the perception node does not need and which pins NumPy 2.
+
+4. Put the arm on the mount from the CAD: the right side wall, arm z along -y,
+   plus the bracket as a visual. The imported scene has it 1.6 m off, on the
+   left.
+
+5. Turn the robot to face -x, so the arm side faces the orchard row the
+   mission drives along.
+
+6. Put the ZED X on a generic wrist bracket looking along the gripper: the
+   imported scene had it looking sideways. Stand-in until the real bracket
+   exists; the same numbers are in tipard_ur20_combined.urdf and
+   perception_sim.yaml.
 
 Optionally it also labels every flower prim, which lets the renderer publish
 instance segmentation. That gives perfect masks on the real rendered image, so
@@ -39,12 +51,29 @@ import shutil
 import sys
 from pathlib import Path
 
-from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdSemantics
+import numpy as np
+from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdSemantics, UsdShade, Vt
 
 ROBOT = "/tipard_ur20_combined"
 WRIST = f"{ROBOT}/wrist_3_link"
 BASE_LINK = f"{ROBOT}/base_link"
 ZED = f"{ROBOT}/ZED_X"
+ARM_BASE = f"{ROBOT}/ur20_base_link"
+MOUNT_JOINT = f"{ROBOT}/joints/tipard_to_ur20_mount_joint"
+
+# Same as tipard_to_ur20_mount_joint in tipard_ur20_combined.urdf.
+ARM_MOUNT_XYZ = (-0.006, -0.42, 0.881)
+ARM_MOUNT_RPY_DEG = (90.0, 90.0, 0.0)
+# Generic wrist bracket: the midpoint between the ZED eyes sits CAMERA_OFFSET_M
+# off the tool axis on -x of wrist_3_link, CAMERA_Z_M in front of the flange,
+# tilted CAMERA_TILT_DEG toward the axis; the baseline runs along y, the gripper
+# fingers' opening direction, and image down points at the gripper.
+CAMERA_OFFSET_M = 0.085
+CAMERA_Z_M = 0.035
+CAMERA_TILT_DEG = 15.0
+# Eye midpoint in the ZED X asset's body frame, whose lenses look along -y.
+ZED_EYE_MIDPOINT = (0.0, -0.0091, 0.0134)
+DEFAULT_BRACKET = Path(__file__).resolve().parents[1] / "tipard_ur20_combined/meshes/ur20_bracket/ur20_bracket.stl"
 ZED_MOUNTED = f"{WRIST}/ZED_X"
 
 # Camera prims inside the referenced ZED X asset (its default prim is /Root).
@@ -240,6 +269,161 @@ def retarget_arm_controller(stage):
     return True
 
 
+def set_local(prim, matrix):
+    """Author `matrix` on the prim's own translate/orient ops, keeping their types."""
+    t = matrix.ExtractTranslation()
+    q = matrix.ExtractRotationQuat()
+    for op in UsdGeom.Xformable(prim).GetOrderedXformOps():
+        if op.GetOpType() == UsdGeom.XformOp.TypeTranslate:
+            op.Set(type(op.Get())(*t))
+        elif op.GetOpType() == UsdGeom.XformOp.TypeOrient:
+            op.Set(type(op.Get())(q.GetReal(), *q.GetImaginary()))
+
+
+def pose_matrix(xyz, rotation):
+    return Gf.Matrix4d().SetRotate(rotation) * Gf.Matrix4d().SetTranslate(Gf.Vec3d(*xyz))
+
+
+def arm_links(stage):
+    """Links on the arm side of the mount joint, found through the joint tree."""
+    children = {}
+    for prim in Usd.PrimRange(stage.GetPrimAtPath(f"{ROBOT}/joints")):
+        joint = UsdPhysics.Joint(prim)
+        if not joint:
+            continue
+        parents, kids = joint.GetBody0Rel().GetTargets(), joint.GetBody1Rel().GetTargets()
+        if parents and kids:
+            children.setdefault(parents[0], []).append(kids[0])
+    links, todo = [], [Sdf.Path(ARM_BASE)]
+    while todo:
+        path = todo.pop()
+        links.append(path)
+        todo += children.get(path, [])
+    return links
+
+
+def set_arm_mount(stage):
+    """Move the arm to the mount from the CAD, carrying every arm link with it."""
+    joint = stage.GetPrimAtPath(MOUNT_JOINT)
+    if not joint:
+        print(f"  ERROR: {MOUNT_JOINT} not found")
+        return False
+    pos = joint.GetAttribute("physics:localPos0")
+    rot = joint.GetAttribute("physics:localRot0")
+    target_rot = Gf.Rotation(Gf.Vec3d(1, 0, 0), ARM_MOUNT_RPY_DEG[0]) * Gf.Rotation(
+        Gf.Vec3d(0, 1, 0), ARM_MOUNT_RPY_DEG[1]) * Gf.Rotation(Gf.Vec3d(0, 0, 1), ARM_MOUNT_RPY_DEG[2])
+    old = pose_matrix(pos.Get(), Gf.Rotation(Gf.Quatd(rot.Get())))
+    new = pose_matrix(ARM_MOUNT_XYZ, target_rot)
+    if Gf.IsClose(old, new, 1e-4):
+        print("  arm already on the CAD mount")
+        return True
+    # Links are siblings under the robot prim, so the change of mount is applied
+    # to each link's pose in the robot frame, through base_link's own pose.
+    base = UsdGeom.Xformable(stage.GetPrimAtPath(BASE_LINK)).GetLocalTransformation()
+    delta = base.GetInverse() * old.GetInverse() * new * base
+    links = arm_links(stage)
+    for path in links:
+        prim = stage.GetPrimAtPath(path)
+        set_local(prim, UsdGeom.Xformable(prim).GetLocalTransformation() * delta)
+    q = new.ExtractRotationQuat()
+    pos.Set(type(pos.Get())(*ARM_MOUNT_XYZ))
+    rot.Set(type(rot.Get())(q.GetReal(), *q.GetImaginary()))
+    print(f"  moved the mount to {ARM_MOUNT_XYZ} rpy {ARM_MOUNT_RPY_DEG} deg, carrying {len(links)} arm links")
+    return True
+
+
+def read_binary_stl(path):
+    data = path.read_bytes()
+    count = int.from_bytes(data[80:84], "little")
+    record = np.dtype([("normal", "<f4", 3), ("v", "<f4", (3, 3)), ("attr", "<u2")])
+    return np.frombuffer(data, record, count, 84)["v"].reshape(-1, 3)
+
+
+def add_bracket(stage, mesh_path):
+    """Visual-only arm bracket on base_link; its vertices are in base_link."""
+    path = f"{BASE_LINK}/ur20_bracket"
+    if stage.GetPrimAtPath(path):
+        print("  bracket already present")
+        return True
+    if not mesh_path.exists():
+        print(f"  ERROR: bracket mesh {mesh_path} not found")
+        return False
+    points = read_binary_stl(mesh_path)
+    mesh = UsdGeom.Mesh.Define(stage, path)
+    mesh.CreatePointsAttr(Vt.Vec3fArray.FromNumpy(np.ascontiguousarray(points)))
+    mesh.CreateFaceVertexCountsAttr([3] * (len(points) // 3))
+    mesh.CreateFaceVertexIndicesAttr(list(range(len(points))))
+    mesh.CreateSubdivisionSchemeAttr(UsdGeom.Tokens.none)
+    material = UsdShade.Material.Define(stage, f"{path}/Steel")
+    shader = UsdShade.Shader.Define(stage, f"{path}/Steel/Shader")
+    shader.CreateIdAttr("UsdPreviewSurface")
+    shader.CreateInput("diffuseColor", Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(0.55, 0.56, 0.58))
+    shader.CreateInput("metallic", Sdf.ValueTypeNames.Float).Set(0.8)
+    shader.CreateInput("roughness", Sdf.ValueTypeNames.Float).Set(0.4)
+    material.CreateSurfaceOutput().ConnectToSource(shader.ConnectableAPI(), "surface")
+    UsdShade.MaterialBindingAPI.Apply(mesh.GetPrim()).Bind(material)
+    print(f"  added the arm bracket ({len(points) // 3} triangles) under base_link, visual only")
+    return True
+
+
+def zed_mount():
+    """Pose of the ZED body in wrist_3_link for the bracket constants."""
+    tilt = np.radians(CAMERA_TILT_DEG)
+    forward = np.array([np.sin(tilt), 0.0, np.cos(tilt)])
+    up = np.array([-np.cos(tilt), 0.0, np.sin(tilt)])
+    rotation = np.column_stack([np.cross(-forward, up), -forward, up])
+    midpoint = np.array([-CAMERA_OFFSET_M, 0.0, CAMERA_Z_M])
+    return rotation, midpoint - rotation @ np.array(ZED_EYE_MIDPOINT)
+
+
+def set_camera_mount(stage):
+    """Mount the ZED X on the generic wrist bracket, with a visual-only bracket."""
+    zed = stage.GetPrimAtPath(ZED_MOUNTED)
+    if not zed:
+        print(f"  ERROR: {ZED_MOUNTED} not found")
+        return False
+    rotation, translation = zed_mount()
+    matrix = Gf.Matrix4d(1.0)
+    matrix.SetRotateOnly(Gf.Matrix3d(*rotation.T.flatten().tolist()))
+    matrix.SetTranslateOnly(Gf.Vec3d(*translation))
+    set_local(zed, matrix)
+
+    plate = UsdGeom.Cylinder.Define(stage, f"{WRIST}/camera_bracket_plate")
+    plate.CreateRadiusAttr(0.045)
+    plate.CreateHeightAttr(0.008)
+    UsdGeom.XformCommonAPI(plate).SetTranslate(Gf.Vec3d(0.0, 0.0, -0.004))
+    arm = UsdGeom.Cube.Define(stage, f"{WRIST}/camera_bracket_arm")
+    arm.CreateSizeAttr(1.0)
+    UsdGeom.XformCommonAPI(arm).SetTranslate(Gf.Vec3d(-0.058, 0.0, 0.004))
+    UsdGeom.XformCommonAPI(arm).SetScale(Gf.Vec3f(0.028, 0.05, 0.016))
+    for prim in (plate, arm):
+        prim.CreateDisplayColorAttr([Gf.Vec3f(0.15, 0.15, 0.16)])
+    print(f"  ZED X on the wrist bracket: {CAMERA_OFFSET_M} m off the tool axis, "
+          f"{CAMERA_Z_M} m forward, tilted {CAMERA_TILT_DEG} deg toward the gripper")
+    return True
+
+
+def set_base_yaw(stage, yaw_deg):
+    """Turn the robot on the spot by turning every link about the robot origin.
+
+    The orchard sits under the robot prim, so turning the prim would turn the
+    orchard with it.
+    """
+    root = stage.GetPrimAtPath(ROBOT)
+    applied = root.GetAttribute("oskar:baseYawDeg")
+    current = applied.Get() if applied and applied.HasAuthoredValue() else 0.0
+    if abs(current - yaw_deg) < 1e-6:
+        print(f"  robot already at yaw {yaw_deg} deg")
+        return True
+    turn = Gf.Matrix4d().SetRotate(Gf.Rotation(Gf.Vec3d(0, 0, 1), yaw_deg - current))
+    links = [p for p in root.GetChildren() if p.HasAPI(UsdPhysics.RigidBodyAPI)]
+    for prim in links:
+        set_local(prim, UsdGeom.Xformable(prim).GetLocalTransformation() * turn)
+    root.CreateAttribute("oskar:baseYawDeg", Sdf.ValueTypeNames.Double).Set(float(yaw_deg))
+    print(f"  turned {len(links)} links to robot yaw {yaw_deg} deg")
+    return True
+
+
 def remove_static_cameras(stage):
     """Drop the base-mounted stereo pair.
 
@@ -398,6 +582,10 @@ def main():
                     help="keep the base-mounted stereo pair and its two render products")
     ap.add_argument("--both-eyes", action="store_true",
                     help="also render the right eye, for a stereo depth path")
+    ap.add_argument("--bracket-mesh", type=Path, default=DEFAULT_BRACKET,
+                    help="arm bracket STL in base_link coordinates")
+    ap.add_argument("--base-yaw-deg", type=float, default=180.0,
+                    help="robot heading at spawn")
     args = ap.parse_args()
 
     if bool(args.output) == args.in_place:
@@ -411,6 +599,11 @@ def main():
     if not mount_camera_on_wrist(stage):
         sys.exit(1)
     clear_stale_render_products(stage)
+    if not set_arm_mount(stage) or not add_bracket(stage, args.bracket_mesh):
+        sys.exit(1)
+    set_base_yaw(stage, args.base_yaw_deg)
+    if not set_camera_mount(stage):
+        sys.exit(1)
     retarget_arm_controller(stage)
     if not args.keep_zed_graph:
         remove_zed_sdk_graph(stage)

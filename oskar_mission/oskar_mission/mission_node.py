@@ -18,6 +18,7 @@ from pathlib import Path
 
 import numpy as np
 import rclpy
+from rclpy.signals import SignalHandlerOptions
 import tf2_ros
 import yaml
 from ament_index_python import get_package_share_directory
@@ -55,6 +56,10 @@ class MissionNode(Node):
         # How far back from the trunk the base parks. The arm reaches the canopy
         # from here; closer and the chassis fouls the branches.
         self.declare_parameter("base_gap_m", 2.0)
+        # How far behind the trunk, along the row, the base parks. With the
+        # trunk level with the arm, the scan line crosses the shoulder axis and
+        # a degree of base yaw decides whether the sweep gets past it.
+        self.declare_parameter("base_along_row_offset_m", 0.0)
         self.declare_parameter("scan_standoff_m", 0.6)
         self.declare_parameter("scan_z_min", 0.8)
         self.declare_parameter("scan_z_max", 3.9)
@@ -73,6 +78,7 @@ class MissionNode(Node):
         self.map_frame = self.get_parameter("map_frame").value
         self.base_frame = self.get_parameter("base_frame").value
         self.base_gap = self.get_parameter("base_gap_m").value
+        self.along_row_offset = self.get_parameter("base_along_row_offset_m").value
         self.tolerance = self.get_parameter("position_tolerance_m").value
         self.max_speed = self.get_parameter("max_speed_mps").value
         self.gain = self.get_parameter("approach_gain").value
@@ -276,7 +282,7 @@ class MissionNode(Node):
         # to the direction of travel, and a constant direction per leg means the
         # wheels are steered once instead of chasing a turning error vector.
         trunk = self.trees[self.current]
-        target = np.array([trunk[0], trunk[1] - self.base_gap])
+        target = np.array([trunk[0] - self.along_row_offset, trunk[1] - self.base_gap])
         self.legs = [np.array([None, target[1]]), target]
         self.state = State.DRIVE
         self.get_logger().info(
@@ -350,13 +356,17 @@ class MissionNode(Node):
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    # rclpy's own SIGINT handler shuts the context down before the stop below
+    # could be published, and Isaac keeps driving on the last /cmd_vel.
+    rclpy.init(args=args, signal_handler_options=SignalHandlerOptions.NO)
     node = MissionNode()
     try:
         rclpy.spin(node)
     except (KeyboardInterrupt, rclpy.executors.ExternalShutdownException):
         pass
     finally:
+        if rclpy.ok():
+            node.cmd_pub.publish(Twist())
         node.destroy_node()
         rclpy.try_shutdown()
 

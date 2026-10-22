@@ -47,8 +47,8 @@ class ScanControllerNode(Node):
         self.declare_parameter("joint_state_topic", "/isaac_joint_states")
         self.declare_parameter("base_frame", "base_link")
         self.declare_parameter("map_frame", "map")
-        self.declare_parameter("tool_translation", [-0.16426, -0.00909, 0.05994])
-        self.declare_parameter("tool_rotation_xyzw", [0.5, 0.5, -0.5, 0.5])
+        self.declare_parameter("tool_translation", [-0.085, 0.0599, 0.035])
+        self.declare_parameter("tool_rotation_xyzw", [0.092296, -0.092296, 0.701057, -0.701057])
         self.declare_parameter("command_rate_hz", 30.0)
         # Camera speed along the path. The tracker's match radius is 0.06 m, so
         # at 30 Hz this leaves a wide margin against fragmenting a flower.

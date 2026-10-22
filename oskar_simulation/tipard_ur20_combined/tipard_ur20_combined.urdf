@@ -692,9 +692,46 @@
     <child link="right_inner_finger_pad" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- ZED X on a generic wrist bracket, looking along the gripper (tilted 15 deg toward
+       its axis). Stand-in until the real bracket exists; same numbers as the scene patch. -->
+  <link name="wrist_camera">
+    <visual>
+      <origin xyz="-0.0909 0.0000 0.0135" rpy="-1.30900 0.00000 1.57080" />
+      <geometry><box size="0.164 0.047 0.032" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0909 0.0000 0.0135" rpy="-1.30900 0.00000 1.57080" />
+      <geometry><box size="0.164 0.047 0.032" /></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.058 0 0.004" rpy="0 0 0" />
+      <geometry><box size="0.028 0.05 0.016" /></geometry>
+    </collision>
+  </link>
+  <joint name="wrist_3_to_camera_joint" type="fixed">
+    <parent link="wrist_3_link" />
+    <child link="wrist_camera" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <!-- Bracket and arm pose from the mechanical CAD: right (-y) side wall, arm z along -y. -->
+  <link name="ur20_bracket">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://tipard_ur20_combined/meshes/ur20_bracket/ur20_bracket.stl" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://tipard_ur20_combined/meshes/ur20_bracket/ur20_bracket.stl" /></geometry>
+    </collision>
+  </link>
+  <joint name="tipard_to_ur20_bracket_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="ur20_bracket" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
   <joint name="tipard_to_ur20_mount_joint" type="fixed">
     <parent link="base_link" />
     <child link="ur20_base_link" />
-    <origin xyz="0.0 1.2 0.7" rpy="-1.5708 1.5708 0" />
+    <origin xyz="-0.006 -0.42 0.881" rpy="1.5708 1.5708 0" />
   </joint>
 </robot>
