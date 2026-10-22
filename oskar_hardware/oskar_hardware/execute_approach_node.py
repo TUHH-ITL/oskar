@@ -435,6 +435,21 @@ class ExecuteApproachNode(Node):
         return wrapped_result.result, None
 
     @staticmethod
+    def _cancel_and_settle(remote_goal, result_future, grace_s=10.0):
+        """Cancel and wait for the goal to end before anything new is sent.
+
+        move_group aborts (rcl_action invalid transition EXECUTING -> CANCELED)
+        when a new MoveGroup goal arrives while the cancelled one is still
+        winding down.
+        """
+        if remote_goal is None:
+            return
+        remote_goal.cancel_goal_async()
+        deadline = time.monotonic() + grace_s
+        while not result_future.done() and time.monotonic() < deadline:
+            time.sleep(0.05)
+
+    @staticmethod
     def _cancel_late_goal(send_future):
         try:
             remote_goal = send_future.result()
@@ -447,12 +462,10 @@ class ExecuteApproachNode(Node):
     def _run_future(future, goal_handle, deadline, remote_goal=None):
         while not future.done():
             if goal_handle.is_cancel_requested:
-                if remote_goal is not None:
-                    remote_goal.cancel_goal_async()
+                ExecuteApproachNode._cancel_and_settle(remote_goal, future)
                 return None, 'cancelled'
             if time.monotonic() >= deadline:
-                if remote_goal is not None:
-                    remote_goal.cancel_goal_async()
+                ExecuteApproachNode._cancel_and_settle(remote_goal, future)
                 return None, 'timeout'
             time.sleep(0.05)
         exception = future.exception()

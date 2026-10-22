@@ -190,7 +190,12 @@ class RemovalExecutorNode(Node):
         while not future.done():
             if goal_handle.is_cancel_requested or time.monotonic() > deadline:
                 if remote is not None:
+                    # The next goal must not reach move_group before this one
+                    # has wound down; it aborts on the overlap.
                     remote.cancel_goal_async()
+                    settle = time.monotonic() + 15.0
+                    while not future.done() and time.monotonic() < settle:
+                        time.sleep(0.02)
                 return None
             time.sleep(0.02)
         return future.result()

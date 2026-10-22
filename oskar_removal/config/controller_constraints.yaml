@@ -1,0 +1,10 @@
+# Loaded after tipard_ur20_moveit_config's ros2_controllers.yaml. goal_time bounds
+# the wait for Isaac's arm to report below stopped_velocity_tolerance. Position
+# stays unchecked: Isaac's arm settles up to 0.07 rad short of its command
+# (measured), so a position tolerance would abort healthy moves. Occasional
+# approach stalls persisted with this in place, so they have another cause.
+ur_manipulator_controller:
+  ros__parameters:
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.05
